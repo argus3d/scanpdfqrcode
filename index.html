@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Escaner de QRcodes hub curitiba</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <script src="pdf.js"></script>
+    <style type="text/css">
+        canvas {
+            border: 1px solid black;
+            margin: 5px;
+            width: 25%;
+        }
+
+        .father {
+            flex-direction: row;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .child {
+            width: 30%;
+            flex-grow: 1;
+        }
+        .child1 {
+            width: 25%;
+            flex-grow: 1;
+        }
+        .child2 {
+            width: 75%;
+            flex-grow: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="level">
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Progresso</p>
+                <p class="title" id="nPag">0</p>
+            </div>
+        </div>
+        <div class="level-item has-text-centered">
+            <div>
+                <p class="heading">Qrcodes Encontrados</p>
+                <p class="title" id="nQr">0</p>
+            </div>
+        </div>
+    </nav>
+    <nav class="level">
+        <div class="level-item has-text-centered">
+            <input type="file" id="fileInput1" accept=".pdf">
+            <button class="button is-large is-fullwidth is-success is-rounded" id="mergeBtn">Gerar</button>
+        </div>
+    </nav>
+    <div class="father">
+        <div class="child1">
+            <div id="canvas">
+            </div>
+        </div>
+        <div class="child2">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th><abbr title="Position">Página</abbr></th>
+                        <th>link</th>
+                        <th>status</th>
+                    </tr>
+                </thead>
+                <tbody class="tabela">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script type="module">
+
+        import QrScanner from "./qr-scanner.min.js";
+        const mergeBtn = document.querySelector('#mergeBtn');
+        const tabela = document.querySelector('.tabela');
+        const fileInput1 = document.getElementById('fileInput1');
+        var canvasdiv = document.getElementById('canvas');
+        var titulo = document.getElementById('nPag');
+        var nQr = document.getElementById('nQr');
+        var pageNumber = 1;
+        var i_qrcodes = 0;
+        var id_count = 0;
+        var totalPages;
+        var data = [];
+
+        var PDFJS = window['pdfjs-dist/build/pdf'];
+
+        PDFJS.GlobalWorkerOptions.workerSrc = 'pdf.worker.js';
+        var url = 'SPE_AT_2024_AF_09_V3_LDIDA_MAT_AL_IMP_LD.pdf';
+
+        electron.ipcRenderer.on('output-done', (e, data) => {
+            console.log("recebeu http", data);
+            const divstatus = document.getElementById('stat' + data[1]);
+            divstatus.innerText = data[0];
+
+        })
+        fileInput1.addEventListener('change', event => {
+            const files = event.target.files;
+
+            const file = files[0];
+            url = file.name;
+
+            console.log(`filename: ${file.name}`);
+            console.log(`file size: ${file.size} bytes`);
+            console.log(`file type: ${file.type}`);
+        });
+
+        mergeBtn.addEventListener('click', () => {
+            mergeBtn.disabled = true;
+            var loadingTask = PDFJS.getDocument("PDFS/"+url);
+            loadingTask.promise.then(function (pdf) {
+                var canvasdiv = document.getElementById('canvas');
+                totalPages = pdf.numPages
+                titulo.innerText = totalPages + " paginas";
+                renderPage(pdf);
+            }, function (reason) {
+                console.error(reason);
+            });
+        });
+
+        function renderPage(pdf) {
+            pdf.getPage(pageNumber).then(function (page) {
+
+                var scale = 5;
+                var viewport = page.getViewport({ scale: scale });
+
+                var canvas = document.createElement('canvas');
+
+                var context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+
+                var renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+
+                var renderTask = page.render(renderContext);
+                renderTask.promise.then(function () {
+                    const imageData = canvas.toDataURL('image/png');
+                    data.push(imageData);
+
+                    QrScanner.scanImage(imageData, { returnDetailedScanResult: true })
+                        .then(result => setResult(result, pageNumber, canvas))
+                        .catch(e => setResult({ data: e || 'No QR code found.' }, pageNumber, canvas));
+
+                    pageNumber++;
+
+                    if (pageNumber <= totalPages) {
+                        renderPage(pdf);
+                        titulo.innerText = pageNumber + " de " + totalPages + " páginas processadas";
+                    }
+
+                });
+            });
+        }
+        function setResult(result, _pagina, _canvas) {
+
+
+            if (result.data == "No QR code found" || result.data == "Scanner error: timeout") {
+                _canvas = null;
+                console.log("sem resultado: ", _pagina + "/" + totalPages);
+            } else {
+                i_qrcodes++;
+                console.log(result.data, "pagina:", _pagina);
+                electron.ipcRenderer.send('output-url', [result.data, id_count]);
+
+                var tr = document.createElement('tr');
+                var td1 = document.createElement('td');
+                td1.innerHTML = _pagina;
+                var td2 = document.createElement('td');
+                var link = document.createElement('a');
+                link.href = result.data;
+                link.target = "_blank";
+                link.innerHTML = result.data;
+
+                td2.appendChild(link);
+
+                var td3 = document.createElement('td');
+                td3.innerHTML = "processando...";
+                td3.id = "stat" + id_count;
+                id_count++;
+
+                tr.appendChild(td1);
+                tr.appendChild(td2);
+                tr.appendChild(td3);
+                tabela.appendChild(tr);
+
+                nQr.innerText = i_qrcodes + " qrcodes";
+
+                var imagedata = _canvas.toDataURL("image/png");
+                var img = new Image();
+                img.src = imagedata;
+                img.onload = function () {
+                    var canvas = document.createElement('canvas');
+                    var ctx2 = canvas.getContext('2d');
+                    canvas.height = 4039 / 4;
+                    canvas.width = 3047 / 4;
+                    ctx2.drawImage(img, 0, 0, canvas.width, canvas.height);
+                    canvas.id = "pag" + pageNumber;
+                    canvasdiv.appendChild(canvas);
+                    _canvas = null;
+                }
+
+
+                
+                fetch(result.data)
+                    .then(function (response) {
+                        if (response.ok) {
+                            return response.text();
+                        } else {
+                            return "erro...";
+                           // throw new Error('Failed to load the link');
+                        }
+                    })
+                    .then(function (sourceCode) {
+                        console.log("sourceCode");
+                    })
+                    .catch(function (error) {
+                        console.error(error);
+                    });
+                    
+                    
+            }
+        }
+        function decodeImageFromBase64(data, callback) {
+            qrcode.callback = callback;
+            qrcode.decode(data)
+        }
+    </script>
+
+
+</body>
+
+</html>

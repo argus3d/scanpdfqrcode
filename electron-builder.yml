@@ -1,0 +1,26 @@
+appId: com.hub.qrcodeverifier
+productName: QRCODEcheck
+directories:
+  output: dist
+files:
+  - "main.js"
+  - "index.html"
+  - "renderer.js"
+  - "pdf.js"
+  - "pdf.worker.js"
+  - "qr-scanner-worker.min.js"
+  - "qr-scanner-worker.min.js.map"
+  - "qr-scanner.legacy.min.js"
+  - "qr-scanner.min.js"
+  - "qr-scanner.min.js.map"
+  - "preload.js"
+  - "node_modules/**/*"
+asar: false
+build:
+  electronVersion: 27.0.2
+
+nsis:
+  oneClick: false
+  allowElevation: true
+  allowToChangeInstallationDirectory: true
+  

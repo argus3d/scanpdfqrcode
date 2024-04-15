@@ -1,0 +1,25 @@
+{
+  "name": "scanpdfqrcode1",
+  "version": "1.0.0",
+  "description": "",
+  "runtimeExecutable": "^16.15.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron .",
+    "package": "electron-packager . pdfqrcodescanner --platform=win32 --arch=x64 --out=dist --overwrite"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@napi-rs/canvas": "^0.1.44",
+    "axios": "^1.6.0",
+    "electron": "^27.0.3",
+    "electron-packager": "^17.1.2",
+    "jsqr": "^1.4.0",
+    "pdfjs-dist": "^3.11.174"
+  },
+  "devDependencies": {
+    "electron": "^27.0.3",
+    "electron-packager": "^17.1.2"
+  }
+}
