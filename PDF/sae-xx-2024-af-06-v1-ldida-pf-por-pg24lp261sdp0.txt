@@ -1,0 +1,13 @@
+URL;ID;Resultado:
+https://url.sae.digital/AF24POR61;0;url ok!
+Objeto Digital;2;talvez nao seja QRCODE...
+https://url.sae.digital/BNCCSAEDIGITAL;1;url ok!
+http://apis.sae.digital/redirect/r/EF226L1POR1ED;3;url ok!
+http://apis.sae.digital/redirect/r/EF226L1POR2ED;6;url ok!
+https://s3.amazonaws.com/gabaritossae/ef2/2021/criterios_correcao/EF21_6_POR_L1_CRITERIO_CORRECAO_P02.pdf;9;url ok!
+http://apis.sae.digital/redirect/r/EF226L1POR3ED;10;url ok!
+https://s3.amazonaws.com/gabaritossae/ef2/2021/criterios_correcao/EF21_6_POR_L1_CRITERIO_CORRECAO_P03.pdf;13;url ok!
+http://apis.sae.digital/redirect/r/EF226L1POR4ED;14;url ok!
+https://s3.amazonaws.com/gabaritossae/ef2/2021/criterios_correcao/EF21_6_POR_L1_CRITERIO_CORRECAO_P04.pdf;17;url ok!
+http://apis.sae.digital/redirect/r/EF226L1POR5ED;18;url ok!
+https://s3.amazonaws.com/gabaritossae/ef2/2021/criterios_correcao/EF21_6_POR_L1_CRITERIO_CORRECAO_P05.pdf;21;url ok!
