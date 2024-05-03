@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Escaner de QRcodes hub curitiba</title>
     <script src="pdf.js"></script>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
@@ -33,6 +34,10 @@
             overflow: auto;
             white-space: nowrap;
             margin-top: 30px;
+        }
+
+        .title {
+            font-weight: 800;
         }
 
         .father {
@@ -137,7 +142,7 @@
         }
 
         input[type="file"]::file-selector-button {
-            width: 136px;
+            width: 160px;
             color: transparent;
         }
 
@@ -191,25 +196,26 @@
 
 <body>
     <div id="telaFim"
-        style="width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);display: none;justify-content: center;align-items: center;position: absolute;z-index: 10;flex-direction: column;">
+        style="width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);display: none;justify-content: center;align-items: center;position: fixed;z-index: 10;flex-direction: column;">
 
         <h2 style="margin: 10px;color: #ffffff;">Documento Concluido</h2>
         <button id="btFechaFim"
             style="background-color: #75dafb;border-radius: 5px;width: 100px;height: 40px;">Fechar</button>
     </div>
 
-    <div class="menuconfiguracoesUI" style="width: 100%;display: none;flex-wrap: wrap;background-color: #a7e7fc;">
-        <div
-            style="width: 100%; background-color: #0964b0;color: #e5e7eb;display: flex;justify-content: space-between;align-items: center;">
-            <h2 style="margin: 10px;">Configurações</h2>
-            <button id="btAbreConfig"
-                style="background-color: #75dafb;border-radius: 5px;width: 100px;height: 40px;margin-right: 20px;">Abrir</button>
-        </div>
+    <div class="menuconfiguracoesUI"
+        style="width: 100%;height:60px;flex-wrap: wrap;background-color: #0964b0;display: flex;justify-content: space-between;align-items: center;">
+        <h2 style="margin: 10px; color: #ffffff;display: none;">PDF Scan</h2>
+        <img src="static/logo.png" style="height: 100%;">
+        <button id="btAbreConfig"
+            style="border: 0;background-color: #0964b0;border-radius: 5px;width: 40px;height: 40px;margin-right: 20px; background-image: url('settings.png'); background-size: 100%;">
+        </button>
+
     </div>
     <div class="configuracoesUI"
-        style="width: 100%;display: flex;flex-wrap: wrap;background-color: #a7e7fc;justify-content: center;align-items: center;">
+        style="width: 100%;display: none;flex-wrap: wrap;background-color: #a7e7fc;justify-content: center;align-items: center;">
         <div
-            style="width: 100%; background-color: #0964b0;color: #e5e7eb;display: flex;justify-content: space-between;align-items: center;">
+            style="width: 100%; background-color: #0964b0;color: #e5e7eb;display: flex;justify-content: space-between;align-items: center;height: 60px;">
             <h2 style="margin: 10px;">Configurações</h2>
             <button id="btFechaConfig"
                 style="background-color: #75dafb;border-radius: 5px;width: 200px;height: 40px;margin-right: 20px;">Fechar
@@ -217,7 +223,8 @@
         </div>
         <div
             style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;">
-            <p>Precisão quanto maior o número mais pesado, valor ideal 5</p>
+            <p>Precisão. Aqui quanto maior o valor mais pesado e mais processamento, valor ideal 5 mas para qrcodes
+                menores 10, mais que isso depende do PC.</p>
             <input id="inputEscala" type="number" value="5" min="5" max="30">
         </div>
         <div
@@ -240,28 +247,13 @@
             <input type="checkbox" id="checkboxSalvaImagens">
         </div>
     </div>
-    <div style="width: 100%;display: flex;flex-wrap: wrap;">
-        <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-            <p class="heading">Progresso</p>
-            <p class="title" id="nPag">0</p>
-        </div>
-        <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-            <p class="heading">Qrcodes Encontrados</p>
-            <p class="title" id="nQr">0</p>
-        </div>
-
-    </div>
-
-    <div style="width: 100%;display: flex;flex-wrap: wrap;">
+    <div style="width: 100%;display: flex;flex-wrap: wrap;margin-top: 10px;">
         <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
             <div
                 style="width: 90%; display: flex;flex-direction: row;gap: 20px;align-items: center;justify-content: center;">
                 <label>Arquivo <b>PDF:</b></label>
                 <input type="file" id="fileInput1" accept=".pdf">
             </div>
-            
-
-
         </div>
         <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
             <button class="styling-b" id="btProcessar">Processar</button>
@@ -271,15 +263,32 @@
 
     <div id="imagensPaginas">
     </div>
+    <div style="width: 100%;display: flex;flex-wrap: wrap;">
+        <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
+            <p class="heading">Progresso</p>
+            <p class="title" id="nPag">0</p>
+            <div style="width: 50%; background-color: #ccc; border-radius: 10px; margin-top: 10px;">
+                <div id="fillBar"
+                    style="width: 0%; background-color: rgb(0, 111, 155); color: white; border-radius: 5px; text-align: center; padding: 5px;">
+                    0%
+                </div>
+            </div>
+        </div>
+        <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
+            <p class="heading">Qrcodes Encontrados</p>
+            <p class="title" id="nQr">0</p>
 
+        </div>
+
+    </div>
     <div class="father">
         <table class="table styled-table">
             <thead>
                 <tr>
                     <th><abbr title="Position">Página</abbr></th>
-                    <th>link</th>
-                    <th>status</th>
-                    <th>encontrado qrcode</th>
+                    <th>Link</th>
+                    <th>Teste automatizado</th>
+                    <th>QRcode relaci</th>
                 </tr>
             </thead>
             <tbody class="tabela">
@@ -292,6 +301,7 @@
         import QrScanner from "./qr-scanner.min.js";
         //modal fim
         const telaFim = document.querySelector('#telaFim');
+        const fillBar = document.querySelector('#fillBar');
         const btFechaFim = document.querySelector('#btFechaFim');
         //
         //configuracoes
@@ -372,6 +382,8 @@
         btProcessar.addEventListener('click', () => {
 
             if (url.length > 3) {
+                imagensPaginas.innerHTML = "";
+                tabela.innerHTML = "";
                 podeEscanear = true;
                 btProcessar.style.display = "none";
                 btProcessarCancela.style.display = "block";
@@ -440,6 +452,9 @@
                     if (pageNumber <= totalPages) {
                         renderPage(pdf);
                         titulo.innerText = pageNumber + " de " + totalPages + " páginas processadas";
+                        let percentage = (pageNumber / totalPages) * 100;
+                        fillBar.style.width = percentage + '%';
+                        fillBar.innerText = percentage.toFixed(0) + '%';
                     } else {
                         console.log("FIM");
                         fim();
@@ -456,8 +471,8 @@
                 console.log("sem resultado: ", _pagina + "/" + totalPages);
             } else {
                 i_qrcodes++;
-                console.log(result.data, "pagina:", _pagina,checkboxSalvaImagens.checked);
-                electron.ipcRenderer.send('processaLink', [result.data, id_count, _pagina,checkboxSalvaImagens.checked]);
+                console.log(result.data, "pagina:", _pagina, checkboxSalvaImagens.checked);
+                electron.ipcRenderer.send('processaLink', [result.data, id_count, _pagina, checkboxSalvaImagens.checked]);
 
                 var tr = document.createElement('tr');
                 var td1 = document.createElement('td');
@@ -473,12 +488,12 @@
                 var td3 = document.createElement('td');
                 td3.innerHTML = "processando...";
                 td3.id = "stat" + id_count;
-                id_count++;
+                
 
                 var td4 = document.createElement('td');
                 td4.innerHTML = "-";
                 td4.id = "find" + id_count;
-
+                id_count++;
 
                 tr.appendChild(td1);
                 tr.appendChild(td2);

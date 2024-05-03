@@ -69,6 +69,10 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
   var temlinha = lines.indexOf(url.trim())
   console.log("temlinha", url, temlinha, _salva);
   //console.log(url, 'SCREENSHOTS/' +nomePDF+ _pagina + ".jpg");
+  let voltaLine = "não encontrado na planilha";
+  if (temlinha > -1) {
+    voltaLine = lines[temlinha];
+  }
 
   if (isValidUrl(url)) {
     axios.get(url)
@@ -76,28 +80,28 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
         if (response.status === 200) {
           const html = response.data;
           if (html.length > 10) {
-            event.sender.send('QRCodeProcessado', ["url ok!", _id, temlinha]);
+            event.sender.send('QRCodeProcessado', ["url ok!", _id,voltaLine]);
             output.write(url + ";" + _id + ";" + "url ok!\n");
             if (_salva) {
               renderPageToImage(url, 'SCREENSHOTS/' + nomePDF + '_pagina_' + _pagina + ".jpg")
                 .catch(error => console.error('Error rendering page to image:', error));
             }
           } else {
-            event.sender.send('QRCodeProcessado', ["link vazio...", _id, temlinha]);
+            event.sender.send('QRCodeProcessado', ["link vazio...", _id, voltaLine]);
             output.write(url + ";" + _id + ";" + "link vazio...\n");
           }
         } else {
           console.log('Failed to load the web page. Status code: ' + response.status);
-          event.sender.send('QRCodeProcessado', ["url com erro...", _id, temlinha]);
+          event.sender.send('QRCodeProcessado', ["url com erro...", _id, voltaLine]);
           output.write(url + ";" + _id + ";" + "url com erro..\n");
         }
       })
       .catch(error => {
-        event.sender.send('QRCodeProcessado', [error, _id, temlinha]);
+        event.sender.send('QRCodeProcessado', [error, _id, voltaLine]);
         output.write(url + ";" + _id + ";" + "talvez nao seja QRCODE...\n");
       })
   } else {
-    event.sender.send('QRCodeProcessado', ["Link invalido", _id, temlinha]);
+    event.sender.send('QRCodeProcessado', ["Link invalido", _id, voltaLine]);
     output.write(url + ";" + _id + ";" + "link invalido\n");
   }
 
