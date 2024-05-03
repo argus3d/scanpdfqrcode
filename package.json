@@ -16,6 +16,8 @@
     "electron": "^27.0.3",
     "electron-packager": "^17.1.2",
     "exceljs": "^4.4.0",
+    "http": "^0.0.1-security",
+    "https": "^1.0.0",
     "jsqr": "^1.4.0",
     "pdfjs-dist": "^3.11.174",
     "puppeteer": "^22.7.1",

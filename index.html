@@ -89,14 +89,13 @@
 
         button {
             position: relative;
-            margin: auto;
-            width: 250px;
             cursor: pointer;
             outline: none;
             border: 0;
             text-transform: inherit;
             font-size: inherit;
             font-family: inherit;
+            border: 2px solid #0692c0;
         }
 
         button.styling-b {
@@ -124,6 +123,12 @@
             box-shadow: 0 0 0 2px #0692c0, 0 0.625em 0 0 #d8f5fe;
             transform: translate3d(0, 0.75em, -1em);
             transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
+        }
+
+        input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+
         }
 
         input[type="file"] {
@@ -185,6 +190,56 @@
 </head>
 
 <body>
+    <div id="telaFim"
+        style="width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);display: none;justify-content: center;align-items: center;position: absolute;z-index: 10;flex-direction: column;">
+
+        <h2 style="margin: 10px;color: #ffffff;">Documento Concluido</h2>
+        <button id="btFechaFim"
+            style="background-color: #75dafb;border-radius: 5px;width: 100px;height: 40px;">Fechar</button>
+    </div>
+
+    <div class="menuconfiguracoesUI" style="width: 100%;display: none;flex-wrap: wrap;background-color: #a7e7fc;">
+        <div
+            style="width: 100%; background-color: #0964b0;color: #e5e7eb;display: flex;justify-content: space-between;align-items: center;">
+            <h2 style="margin: 10px;">Configurações</h2>
+            <button id="btAbreConfig"
+                style="background-color: #75dafb;border-radius: 5px;width: 100px;height: 40px;margin-right: 20px;">Abrir</button>
+        </div>
+    </div>
+    <div class="configuracoesUI"
+        style="width: 100%;display: flex;flex-wrap: wrap;background-color: #a7e7fc;justify-content: center;align-items: center;">
+        <div
+            style="width: 100%; background-color: #0964b0;color: #e5e7eb;display: flex;justify-content: space-between;align-items: center;">
+            <h2 style="margin: 10px;">Configurações</h2>
+            <button id="btFechaConfig"
+                style="background-color: #75dafb;border-radius: 5px;width: 200px;height: 40px;margin-right: 20px;">Fechar
+                Configurações</button>
+        </div>
+        <div
+            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;">
+            <p>Precisão quanto maior o número mais pesado, valor ideal 5</p>
+            <input id="inputEscala" type="number" value="5" min="5" max="30">
+        </div>
+        <div
+            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;">
+            <p>Mostra Imagens</p>
+            <input type="checkbox" id="checkboxImagens" checked>
+        </div>
+        <div
+            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;">
+            <p>Compara com lista de codigos em arquivo <b>TXT</b></p>
+            <input type="checkbox" id="checkboxLista">
+            <div id="seletorLista"
+                style="width: 100%; display: none;flex-direction: column;gap: 20px;align-items: center;justify-content: center;">
+                <input type="file" id="fileInput2" accept=".txt" style="content: 'Abrir arquivo TXT';">
+            </div>
+        </div>
+        <div
+            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;">
+            <p>Salva screenshots dos links na pasta <b>/SCREENSHOTS</b></p>
+            <input type="checkbox" id="checkboxSalvaImagens">
+        </div>
+    </div>
     <div style="width: 100%;display: flex;flex-wrap: wrap;">
         <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
             <p class="heading">Progresso</p>
@@ -194,23 +249,23 @@
             <p class="heading">Qrcodes Encontrados</p>
             <p class="title" id="nQr">0</p>
         </div>
+
     </div>
 
     <div style="width: 100%;display: flex;flex-wrap: wrap;">
         <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-            <div style="width: 90%; display: flex;flex-direction: row;gap: 20px;align-items: center;justify-content: center;">
+            <div
+                style="width: 90%; display: flex;flex-direction: row;gap: 20px;align-items: center;justify-content: center;">
                 <label>Arquivo <b>PDF:</b></label>
                 <input type="file" id="fileInput1" accept=".pdf">
             </div>
-            <div style="width: 90%; display: flex;flex-direction: row;gap: 20px;align-items: center;justify-content: center;">
-                <label>Arquivo <b>TXT:</b></label>
-                <input type="file" id="fileInput2" accept=".txt" style="content: 'Abrir arquivo TXT';">
-            </div>
             
+
 
         </div>
         <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-            <button class="styling-b" id="mergeBtn">Gerar</button>
+            <button class="styling-b" id="btProcessar">Processar</button>
+            <button class="styling-b" id="btProcessarCancela" style="display: none;">Cancelar</button>
         </div>
     </div>
 
@@ -235,7 +290,23 @@
     <script type="module">
 
         import QrScanner from "./qr-scanner.min.js";
-        const mergeBtn = document.querySelector('#mergeBtn');
+        //modal fim
+        const telaFim = document.querySelector('#telaFim');
+        const btFechaFim = document.querySelector('#btFechaFim');
+        //
+        //configuracoes
+        const inputEscala = document.querySelector('#inputEscala');
+        console.log(inputEscala.value)
+        const btFechaConfig = document.querySelector('#btFechaConfig');
+        const configuracoesUI = document.querySelector('.configuracoesUI');
+        const btAbreConfig = document.querySelector('#btAbreConfig');
+        const menuconfiguracoesUI = document.querySelector('.menuconfiguracoesUI');
+        const checkboxImagens = document.getElementById('checkboxImagens');
+        const checkboxLista = document.getElementById('checkboxLista');
+        const checkboxSalvaImagens = document.getElementById('checkboxSalvaImagens');
+        //
+        const btProcessar = document.querySelector('#btProcessar');
+        const btProcessarCancela = document.querySelector('#btProcessarCancela');
         const tabela = document.querySelector('.tabela');
         const fileInput1 = document.getElementById('fileInput1');
         const fileInput2 = document.getElementById('fileInput2');
@@ -247,11 +318,13 @@
         var id_count = 0;
         var totalPages;
         var data = [];
+        var podeEscanear = true;
+
 
         var PDFJS = window['pdfjs-dist/build/pdf'];
 
         PDFJS.GlobalWorkerOptions.workerSrc = 'pdf.worker.js';
-        var url = 'SPE_AT_2024_AF_09_V3_LDIDA_MAT_AL_IMP_LD.pdf';
+        var url = '';
 
         electron.ipcRenderer.on('QRCodeProcessado', (e, data) => {
             console.log("recebeu http", data);
@@ -260,6 +333,22 @@
             divstatus.innerText = data[0];
             divfind.innerText = data[2];
         })
+
+
+        checkboxImagens.addEventListener('change', function () {
+            if (checkboxImagens.checked) {
+                imagensPaginas.style.display = "block"
+            } else {
+                imagensPaginas.style.display = "none"
+            }
+        });
+        checkboxLista.addEventListener('change', function () {
+            if (checkboxLista.checked) {
+                document.querySelector('#seletorLista').style.display = "flex"
+            } else {
+                document.querySelector('#seletorLista').style.display = "none"
+            }
+        });
         fileInput2.addEventListener('change', event => {
             const files = event.target.files;
             const file = files[0];
@@ -277,25 +366,53 @@
 
             electron.ipcRenderer.send('abrearquivo', file.name);
         });
+        btFechaFim.addEventListener('click', () => {
+            telaFim.style.display = "none";
+        });
+        btProcessar.addEventListener('click', () => {
 
-        mergeBtn.addEventListener('click', () => {
-            mergeBtn.disabled = true;
-            var loadingTask = PDFJS.getDocument("./PDF/" + url);
-            loadingTask.promise.then(function (pdf) {
-                totalPages = pdf.numPages
-                titulo.innerText = totalPages + " paginas";
-                renderPage(pdf);
-            }, function (reason) {
-                console.error(reason);
-            });
+            if (url.length > 3) {
+                podeEscanear = true;
+                btProcessar.style.display = "none";
+                btProcessarCancela.style.display = "block";
+                var loadingTask = PDFJS.getDocument("./PDF/" + url);
+                loadingTask.promise.then(function (pdf) {
+                    totalPages = pdf.numPages
+                    titulo.innerText = totalPages + " paginas";
+                    renderPage(pdf);
+                }, function (reason) {
+                    console.error(reason);
+                });
+            }
+        });
+        btProcessarCancela.addEventListener('click', () => {
+            podeEscanear = false;
+            btProcessar.style.display = "block";
+            btProcessarCancela.style.display = "none";
+            QrScanner.stop();
+        })
+        btAbreConfig.addEventListener('click', () => {
+            abreConfiguracoes();
+        });
+        btFechaConfig.addEventListener('click', () => {
+            fechaConfiguracoes();
 
         });
-
+        function abreConfiguracoes() {
+            menuconfiguracoesUI.style.display = "none";
+            configuracoesUI.style.display = "flex";
+        }
+        function fechaConfiguracoes() {
+            menuconfiguracoesUI.style.display = "flex";
+            configuracoesUI.style.display = "none";
+        }
         function renderPage(pdf) {
+            if (!podeEscanear) {
+                return;
+            }
             pdf.getPage(pageNumber).then(function (page) {
-
-                var scale = 5;
-                var viewport = page.getViewport({ scale: scale });
+                console.log("escala:", inputEscala.value)
+                var viewport = page.getViewport({ scale: inputEscala.value });
 
                 var canvas = document.createElement('canvas');
 
@@ -325,7 +442,7 @@
                         titulo.innerText = pageNumber + " de " + totalPages + " páginas processadas";
                     } else {
                         console.log("FIM");
-                        electron.ipcRenderer.send('fim', "nada");
+                        fim();
                     }
 
                 });
@@ -339,8 +456,8 @@
                 console.log("sem resultado: ", _pagina + "/" + totalPages);
             } else {
                 i_qrcodes++;
-                console.log(result.data, "pagina:", _pagina);
-                electron.ipcRenderer.send('processaLink', [result.data, id_count, _pagina]);
+                console.log(result.data, "pagina:", _pagina,checkboxSalvaImagens.checked);
+                electron.ipcRenderer.send('processaLink', [result.data, id_count, _pagina,checkboxSalvaImagens.checked]);
 
                 var tr = document.createElement('tr');
                 var td1 = document.createElement('td');
@@ -409,6 +526,13 @@
         function decodeImageFromBase64(data, callback) {
             qrcode.callback = callback;
             qrcode.decode(data)
+        }
+        function fim() {
+            telaFim.style.display = "flex";
+            electron.ipcRenderer.send('fim', "nada");
+            podeEscanear = true;
+            btProcessar.style.display = "block";
+            btProcessarCancela.style.display = "none";
         }
     </script>
 
