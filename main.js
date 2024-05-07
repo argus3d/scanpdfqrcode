@@ -11,12 +11,15 @@ const path = require('path');
 var output;
 var nomePDF;
 var lines = [];
+var caminho="../../";
+//var caminho="";
 
 let mainWindow;
 function createWindow() {
   mainWindow = new BrowserWindow({
     width: 1500,
     height: 900,
+    icon: 'qr.ico',
     webPreferences: {
       contextIsolation: true,
       preload: path.join(__dirname, 'preload.js'),
@@ -83,7 +86,7 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
             event.sender.send('QRCodeProcessado', ["url ok!", _id,voltaLine]);
             output.write(url + ";" + _id + ";" + "url ok!\n");
             if (_salva) {
-              renderPageToImage(url, 'SCREENSHOTS/' + nomePDF + '_pagina_' + _pagina + ".jpg")
+              renderPageToImage(url, caminho+'SCREENSHOTS/' + nomePDF + '_pagina_' + _pagina + ".jpg")
                 .catch(error => console.error('Error rendering page to image:', error));
             }
           } else {
@@ -108,7 +111,7 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
 })
 ipcMain.on('abrearquivoTxt', async (event, nome) => {
 
-  readFileToArray("TXT/" + nome)
+  readFileToArray(caminho+"TXT/" + nome)
     .then(lines => {
       //console.log('Array of lines:', lines);
     })
@@ -118,7 +121,7 @@ ipcMain.on('abrearquivoTxt', async (event, nome) => {
 });
 ipcMain.on('abrearquivo', async (event, nome) => {
   nomePDF = nome.substring(0, nome.lastIndexOf("."));
-  output = fs.createWriteStream("PDF/" + nomePDF + ".txt");
+  output = fs.createWriteStream(caminho+"PDF/" + nomePDF + ".txt");
   output.once('open', function (fd) {
     output.write("URL;ID;Resultado:\n");
   });

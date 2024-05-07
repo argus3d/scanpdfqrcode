@@ -136,6 +136,17 @@
 
         }
 
+        input[type="range" i]::-webkit-slider-thumb {
+            height: var(--s);
+            aspect-ratio: 1;
+            border-radius: 50%;
+            box-shadow: 0 0 0 var(--_b, var(--l)) inset var(--_c);
+            border-image: linear-gradient(90deg, var(--_c) 50%, #ababab 0) 0 1/calc(50% - var(--l)/2) 100vw/0 calc(100vw + var(--g));
+            -webkit-appearance: none;
+            appearance: none;
+            transition: .3s;
+        }
+
         input[type="file"] {
             position: relative;
             width: 70%;
@@ -223,9 +234,15 @@
         </div>
         <div
             style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;">
-            <p>Precisão. Aqui quanto maior o valor mais pesado e mais processamento, valor ideal 5 mas para qrcodes
-                menores 10, mais que isso depende do PC.</p>
-            <input id="inputEscala" type="number" value="5" min="5" max="30">
+            <p>Precisão. Para QRcodes menores ajustar para a direita</p>
+            <div
+                style="display: flex;flex-direction: row;width: 100%;height: 100px; align-items: center;justify-content: center;">
+                <img src="qr-code.png" style="height: 60%;margin-right: 10px;">
+                <input id="inputEscala" type="range" value="5" min="5" max="15" step="1">
+                <img src="qr-code.png" style="height: 25%;margin-left: 10px;">
+            </div>
+
+
         </div>
         <div
             style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;">
@@ -247,7 +264,7 @@
             <input type="checkbox" id="checkboxSalvaImagens">
         </div>
     </div>
-    <div style="width: 100%;display: flex;flex-wrap: wrap;margin-top: 10px;">
+    <div style="width: 100%;display: flex;flex-wrap: wrap;margin-top: 10px; align-items: center;justify-content: space-between;">
         <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
             <div
                 style="width: 90%; display: flex;flex-direction: row;gap: 20px;align-items: center;justify-content: center;">
@@ -255,9 +272,9 @@
                 <input type="file" id="fileInput1" accept=".pdf">
             </div>
         </div>
-        <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-            <button class="styling-b" id="btProcessar">Processar</button>
-            <button class="styling-b" id="btProcessarCancela" style="display: none;">Cancelar</button>
+        <div style="width: 50%;display: flex;align-items: end;justify-content: center;flex-direction: column;">
+            <button class="styling-b" id="btProcessar" style="margin-right: 20px;">Processar</button>
+            <button class="styling-b" id="btProcessarCancela" style="display: none;margin-right: 20px;">Cancelar</button>
         </div>
     </div>
 
@@ -329,7 +346,8 @@
         var totalPages;
         var data = [];
         var podeEscanear = true;
-
+        var caminho="../../";
+       // var caminho = "./";
 
         var PDFJS = window['pdfjs-dist/build/pdf'];
 
@@ -387,7 +405,7 @@
                 podeEscanear = true;
                 btProcessar.style.display = "none";
                 btProcessarCancela.style.display = "block";
-                var loadingTask = PDFJS.getDocument("./PDF/" + url);
+                var loadingTask = PDFJS.getDocument(caminho+"PDF/" + url);
                 loadingTask.promise.then(function (pdf) {
                     totalPages = pdf.numPages
                     titulo.innerText = totalPages + " paginas";
@@ -488,7 +506,7 @@
                 var td3 = document.createElement('td');
                 td3.innerHTML = "processando...";
                 td3.id = "stat" + id_count;
-                
+
 
                 var td4 = document.createElement('td');
                 td4.innerHTML = "-";

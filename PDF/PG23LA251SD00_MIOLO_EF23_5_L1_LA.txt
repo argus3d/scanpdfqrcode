@@ -1,0 +1,4 @@
+URL;ID;Resultado:
+Objeto Digital;0;link invalido
+http://apis.sae.digital/redirect/r/EF225L1POR1ED;1;url ok!
+https://url.sae.digital/EF21_5_POR_L1_U1_01_OD1;2;url ok!
