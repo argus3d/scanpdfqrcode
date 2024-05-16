@@ -1,4 +1,0 @@
-URL;ID;Resultado:
-https://url.sae.digital/BNCCSAEDIGITAL;0;url ok!
-Objeto Digital;1;link invalido
-http://apis.sae.digital/redirect/r/EF221L1POR1ED;2;url ok!

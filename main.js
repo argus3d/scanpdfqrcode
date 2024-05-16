@@ -11,8 +11,8 @@ const path = require('path');
 var output;
 var nomePDF;
 var lines = [];
-var caminho="../../";
-//var caminho="";
+//var caminho="../../";
+var caminho="";
 
 let mainWindow;
 function createWindow() {
@@ -84,28 +84,28 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
           const html = response.data;
           if (html.length > 10) {
             event.sender.send('QRCodeProcessado', ["url ok!", _id,voltaLine]);
-            output.write(url + ";" + _id + ";" + "url ok!\n");
+            output.write(url + ";" + _pagina + ";" + "url ok!\n");
             if (_salva) {
               renderPageToImage(url, caminho+'SCREENSHOTS/' + nomePDF + '_pagina_' + _pagina + ".jpg")
                 .catch(error => console.error('Error rendering page to image:', error));
             }
           } else {
             event.sender.send('QRCodeProcessado', ["link vazio...", _id, voltaLine]);
-            output.write(url + ";" + _id + ";" + "link vazio...\n");
+            output.write(url + ";" + _pagina + ";" + "link vazio...\n");
           }
         } else {
           console.log('Failed to load the web page. Status code: ' + response.status);
           event.sender.send('QRCodeProcessado', ["url com erro...", _id, voltaLine]);
-          output.write(url + ";" + _id + ";" + "url com erro..\n");
+          output.write(url + ";" + _pagina + ";" + "url com erro..\n");
         }
       })
       .catch(error => {
         event.sender.send('QRCodeProcessado', [error, _id, voltaLine]);
-        output.write(url + ";" + _id + ";" + "talvez nao seja QRCODE...\n");
+        output.write(url + ";" + _pagina + ";" + "talvez nao seja QRCODE...\n");
       })
   } else {
     event.sender.send('QRCodeProcessado', ["Link invalido", _id, voltaLine]);
-    output.write(url + ";" + _id + ";" + "link invalido\n");
+    output.write(url + ";" + _pagina + ";" + "link invalido\n");
   }
 
 })

@@ -238,7 +238,7 @@
             <div
                 style="display: flex;flex-direction: row;width: 100%;height: 100px; align-items: center;justify-content: center;">
                 <img src="qr-code.png" style="height: 60%;margin-right: 10px;">
-                <input id="inputEscala" type="range" value="5" min="5" max="15" step="1">
+                <input id="inputEscala" type="range" value="2" min="2" max="10" step="1">
                 <img src="qr-code.png" style="height: 25%;margin-left: 10px;">
             </div>
 
@@ -264,7 +264,8 @@
             <input type="checkbox" id="checkboxSalvaImagens">
         </div>
     </div>
-    <div style="width: 100%;display: flex;flex-wrap: wrap;margin-top: 10px; align-items: center;justify-content: space-between;">
+    <div
+        style="width: 100%;display: flex;flex-wrap: wrap;margin-top: 10px; align-items: center;justify-content: space-between;">
         <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
             <div
                 style="width: 90%; display: flex;flex-direction: row;gap: 20px;align-items: center;justify-content: center;">
@@ -274,7 +275,8 @@
         </div>
         <div style="width: 50%;display: flex;align-items: end;justify-content: center;flex-direction: column;">
             <button class="styling-b" id="btProcessar" style="margin-right: 20px;">Processar</button>
-            <button class="styling-b" id="btProcessarCancela" style="display: none;margin-right: 20px;">Cancelar</button>
+            <button class="styling-b" id="btProcessarCancela"
+                style="display: none;margin-right: 20px;">Cancelar</button>
         </div>
     </div>
 
@@ -346,8 +348,8 @@
         var totalPages;
         var data = [];
         var podeEscanear = true;
-        var caminho="../../";
-       // var caminho = "./";
+        //var caminho="../../";
+        var caminho = "./";
 
         var PDFJS = window['pdfjs-dist/build/pdf'];
 
@@ -398,14 +400,17 @@
             telaFim.style.display = "none";
         });
         btProcessar.addEventListener('click', () => {
-
+            pageNumber = 1;
+            i_qrcodes = 0;
+            id_count = 0;
+            data = [];
             if (url.length > 3) {
                 imagensPaginas.innerHTML = "";
                 tabela.innerHTML = "";
                 podeEscanear = true;
                 btProcessar.style.display = "none";
                 btProcessarCancela.style.display = "block";
-                var loadingTask = PDFJS.getDocument(caminho+"PDF/" + url);
+                var loadingTask = PDFJS.getDocument(caminho + "PDF/" + url);
                 loadingTask.promise.then(function (pdf) {
                     totalPages = pdf.numPages
                     titulo.innerText = totalPages + " paginas";
