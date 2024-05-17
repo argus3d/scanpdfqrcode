@@ -215,18 +215,18 @@
     </div>
 
     <div class="menuconfiguracoesUI"
-        style="width: 100%;height:60px;flex-wrap: wrap;background-color: #0964b0;display: flex;justify-content: space-between;align-items: center;">
+        style="padding: 10px;width: 100%;height:80px;flex-wrap: wrap;background-color: #001236;display: flex;justify-content: space-between;align-items: center;">
         <h2 style="margin: 10px; color: #ffffff;display: none;">PDF Scan</h2>
-        <img src="static/logo.png" style="height: 100%;">
+        <img src="static/marca_site.png" style="height: 100%;margin-left: 20px;">
         <button id="btAbreConfig"
-            style="border: 0;background-color: #0964b0;border-radius: 5px;width: 40px;height: 40px;margin-right: 20px; background-image: url('settings.png'); background-size: 100%;">
+            style="border: 0;background-color: #001236;border-radius: 5px;width: 40px;height: 40px;margin-right: 20px; background-image: url('settings.png'); background-size: 100%;">
         </button>
 
     </div>
     <div class="configuracoesUI"
         style="width: 100%;display: none;flex-wrap: wrap;background-color: #a7e7fc;justify-content: center;align-items: center;">
         <div
-            style="width: 100%; background-color: #0964b0;color: #e5e7eb;display: flex;justify-content: space-between;align-items: center;height: 60px;">
+            style="width: 100%; background-color: #0964b0;color: #e5e7eb;display: flex;justify-content: space-between;align-items: start;height: 60px;">
             <h2 style="margin: 10px;">Configurações</h2>
             <button id="btFechaConfig"
                 style="background-color: #75dafb;border-radius: 5px;width: 200px;height: 40px;margin-right: 20px;">Fechar
@@ -245,12 +245,12 @@
 
         </div>
         <div
-            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;">
+            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;gap: 20px;">
             <p>Mostra Imagens</p>
             <input type="checkbox" id="checkboxImagens" checked>
         </div>
         <div
-            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;">
+            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;;gap: 20px;">
             <p>Compara com lista de codigos em arquivo <b>TXT</b></p>
             <input type="checkbox" id="checkboxLista">
             <div id="seletorLista"
@@ -259,7 +259,7 @@
             </div>
         </div>
         <div
-            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;">
+            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;;gap: 20px;">
             <p>Salva screenshots dos links na pasta <b>/SCREENSHOTS</b></p>
             <input type="checkbox" id="checkboxSalvaImagens">
         </div>
@@ -348,8 +348,10 @@
         var totalPages;
         var data = [];
         var podeEscanear = true;
-        //var caminho="../../";
-        var caminho = "./";
+        //quando for fazer a build "npm run package":
+        var caminho="../../";
+        //pra dev:
+        //var caminho = "./";
 
         var PDFJS = window['pdfjs-dist/build/pdf'];
 
