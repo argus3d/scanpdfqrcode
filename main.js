@@ -21,7 +21,7 @@ var caminho = "";
 
 // Your web app's Firebase configuration
 // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-
+/*
 const admin = require('firebase-admin');
 const serviceAccount = require("./pdfscan.json");
 
@@ -50,7 +50,7 @@ function saveData(name, year, description) {
     }
   });
 }
-
+*/
 
 let mainWindow;
 function createWindow() {
@@ -156,7 +156,7 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
           if (html.length > 10) {
             event.sender.send('QRCodeProcessado', ["url ok!", _id, voltaLine]);
             output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + "url ok!\n");
-            saveData(url, ano, componente);
+            //saveData(url, ano, componente);
 
             if (_salva) {
               renderPageToImage(url, caminho + 'SCREENSHOTS/' + nomePDF + '_pagina_' + _pagina + ".jpg")
