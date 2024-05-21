@@ -107,6 +107,7 @@ async function renderPageToImage(url, filename) {
 }
 
 ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
+ 
   var temlinha = lines.indexOf(url.trim())
   console.log("temlinha", url, temlinha, _salva);
   //console.log(url, 'SCREENSHOTS/' +nomePDF+ _pagina + ".jpg");

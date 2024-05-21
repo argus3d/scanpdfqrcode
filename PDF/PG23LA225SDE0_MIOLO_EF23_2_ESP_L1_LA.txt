@@ -1,0 +1,7 @@
+URL;ID;Resultado:
+EF23;2;L1;ESP;https://url.sae.digital/EF21_2_ESP_L1_U1_01_OD1;15;url ok!
+EF23;2;L1;ESP;https://url.sae.digital/EF21_2_ESP_L1_U1_02_OD1;28;url ok!
+EF23;2;L1;ESP;https://url.sae.digital/EF21_2_ESP_L1_U2_01_OD1;43;url ok!
+EF23;2;L1;ESP;https://url.sae.digital/EF21_2_ESP_L1_U2_02_OD1;54;url ok!
+EF23;2;L1;ESP;https://url.sae.digital/EF21_2_ESP_L1_U3_01_OD1;64;url ok!
+EF23;2;L1;ESP;https://url.sae.digital/EF21_2_ESP_L1_U3_02_OD1;77;url ok!

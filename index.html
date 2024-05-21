@@ -224,16 +224,16 @@
 
     </div>
     <div class="configuracoesUI"
-        style="width: 100%;display: none;flex-wrap: wrap;background-color: #a7e7fc;justify-content: center;align-items: center;">
+        style="width: 100%;display: none;flex-wrap: wrap;background-color: #a7e7fc;justify-content: center;align-items: start;">
         <div
-            style="width: 100%; background-color: #0964b0;color: #e5e7eb;display: flex;justify-content: space-between;align-items: start;height: 60px;">
+            style="width: 100%; background-color: #001236;color: #e5e7eb;display: flex;justify-content: space-between;align-items: center;height: 80px;">
             <h2 style="margin: 10px;">Configurações</h2>
             <button id="btFechaConfig"
                 style="background-color: #75dafb;border-radius: 5px;width: 200px;height: 40px;margin-right: 20px;">Fechar
                 Configurações</button>
         </div>
         <div
-            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;">
+            style="width: 20%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
             <p>Precisão. Para QRcodes menores ajustar para a direita</p>
             <div
                 style="display: flex;flex-direction: row;width: 100%;height: 100px; align-items: center;justify-content: center;">
@@ -251,7 +251,7 @@
         </div>
         <div
             style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;;gap: 20px;">
-            <p>Compara com lista de codigos em arquivo <b>TXT</b></p>
+            <p>Compara com lista de codigos em arquivo <b>.txt</b><br>Arquivo deve estar na pasta<b>/TXT</b> </p>
             <input type="checkbox" id="checkboxLista">
             <div id="seletorLista"
                 style="width: 100%; display: none;flex-direction: column;gap: 20px;align-items: center;justify-content: center;">
@@ -260,7 +260,7 @@
         </div>
         <div
             style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;;gap: 20px;">
-            <p>Salva screenshots dos links na pasta <b>/SCREENSHOTS</b></p>
+            <p>*EXPERIMENTAL<br>Salva screenshots dos links na pasta <b>/SCREENSHOTS</b></p>
             <input type="checkbox" id="checkboxSalvaImagens">
         </div>
     </div>
@@ -305,9 +305,10 @@
             <thead>
                 <tr>
                     <th><abbr title="Position">Página</abbr></th>
+                    <th>Check</th>
                     <th>Link</th>
-                    <th>Teste automatizado</th>
-                    <th>QRcode relaci</th>
+                    <th>Teste URL</th>
+                    <th>QRCODE listado</th>
                 </tr>
             </thead>
             <tbody class="tabela">
@@ -349,9 +350,9 @@
         var data = [];
         var podeEscanear = true;
         //quando for fazer a build "npm run package":
-        var caminho="../../";
+        //var caminho = "../../";
         //pra dev:
-        //var caminho = "./";
+        var caminho = "./";
 
         var PDFJS = window['pdfjs-dist/build/pdf'];
 
@@ -502,6 +503,8 @@
                 var tr = document.createElement('tr');
                 var td1 = document.createElement('td');
                 td1.innerHTML = _pagina;
+                
+
                 var td2 = document.createElement('td');
                 var link = document.createElement('a');
                 link.href = result.data;
@@ -520,10 +523,18 @@
                 td4.id = "find" + id_count;
                 id_count++;
 
+                var td5 = document.createElement('td');
+                var checkbox = document.createElement('input');
+                checkbox.type = 'checkbox';
+                td5.appendChild(checkbox);
+
+
                 tr.appendChild(td1);
+                tr.appendChild(td5);
                 tr.appendChild(td2);
                 tr.appendChild(td3);
                 tr.appendChild(td4);
+                
                 tabela.appendChild(tr);
 
                 nQr.innerText = i_qrcodes + " qrcodes";
@@ -540,6 +551,17 @@
                     canvas.id = "pag" + pageNumber;
                     imagensPaginas.appendChild(canvas);
                     _canvas = null;
+                    canvas.onclick = function () {
+                        var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
+                        var windowObjectReference = window.open('', 'CanvasImageWindow', windowFeatures);
+                        var newCanvas = windowObjectReference.document.createElement('canvas');
+                        newCanvas.width = canvas.width;
+                        newCanvas.height = canvas.height;
+                        var newContext = newCanvas.getContext('2d');
+                        newContext.drawImage(canvas, 0, 0);
+                        windowObjectReference.document.body.appendChild(newCanvas);
+                        windowObjectReference.document.title = "Página: " + canvas.id;
+                    };
                 }
 
 
