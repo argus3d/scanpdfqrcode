@@ -1,0 +1,14 @@
+URL;ID;Resultado:
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;8;erro
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;10;erro
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ9;21;vídeo youtube
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ16;23;vídeo youtube
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ10;26;vídeo youtube
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ10;27;vídeo youtube
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ12;28;vídeo youtube
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ26;34;vídeo youtube
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ14;34;vídeo youtube
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ11;35;vídeo youtube
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ18;37;vídeo youtube
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ29;38;vídeo youtube
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ44;47;vídeo youtube

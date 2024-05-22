@@ -209,15 +209,12 @@
 <body>
     <div id="telaTutorial"
         style="width: 100%;height: 100%;background-color: #396087;display: flex;justify-content: center;align-items: center;position: fixed;z-index: 10;flex-direction: column;">
-        <img class="tuto" src="tuto1.jpg" style="height: 100%;">
+        <img class="tuto" src="tutorial.png" style="height: 80%">
+        <img class="tuto" src="tuto1.jpg" style="height: 100%;;display: none;">
         <img class="tuto" src="tuto2.jpg" style="height: 100%;display: none;">
         <img class="tuto" src="tuto3.jpg" style="height: 100%;display: none;">
         <img class="tuto" src="tuto4.jpg" style="height: 100%;display: none;">
         <img class="tuto" src="tuto5.jpg" style="height: 100%;display: none;">
-    </div>
-    <div id="telaHelp"
-        style="width: 100%;height: 100%;background-color: rgba(255, 255, 255, 0.643);display: none;justify-content: center;align-items: center;position: fixed;z-index: 10;flex-direction: column;">
-        <img id="btFechaTutorial" src="tutorial.png" style="height: 100%;">
     </div>
     <div id="telaFim"
         style="width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);display: none;justify-content: center;align-items: center;position: fixed;z-index: 10;flex-direction: column;">
@@ -253,6 +250,11 @@
             </div>
         </div>
         <div
+            style="width: 10%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
+            <p>Multiplos QRCODES por página (diminui o tempo de leitura)</p>
+            <input type="checkbox" id="checkboxMulti" checked>
+        </div>
+        <div
             style="width: 20%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
             <p>Precisão. Para QRcodes menores ajustar para a direita</p>
             <div
@@ -265,7 +267,7 @@
 
         </div>
         <div
-            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;gap: 20px;">
+            style="width: 10%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;gap: 20px;">
             <p>Mostra Imagens</p>
             <input type="checkbox" id="checkboxImagens" checked>
         </div>
@@ -345,22 +347,14 @@
         const telaTutorial = document.querySelector('#telaTutorial');
         let currentIndex = 0;
 
-        function handleTutorialClick() {
-            if (currentIndex < tutorialElements.length - 1) {
-                tutorialElements[currentIndex].style.display = "none";
-                currentIndex++;
-                tutorialElements[currentIndex].style.display = "flex";
-            } else {
-                telaTutorial.style.display = 'none'; // Assuming the parent div has a class 'parentDiv'
-            }
-        }
-        telaTutorial.addEventListener('click', handleTutorialClick);
+
+
 
         const telaHelp = document.querySelector('#telaHelp');
         const telaFim = document.querySelector('#telaFim');
         const fillBar = document.querySelector('#fillBar');
+        const btHelp = document.querySelector('#btHelp');
         const btFechaFim = document.querySelector('#btFechaFim');
-        const btFechaTutorial = document.querySelector('#btFechaTutorial');
         //
         //configuracoes
         const inputEscala = document.querySelector('#inputEscala');
@@ -368,11 +362,11 @@
         const btFechaConfig = document.querySelector('#btFechaConfig');
         const configuracoesUI = document.querySelector('.configuracoesUI');
         const btAbreConfig = document.querySelector('#btAbreConfig');
-        const btHelp = document.querySelector('#btHelp');
         const menuconfiguracoesUI = document.querySelector('.menuconfiguracoesUI');
         const checkboxImagens = document.getElementById('checkboxImagens');
         const checkboxLista = document.getElementById('checkboxLista');
         const checkboxSalvaImagens = document.getElementById('checkboxSalvaImagens');
+        const checkboxMulti = document.getElementById('checkboxMulti');
         //
         const btProcessar = document.querySelector('#btProcessar');
         const btProcessarCancela = document.querySelector('#btProcessarCancela');
@@ -438,11 +432,20 @@
 
             electron.ipcRenderer.send('abrearquivo', file.name);
         });
-        btHelp.addEventListener('click', () => {
-            telaHelp.style.display = "flex";
+        telaTutorial.addEventListener('click', () => {
+            if (currentIndex < tutorialElements.length - 1) {
+                tutorialElements[currentIndex].style.display = "none";
+                currentIndex++;
+                tutorialElements[currentIndex].style.display = "flex";
+            } else {
+                tutorialElements[currentIndex].style.display = "none";
+                telaTutorial.style.display = 'none'; // Assuming the parent div has a class 'parentDiv'
+            }
         });
-        btFechaTutorial.addEventListener('click', () => {
-            telaHelp.style.display = "none";
+        btHelp.addEventListener('click', () => {
+            currentIndex = 0;
+            tutorialElements[0].style.display = "flex";
+            telaTutorial.style.display = "flex";
         });
         btFechaFim.addEventListener('click', () => {
             telaFim.style.display = "none";
@@ -503,7 +506,6 @@
                 canvas.height = viewport.height;
                 canvas.width = viewport.width;
 
-
                 var renderContext = {
                     canvasContext: context,
                     viewport: viewport
@@ -513,11 +515,25 @@
                 renderTask.promise.then(function () {
                     const imageData = canvas.toDataURL('image/png');
                     data.push(imageData);
+                    let _scanRegion;
+                    // Example usage:
+                    const imageWidth = canvas.width; // Replace with the actual width of your image
+                    const imageHeight = canvas.height; // Replace with the actual height of your image
+                    const numHorizontalSections = 2;
+                    const numVerticalSections = 5;
 
-                    QrScanner.scanImage(imageData, { returnDetailedScanResult: true })
-                        .then(result => setResult(result, pageNumber, canvas))
-                        .catch(e => setResult({ data: e || 'No QR code found.' }, pageNumber, canvas));
+                    const sections = divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections);
 
+                    if (checkboxMulti.checked == "true") {
+                        console.log("qrcodes multi:",checkboxMulti.checked);
+                        processSections(sections, imageData, pageNumber, canvas);
+                    } else {
+                        console.log("qrcodes multi:",checkboxMulti.checked);
+                        QrScanner.scanImage(imageData, { returnDetailedScanResult: true, scanRegion: _scanRegion })
+                            .then(result => setResult(result, pageNumber, canvas))
+                            .catch(e => setResult({ data: e || 'No QR code found.' }, pageNumber, canvas));
+
+                    }
                     pageNumber++;
 
                     if (pageNumber <= totalPages) {
@@ -533,6 +549,32 @@
 
                 });
             });
+        }
+        function processSections(sections, imageData, pageNumber, canvas) {
+            let currentSection = 0;
+
+            function processNextSection() {
+                if (currentSection < sections.length) {
+                    console.log("procura pagina: ", pageNumber, "secao:", sections[currentSection][0], sections[currentSection][1], sections[currentSection][2], sections[currentSection][3]);
+
+                    const _scanRegion = {
+                        x: sections[currentSection][0], // x-coordinate of the top-left corner
+                        y: sections[currentSection][1], // y-coordinate of the top-left corner
+                        width: sections[currentSection][2], // width of the scan region
+                        height: sections[currentSection][3] // height of the scan region
+                    };
+
+                    QrScanner.scanImage(imageData, { returnDetailedScanResult: true, scanRegion: _scanRegion })
+                        .then(result => setResult(result, pageNumber, canvas))
+                        .catch(e => setResult({ data: e || 'No QR code found.' }, pageNumber, canvas))
+                        .finally(() => {
+                            currentSection++;
+                            setTimeout(processNextSection, 500); // Delay of 500 milliseconds
+                        });
+                }
+            }
+
+            processNextSection();
         }
         function setResult(result, _pagina, _canvas) {
 
@@ -621,27 +663,26 @@
                     };
                 }
 
-
-
-                fetch(result.data)
-                    .then(function (response) {
-                        if (response.ok) {
-                            return response.text();
-                        } else {
-                            return "erro...";
-                            // throw new Error('Failed to load the link');
-                        }
-                    })
-                    .then(function (sourceCode) {
-                        console.log("sourceCode");
-                    })
-                    .catch(function (error) {
-                        console.error(error);
-                    });
-
-
             }
         }
+        function divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections) {
+            const sectionWidth = imageWidth / numHorizontalSections;
+            const sectionHeight = imageHeight / numVerticalSections;
+            const sections = [];
+
+            for (let row = 0; row < numVerticalSections; row++) {
+                for (let col = 0; col < numHorizontalSections; col++) {
+                    const x = col * sectionWidth;
+                    const y = row * sectionHeight;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                }
+            }
+
+            return sections;
+        }
+
+
+
         function decodeImageFromBase64(data, callback) {
             qrcode.callback = callback;
             qrcode.decode(data)

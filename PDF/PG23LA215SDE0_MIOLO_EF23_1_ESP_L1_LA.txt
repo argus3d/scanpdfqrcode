@@ -1,0 +1,5 @@
+URL;ID;Resultado:
+EF23;1;L1;ESP;;4;link invalido
+EF23;1;L1;ESP;Objeto Digital;8;link invalido
+EF23;1;L1;ESP;;4;link invalido
+EF23;1;L1;ESP;Objeto Digital;8;link invalido
