@@ -96,9 +96,9 @@ async function renderPageToImage(url, filename) {
   await page.goto(url);
 
   // Adjust viewport
-  await page.setViewport({ width: 800, height: 600 });
+  await page.setViewport({ width: 1280, height: 720 });
 
-  await page.screenshot({ path: filename, fullPage: true });
+  await page.screenshot({ path: filename, fullPage: false });
 
   await browser.close();
   console.log('Page rendered to image successfully!');
@@ -155,14 +155,33 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
         if (response.status === 200) {
           const html = response.data;
           if (html.length > 10) {
-            event.sender.send('QRCodeProcessado', ["url ok!", _id, voltaLine]);
-            output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + "url ok!\n");
+            let respostaTexto="url ok!";
             //saveData(url, ano, componente);
-
+            if (response.data.includes("vimeo")) {
+              respostaTexto="vídeo vimeo";
+            }
+            if (response.data.includes("youtube")) {
+              respostaTexto="vídeo youtube";
+            }
+            if (url.includes("OD1")) {
+              respostaTexto="objeto digital";
+            }
+            if (url.includes("OD2")) {
+              respostaTexto="objeto digital";
+            }
+            if (url.includes("OD3")) {
+              respostaTexto="objeto digital";
+            }
+            if (url.includes("pdf")) {
+              respostaTexto="pdf";
+            }
             if (_salva) {
               renderPageToImage(url, caminho + 'SCREENSHOTS/' + nomePDF + '_pagina_' + _pagina + ".jpg")
                 .catch(error => console.error('Error rendering page to image:', error));
             }
+
+            event.sender.send('QRCodeProcessado', [respostaTexto, _id, voltaLine]);
+            output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + respostaTexto+"\n");
           } else {
             event.sender.send('QRCodeProcessado', ["link vazio...", _id, voltaLine]);
             output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" +url + ";" + _pagina + ";" + "link vazio...\n");
@@ -175,7 +194,7 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
       })
       .catch(error => {
         event.sender.send('QRCodeProcessado', [error, _id, voltaLine]);
-        output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" +url + ";" + _pagina + ";" + "talvez nao seja QRCODE...\n");
+        output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" +url + ";" + _pagina + ";" + "erro\n");
       })
   } else {
     event.sender.send('QRCodeProcessado', ["Link invalido", _id, voltaLine]);

@@ -1,0 +1,6 @@
+URL;ID;Resultado:
+EF23;2;L1;;https://url.sae.digital/EF21_1_CIE_L1_U1_02_OD1;8;objeto digital
+EF23;2;L1;;https://url.sae.digital/EF21_2_POR_L1_U1_01_OD2;16;objeto digital
+EF23;2;L1;;https://url.sae.digital/EF21_2_POR_L1_U1_01_OD1;16;objeto digital
+EF23;2;L1;;http://apis.sae.digital/redirect/r/EF222L1POR1ED;11;vídeo youtube
+EF23;2;L1;;https://url.sae.digital/EF1232APORL111V001;22;vídeo youtube

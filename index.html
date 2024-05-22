@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Escaner de QRcodes hub curitiba</title>
+    <title>Escaner de QRcodes Hub Curitiba V0.1 alpha</title>
     <script src="pdf.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style type="text/css">
@@ -28,8 +28,9 @@
         }
 
         #imagensPaginas {
+            display: flex;
             width: 100%;
-            height: 200px;
+            height: 250px;
             background-color: #cfcfcf;
             overflow: auto;
             white-space: nowrap;
@@ -84,7 +85,7 @@
         }
 
         .styled-table tbody tr:last-of-type {
-            border-bottom: 2px solid #009879;
+            border-bottom: 2px solid #0692c0;
         }
 
         .styled-table tbody tr.active-row {
@@ -206,6 +207,18 @@
 </head>
 
 <body>
+    <div id="telaTutorial"
+        style="width: 100%;height: 100%;background-color: #396087;display: flex;justify-content: center;align-items: center;position: fixed;z-index: 10;flex-direction: column;">
+        <img class="tuto" src="tuto1.jpg" style="height: 100%;">
+        <img class="tuto" src="tuto2.jpg" style="height: 100%;display: none;">
+        <img class="tuto" src="tuto3.jpg" style="height: 100%;display: none;">
+        <img class="tuto" src="tuto4.jpg" style="height: 100%;display: none;">
+        <img class="tuto" src="tuto5.jpg" style="height: 100%;display: none;">
+    </div>
+    <div id="telaHelp"
+        style="width: 100%;height: 100%;background-color: rgba(255, 255, 255, 0.643);display: none;justify-content: center;align-items: center;position: fixed;z-index: 10;flex-direction: column;">
+        <img id="btFechaTutorial" src="tutorial.png" style="height: 100%;">
+    </div>
     <div id="telaFim"
         style="width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);display: none;justify-content: center;align-items: center;position: fixed;z-index: 10;flex-direction: column;">
 
@@ -218,9 +231,15 @@
         style="padding: 10px;width: 100%;height:80px;flex-wrap: wrap;background-color: #001236;display: flex;justify-content: space-between;align-items: center;">
         <h2 style="margin: 10px; color: #ffffff;display: none;">PDF Scan</h2>
         <img src="static/marca_site.png" style="height: 100%;margin-left: 20px;">
-        <button id="btAbreConfig"
-            style="border: 0;background-color: #001236;border-radius: 5px;width: 40px;height: 40px;margin-right: 20px; background-image: url('settings.png'); background-size: 100%;">
-        </button>
+        <div style="display: flex;flex-direction: row;">
+            <div id="btAbreConfig" style="width: 40px;height: 40px;margin-right: 20px;">
+                <img src="icons8-tools-94.png" style="height: 100%;">
+            </div>
+            <div id="btHelp" style="width: 40px;height: 40px;margin-right: 20px;">
+                <img src="icons8-help-94.png" style="height: 100%;">
+            </div>
+        </div>
+
 
     </div>
     <div class="configuracoesUI"
@@ -228,9 +247,10 @@
         <div
             style="width: 100%; background-color: #001236;color: #e5e7eb;display: flex;justify-content: space-between;align-items: center;height: 80px;">
             <h2 style="margin: 10px;">Configurações</h2>
-            <button id="btFechaConfig"
-                style="background-color: #75dafb;border-radius: 5px;width: 200px;height: 40px;margin-right: 20px;">Fechar
-                Configurações</button>
+
+            <div id="btFechaConfig" style="width: 40px;height: 40px;margin-right: 20px;">
+                <img src="icons8-done-94.png" style="height: 100%;">
+            </div>
         </div>
         <div
             style="width: 20%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
@@ -308,7 +328,7 @@
                     <th>Check</th>
                     <th>Link</th>
                     <th>Teste URL</th>
-                    <th>QRCODE listado</th>
+                    <th>Planilha TXT</th>
                 </tr>
             </thead>
             <tbody class="tabela">
@@ -320,9 +340,26 @@
 
         import QrScanner from "./qr-scanner.min.js";
         //modal fim
+        const tutorialElements = document.querySelectorAll('.tuto');
+        const telaTutorial = document.querySelector('#telaTutorial');
+        let currentIndex = 0;
+
+        function handleTutorialClick() {
+            if (currentIndex < tutorialElements.length - 1) {
+                tutorialElements[currentIndex].style.display="none";
+                currentIndex++;
+                tutorialElements[currentIndex].style.display="flex";
+            } else {
+                telaTutorial.style.display = 'none'; // Assuming the parent div has a class 'parentDiv'
+            }
+        }
+        telaTutorial.addEventListener('click', handleTutorialClick);
+
+        const telaHelp = document.querySelector('#telaHelp');
         const telaFim = document.querySelector('#telaFim');
         const fillBar = document.querySelector('#fillBar');
         const btFechaFim = document.querySelector('#btFechaFim');
+        const btFechaTutorial = document.querySelector('#btFechaTutorial');
         //
         //configuracoes
         const inputEscala = document.querySelector('#inputEscala');
@@ -330,6 +367,7 @@
         const btFechaConfig = document.querySelector('#btFechaConfig');
         const configuracoesUI = document.querySelector('.configuracoesUI');
         const btAbreConfig = document.querySelector('#btAbreConfig');
+        const btHelp = document.querySelector('#btHelp');
         const menuconfiguracoesUI = document.querySelector('.menuconfiguracoesUI');
         const checkboxImagens = document.getElementById('checkboxImagens');
         const checkboxLista = document.getElementById('checkboxLista');
@@ -398,6 +436,12 @@
             console.log(`file type: ${file.type}`);
 
             electron.ipcRenderer.send('abrearquivo', file.name);
+        });
+        btHelp.addEventListener('click', () => {
+            telaHelp.style.display = "flex";
+        });
+        btFechaTutorial.addEventListener('click', () => {
+            telaHelp.style.display = "none";
         });
         btFechaFim.addEventListener('click', () => {
             telaFim.style.display = "none";
@@ -503,7 +547,7 @@
                 var tr = document.createElement('tr');
                 var td1 = document.createElement('td');
                 td1.innerHTML = _pagina;
-                
+
 
                 var td2 = document.createElement('td');
                 var link = document.createElement('a');
@@ -534,7 +578,7 @@
                 tr.appendChild(td2);
                 tr.appendChild(td3);
                 tr.appendChild(td4);
-                
+
                 tabela.appendChild(tr);
 
                 nQr.innerText = i_qrcodes + " qrcodes";
@@ -543,13 +587,24 @@
                 var img = new Image();
                 img.src = imagedata;
                 img.onload = function () {
+                    var div = document.createElement('div');
+                    div.style.height = "88%";
+                    div.style.display = "flex";
+                    div.style.flexDirection = "column";
+                    div.style.alignItems = "center";
+                    var label = document.createElement('label');
+                    label.innerText = "Página: " + pageNumber;
+                    label.style.fontSize = "12px";
                     var canvas = document.createElement('canvas');
+                    canvas.style.height = "100%";
                     var ctx2 = canvas.getContext('2d');
                     canvas.height = 4039 / 4;
                     canvas.width = 3047 / 4;
                     ctx2.drawImage(img, 0, 0, canvas.width, canvas.height);
                     canvas.id = "pag" + pageNumber;
-                    imagensPaginas.appendChild(canvas);
+                    div.appendChild(canvas);
+                    div.appendChild(label);
+                    imagensPaginas.appendChild(div);
                     _canvas = null;
                     canvas.onclick = function () {
                         var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
