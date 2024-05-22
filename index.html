@@ -336,6 +336,7 @@
             </tbody>
         </table>
     </div>
+
     <script type="module">
 
         import QrScanner from "./qr-scanner.min.js";
@@ -346,9 +347,9 @@
 
         function handleTutorialClick() {
             if (currentIndex < tutorialElements.length - 1) {
-                tutorialElements[currentIndex].style.display="none";
+                tutorialElements[currentIndex].style.display = "none";
                 currentIndex++;
-                tutorialElements[currentIndex].style.display="flex";
+                tutorialElements[currentIndex].style.display = "flex";
             } else {
                 telaTutorial.style.display = 'none'; // Assuming the parent div has a class 'parentDiv'
             }
@@ -398,7 +399,7 @@
         var url = '';
 
         electron.ipcRenderer.on('QRCodeProcessado', (e, data) => {
-            console.log("recebeu http", data);
+            //console.log("recebeu http", data);
             const divstatus = document.getElementById('stat' + data[1]);
             const divfind = document.getElementById('find' + data[1]);
             divstatus.innerText = data[0];
@@ -493,7 +494,7 @@
                 return;
             }
             pdf.getPage(pageNumber).then(function (page) {
-                console.log("escala:", inputEscala.value)
+                //console.log("escala:", inputEscala.value)
                 var viewport = page.getViewport({ scale: inputEscala.value });
 
                 var canvas = document.createElement('canvas');
@@ -538,10 +539,11 @@
 
             if (result.data == "No QR code found" || result.data == "Scanner error: timeout") {
                 _canvas = null;
-                console.log("sem resultado: ", _pagina + "/" + totalPages);
+                //console.log("sem resultado: ", _pagina + "/" + totalPages);
             } else {
+                console.log(result, _pagina);
                 i_qrcodes++;
-                console.log(result.data, "pagina:", _pagina, checkboxSalvaImagens.checked);
+                //console.log(result.data, "pagina:", _pagina, checkboxSalvaImagens.checked);
                 electron.ipcRenderer.send('processaLink', [result.data, id_count, _pagina, checkboxSalvaImagens.checked]);
 
                 var tr = document.createElement('tr');
