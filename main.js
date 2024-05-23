@@ -107,7 +107,7 @@ async function renderPageToImage(url, filename) {
 }
 
 ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
- 
+
   var temlinha = lines.indexOf(url.trim())
   console.log("temlinha", url, temlinha, _salva);
   //console.log(url, 'SCREENSHOTS/' +nomePDF+ _pagina + ".jpg");
@@ -155,25 +155,33 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
         if (response.status === 200) {
           const html = response.data;
           if (html.length > 10) {
-            let respostaTexto="url ok!";
+            let respostaTexto = "url ok!";
             //saveData(url, ano, componente);
-            if (response.data.includes("vimeo")) {
-              respostaTexto="vídeo vimeo";
+
+
+            if (response.data.includes("sae-digital-home")) {
+              respostaTexto = "link não cadastrado";
             }
-            if (response.data.includes("youtube")) {
-              respostaTexto="vídeo youtube";
+            if (response.data.includes("vimeo")) {
+              respostaTexto = "vídeo vimeo";
+            }
+            if (response.data.includes("inscritos")) {
+              respostaTexto = "vídeo youtube";
+            }
+            if (url.includes(".mp4")) {
+              respostaTexto = "video";
             }
             if (url.includes("OD1")) {
-              respostaTexto="objeto digital";
+              respostaTexto = "objeto digital";
             }
             if (url.includes("OD2")) {
-              respostaTexto="objeto digital";
+              respostaTexto = "objeto digital";
             }
             if (url.includes("OD3")) {
-              respostaTexto="objeto digital";
+              respostaTexto = "objeto digital";
             }
-            if (url.includes("pdf")) {
-              respostaTexto="pdf";
+            if (url.includes(".pdf")) {
+              respostaTexto = "pdf";
             }
             if (_salva) {
               renderPageToImage(url, caminho + 'SCREENSHOTS/' + nomePDF + '_pagina_' + _pagina + ".jpg")
@@ -181,24 +189,24 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
             }
 
             event.sender.send('QRCodeProcessado', [respostaTexto, _id, voltaLine]);
-            output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + respostaTexto+"\n");
+            output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + respostaTexto + "\n");
           } else {
             event.sender.send('QRCodeProcessado', ["link vazio...", _id, voltaLine]);
-            output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" +url + ";" + _pagina + ";" + "link vazio...\n");
+            output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + "link vazio...\n");
           }
         } else {
           console.log('Failed to load the web page. Status code: ' + response.status);
           event.sender.send('QRCodeProcessado', ["url com erro...", _id, voltaLine]);
-          output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" +url + ";" + _pagina + ";" + "url com erro..\n");
+          output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + "url com erro..\n");
         }
       })
       .catch(error => {
-        event.sender.send('QRCodeProcessado', [error, _id, voltaLine]);
-        output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" +url + ";" + _pagina + ";" + "erro\n");
+        event.sender.send('QRCodeProcessado', ["erro ao buscar URL", _id, voltaLine]);
+        output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + "erro\n");
       })
   } else {
     event.sender.send('QRCodeProcessado', ["Link invalido", _id, voltaLine]);
-    output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" +url + ";" + _pagina + ";" + "link invalido\n");
+    output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + "link invalido\n");
   }
 
 })
