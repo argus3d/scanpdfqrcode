@@ -381,6 +381,7 @@
         var id_count = 0;
         var totalPages;
         var data = [];
+        var qrcodesDuplicados = [];
         var podeEscanear = true;
         //quando for fazer a build "npm run package":
         //var caminho = "../../";
@@ -498,6 +499,7 @@
             }
             pdf.getPage(pageNumber).then(function (page) {
                 //console.log("escala:", inputEscala.value)
+                qrcodesDuplicados = [];
                 var viewport = page.getViewport({ scale: inputEscala.value });
 
                 var canvas = document.createElement('canvas');
@@ -505,6 +507,8 @@
                 var context = canvas.getContext('2d');
                 canvas.height = viewport.height;
                 canvas.width = viewport.width;
+
+                console.log("tamanho:", viewport.width, viewport.height)
 
                 var renderContext = {
                     canvasContext: context,
@@ -521,69 +525,127 @@
                     const imageHeight = canvas.height; // Replace with the actual height of your image
                     const numHorizontalSections = 2;
                     const numVerticalSections = 5;
+                    const overlap = canvas.height / 10;
+                    const sections = divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap);
 
-                    const sections = divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections);
+                    if (checkboxMulti.checked) {
+                        console.log(sections); // This will print out the sections including overlaps
+                        processSections(sections, imageData, pageNumber, canvas).then(function () {
+                            pageNumber++;
+                            console.log("pula pagina===================================>:", pageNumber);
+                            if (pageNumber <= totalPages) {
+                                renderPage(pdf);
+                                titulo.innerText = pageNumber + " de " + totalPages + " páginas processadas";
+                                let percentage = (pageNumber / totalPages) * 100;
+                                fillBar.style.width = percentage + '%';
+                                fillBar.innerText = percentage.toFixed(0) + '%';
+                            } else {
+                                console.log("FIM");
+                                fim();
+                            }
+                        });
 
-                    if (checkboxMulti.checked == "true") {
-                        console.log("qrcodes multi:",checkboxMulti.checked);
-                        processSections(sections, imageData, pageNumber, canvas);
                     } else {
-                        console.log("qrcodes multi:",checkboxMulti.checked);
-                        QrScanner.scanImage(imageData, { returnDetailedScanResult: true, scanRegion: _scanRegion })
-                            .then(result => setResult(result, pageNumber, canvas))
-                            .catch(e => setResult({ data: e || 'No QR code found.' }, pageNumber, canvas));
+                        console.log("qrcodes multi:", checkboxMulti.checked);
+                        QrScanner.scanImage(imageData, { returnDetailedScanResult: true })
+                            .then(result => {
+                                setResult(result, pageNumber, canvas);
+                            })
+                            .catch(e => {
+                                console.log("SEM QRCODE SIMPLES");
+                            })
+                            .finally(e => {
+                                pageNumber++;
+                                console.log("pula pagina===================================>:", pageNumber);
+                                if (pageNumber <= totalPages) {
+                                    renderPage(pdf);
+                                    titulo.innerText = pageNumber + " de " + totalPages + " páginas processadas";
+                                    let percentage = (pageNumber / totalPages) * 100;
+                                    fillBar.style.width = percentage + '%';
+                                    fillBar.innerText = percentage.toFixed(0) + '%';
+                                } else {
+                                    console.log("FIM");
+                                    fim();
+                                }
+                            });
 
                     }
-                    pageNumber++;
 
-                    if (pageNumber <= totalPages) {
-                        renderPage(pdf);
-                        titulo.innerText = pageNumber + " de " + totalPages + " páginas processadas";
-                        let percentage = (pageNumber / totalPages) * 100;
-                        fillBar.style.width = percentage + '%';
-                        fillBar.innerText = percentage.toFixed(0) + '%';
-                    } else {
-                        console.log("FIM");
-                        fim();
-                    }
 
                 });
             });
         }
-        function processSections(sections, imageData, pageNumber, canvas) {
-            let currentSection = 0;
+        function divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap) {
+            const sectionWidth = imageWidth / numHorizontalSections;
+            const sectionHeight = imageHeight / numVerticalSections;
+            const sections = [];
 
-            function processNextSection() {
-                if (currentSection < sections.length) {
-                    console.log("procura pagina: ", pageNumber, "secao:", sections[currentSection][0], sections[currentSection][1], sections[currentSection][2], sections[currentSection][3]);
+            for (let row = 0; row < numVerticalSections; row++) {
+                for (let col = 0; col < numHorizontalSections; col++) {
+                    let x = col * sectionWidth;
+                    let y = row * sectionHeight;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
 
-                    const _scanRegion = {
-                        x: sections[currentSection][0], // x-coordinate of the top-left corner
-                        y: sections[currentSection][1], // y-coordinate of the top-left corner
-                        width: sections[currentSection][2], // width of the scan region
-                        height: sections[currentSection][3] // height of the scan region
-                    };
+                    //overlap:
+                    if (col > 0) {
+                        x = col * sectionWidth;
+                        y = row * sectionHeight + overlap;
+                        sections.push([x, y, sectionWidth, overlap * 2]);
+                    }
 
-                    QrScanner.scanImage(imageData, { returnDetailedScanResult: true, scanRegion: _scanRegion })
-                        .then(result => setResult(result, pageNumber, canvas))
-                        .catch(e => setResult({ data: e || 'No QR code found.' }, pageNumber, canvas))
-                        .finally(() => {
-                            currentSection++;
-                            setTimeout(processNextSection, 500); // Delay of 500 milliseconds
-                        });
                 }
             }
 
-            processNextSection();
+
+            return sections;
+        }
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+        async function processSections(sections, imageData, pageNumber, canvas) {
+            const results = [];
+
+            for (let i = 0; i < sections.length; i++) {
+                console.log("Processing page:", pageNumber, "section:", sections[i][0], sections[i][1], sections[i][2], sections[i][3]);
+
+                const _scanRegion = {
+                    x: sections[i][0],
+                    y: sections[i][1],
+                    width: sections[i][2],
+                    height: sections[i][3]
+                };
+
+                try {
+                    const result = await QrScanner.scanImage(imageData, { returnDetailedScanResult: true, scanRegion: _scanRegion });
+                    if (result.data) {
+                        //results.push(result);
+                        if (qrcodesDuplicados.indexOf(result.data) > -1) {
+                            console.log("QRCODE DUPLICADO");
+                        } else {
+                            setResult(result, pageNumber, canvas);
+                            qrcodesDuplicados.push(result.data);
+                        }
+
+                    }
+                } catch (e) {
+                    console.log("No QR code found in this section:", e);
+                }
+
+                // delayzinho entre as seccoes
+                await delay(50);
+            }
+
+            console.log("All sections processed. Results:", results);
+            //setResult(results, pageNumber, canvas);
         }
         function setResult(result, _pagina, _canvas) {
-
 
             if (result.data == "No QR code found" || result.data == "Scanner error: timeout") {
                 _canvas = null;
                 //console.log("sem resultado: ", _pagina + "/" + totalPages);
             } else {
-                console.log(result, _pagina);
+                console.log(result.data, _pagina);
                 i_qrcodes++;
                 //console.log(result.data, "pagina:", _pagina, checkboxSalvaImagens.checked);
                 electron.ipcRenderer.send('processaLink', [result.data, id_count, _pagina, checkboxSalvaImagens.checked]);
@@ -665,21 +727,7 @@
 
             }
         }
-        function divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections) {
-            const sectionWidth = imageWidth / numHorizontalSections;
-            const sectionHeight = imageHeight / numVerticalSections;
-            const sections = [];
 
-            for (let row = 0; row < numVerticalSections; row++) {
-                for (let col = 0; col < numHorizontalSections; col++) {
-                    const x = col * sectionWidth;
-                    const y = row * sectionHeight;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                }
-            }
-
-            return sections;
-        }
 
 
 

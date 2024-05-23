@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>QR Code Scanner</title>
+    <script src="pdf.js"></script>
+</head>
+
+<body>
+    <input type="file" id="fileInput" accept=".pdf">
+    <button id="bt">processa</button>
+    <div id="result"></div>
+    <canvas id="canvas" style="display: none;"></canvas>
+
+    <script type="module">
+
+        import QrScanner from "./qr-scanner.min.js";
+        var PDFJS = window['pdfjs-dist/build/pdf'];
+
+        PDFJS.GlobalWorkerOptions.workerSrc = 'pdf.worker.js';
+        var url = '';
+        var file;
+        var reader = new FileReader();
+        var image = new Image();
+        var pageNumber = 4;
+        var caminho = "./";
+        var data = [];
+
+        document.getElementById('bt').addEventListener('click', function (e) {
+            var loadingTask = PDFJS.getDocument(caminho + "PDF/" + url);
+            loadingTask.promise.then(function (pdf) {
+                renderPage(pdf);
+            }, function (reason) {
+                console.error(reason);
+            });
+
+        });
+        document.getElementById('fileInput').addEventListener('change', function (e) {
+            file = e.target.files[0];
+            url = file.name;
+            reader.onload = function (event) {
+                image.src = event.target.result;
+            };
+            reader.readAsDataURL(file);
+        });
+        function renderPage(pdf) {
+            pdf.getPage(pageNumber).then(function (page) {
+                //console.log("escala:", inputEscala.value)
+                var viewport = page.getViewport({ scale: 2 });
+
+                var canvas = document.createElement('canvas');
+
+                var context = canvas.getContext('2d');
+                canvas.height = viewport.height;
+                canvas.width = viewport.width;
+
+                var renderContext = {
+                    canvasContext: context,
+                    viewport: viewport
+                };
+
+                var renderTask = page.render(renderContext);
+                renderTask.promise.then(function () {
+                    const imageData = canvas.toDataURL('image/png');
+                    data.push(imageData);
+                    const imageWidth = canvas.width; // Replace with the actual width of your image
+                    const imageHeight = canvas.height; // Replace with the actual height of your image
+                    const numHorizontalSections = 2;
+                    const numVerticalSections = 3;
+                    const overlap = 50;
+                    const sections = divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap);
+
+
+                    processSections(sections, imageData, pageNumber, canvas).then(function () {
+                        pageNumber++;
+                        console.log("pula pagina:", pageNumber);
+                        renderPage(pdf);
+                    });
+                    /*
+                    QrScanner.scanImage(imageData, { returnDetailedScanResult: true })
+                        .then(result => {
+                            console.log("result:", result);
+                        })
+                        .catch(e => {
+                            console.log("No QR code found:", e);
+                        })
+                        .finally(e => {
+                            console.log('Experiment completed');
+                            pageNumber++;
+                            renderPage(pdf);
+
+                        });
+                        */
+
+                });
+            });
+        };
+
+
+        function delay(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+        async function processSections(sections, imageData, pageNumber, canvas) {
+            const results = [];
+
+            for (let i = 0; i < sections.length; i++) {
+                console.log("Processing page:", pageNumber, "section:", sections[i][0], sections[i][1], sections[i][2], sections[i][3]);
+
+                const _scanRegion = {
+                    x: sections[i][0],
+                    y: sections[i][1],
+                    width: sections[i][2],
+                    height: sections[i][3]
+                };
+
+                try {
+                    const result = await QrScanner.scanImage(imageData, { returnDetailedScanResult: true, scanRegion: _scanRegion });
+                    if (result.data) {
+                        //results.push(result);
+                        //setResult(result, pageNumber, canvas)
+                        console.log("QR code found:", result);
+                    }
+                } catch (e) {
+                    console.log("No QR code found in this section:", e);
+                }
+
+                // Introduce a delay between scans
+                await delay(500); // Delay of 500 milliseconds
+            }
+
+            console.log("All sections processed. Results:");
+        }
+        function divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap) {
+            const sectionWidth = imageWidth / numHorizontalSections;
+            const sectionHeight = imageHeight / numVerticalSections;
+            const sections = [];
+            console.log(imageWidth, imageHeight, sectionWidth, sectionHeight);
+
+            for (let row = 0; row < numVerticalSections; row++) {
+                for (let col = 0; col < numHorizontalSections; col++) {
+                    const x = col * sectionWidth;
+                    const y = row * sectionHeight;
+                    sections.push([Math.floor(x), Math.floor(y), Math.floor(sectionWidth), Math.floor(sectionHeight)]);
+
+                }
+            }
+            console.log("Sections with overlap:", JSON.stringify(sections));
+
+            return sections;
+        }
+
+
+    </script>
+</body>
+
+</html>
