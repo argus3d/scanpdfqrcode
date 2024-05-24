@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <title>Escaner de QRcodes Hub Curitiba V0.1 alpha</title>
     <script src="pdf.js"></script>
+    <script src="anime.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style type="text/css">
         @import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
@@ -239,9 +240,11 @@
         .w30 {
             width: 30%;
         }
+
         .w100 {
             width: 100%;
         }
+
         .gradienteCinza {
             background: linear-gradient(to bottom, #e6e6e6 0%, #c4c4c4 100%);
         }
@@ -249,7 +252,7 @@
 </head>
 
 <body>
-    <div id="telaAbertura" class="tela gradienteCinza" >
+    <div id="telaAbertura" class="tela gradienteCinza">
         <div style="width: 100%;" class="alinharTudo">
             <img src="static/logo.png" style="height: 60%;">
         </div>
@@ -283,7 +286,7 @@
                 <button id="btEscolha2" class="botao w100">De 5 a 10 QRCODES</button>
                 <p><b>Lento:</b> Para pdfs do EM com varios qrcodes por página</p>
             </div>
-            
+
         </div>
         <div style="position: absolute; bottom: 20px; right: 20px;">
             <p style="font-size: 10px;">Desenvolvido por Augusto</p>
@@ -618,12 +621,12 @@
                     var imageHeight = canvas.height;
                     var numHorizontalSections = 2;
                     var numVerticalSections = 6;
-                    var overlap = canvas.height / 10;
-                    var sections = divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap);
+                    
+                    
 
                     if (checkboxMulti.checked) {
                         numHorizontalSections = 2;
-                        numVerticalSections = 9;
+                        numVerticalSections = 8;
 
                     } else {
                         numHorizontalSections = 2;
@@ -653,6 +656,8 @@
                             });
 */
                     }
+                    var overlap = imageHeight / numVerticalSections;
+                    var sections = divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap);
                     console.log(sections); // This will print out the sections including overlaps
                     processSections(sections, imageData, pageNumber, canvas).then(function () {
                         pageNumber++;
@@ -684,7 +689,7 @@
                     sections.push([x, y, sectionWidth, sectionHeight]);
 
                     x = col * sectionWidth;
-                    y = row * sectionHeight + overlap;
+                    y = row * sectionHeight + overlap/2;
                     sections.push([x, y, sectionWidth, sectionHeight]);
 
                     //overlap:
@@ -822,9 +827,12 @@
                     canvas.width = 3047 / 4;
                     ctx2.drawImage(img, 0, 0, canvas.width, canvas.height);
                     canvas.id = "pag" + pageNumber;
+                    
+
                     div.appendChild(canvas);
                     div.appendChild(label);
                     imagensPaginas.appendChild(div);
+
                     _canvas = null;
                     canvas.onclick = function () {
                         var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";

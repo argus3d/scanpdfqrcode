@@ -1,0 +1,18 @@
+URL;ID;Resultado:
+EF23;5;L1;;Objeto Digital;6;link invalido
+EF23;5;L1;;http://apis.sae.digital/redirect/r/EF225L1POR1ED;8;url ok!
+EF23;5;L1;;https://url.sae.digital/EF21_5_POR_L1_U1_01_OD1;9;objeto digital
+EF23;5;L1;;https://url.sae.digital/EF21_5_POR_L1_U1_01_OD2;16;objeto digital
+EF23;5;L1;;http://apis.sae.digital/redirect/r/EF225L1POR2ED;22;url ok!
+EF23;5;L1;;https://url.sae.digital/EF21_5_POR_L1_U1_02_OD1;25;objeto digital
+EF23;5;L1;;https://url.sae.digital/EF21_5_POR_L1_U1_02_OD2;34;objeto digital
+EF23;5;L1;;https://url.sae.digital/EF21_5_POR_L1_U1_02_OD3;36;objeto digital
+EF23;5;L1;;http://apis.sae.digital/redirect/r/EF225L1POR3ED;40;url ok!
+EF23;5;L1;;http://apis.sae.digital/redirect/r/EF225L1POR4ED;54;url ok!
+EF23;5;L1;;https://url.sae.digital/EF21_5_POR_L1_U2_02_OD1;67;objeto digital
+EF23;5;L1;;http://apis.sae.digital/redirect/r/EF225L1MAT1ED;72;url ok!
+EF23;5;L1;;https://url.sae.digital/EF21_5_MAT_L1_U1_01_OD1;75;objeto digital
+EF23;5;L1;;http://apis.sae.digital/redirect/r/EF225L1MAT2ED;78;url ok!
+EF23;5;L1;;https://url.sae.digital/EF21_5_MAT_L1_U1_02_OD1;79;objeto digital
+EF23;5;L1;;https://url.sae.digital/EF21_5_MAT_L1_U1_02_OD2;81;objeto digital
+EF23;5;L1;;https://url.sae.digital/EF21_5_MAT_L1_U1_02_OD3;90;objeto digital

@@ -158,16 +158,8 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
             let respostaTexto = "url ok!";
             //saveData(url, ano, componente);
 
-
-            if (response.data.includes("sae-digital-home")) {
-              respostaTexto = "link não cadastrado";
-            }
-            if (response.data.includes("vimeo")) {
-              respostaTexto = "vídeo vimeo";
-            }
-            if (response.data.includes("inscritos")) {
-              respostaTexto = "vídeo youtube";
-            }
+            
+            
             if (url.includes(".mp4")) {
               respostaTexto = "video";
             }
@@ -180,8 +172,19 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
             if (url.includes("OD3")) {
               respostaTexto = "objeto digital";
             }
+            if (url.includes("youtube")) {
+              respostaTexto = "vídeo youtube";
+            }
+            if (response.data.includes("vimeo")) {
+              respostaTexto = "vídeo vimeo";
+            }
+            
             if (url.includes(".pdf")) {
               respostaTexto = "pdf";
+            }
+
+            if (response.data.includes("sae-digital-home")) {
+              respostaTexto = "link não cadastrado";
             }
             if (_salva) {
               renderPageToImage(url, caminho + 'SCREENSHOTS/' + nomePDF + '_pagina_' + _pagina + ".jpg")

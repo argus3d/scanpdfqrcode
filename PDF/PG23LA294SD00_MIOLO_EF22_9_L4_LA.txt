@@ -1,0 +1,4 @@
+URL;ID;Resultado:
+EF22;9;L4;;Objeto Digital;4;link invalido
+EF22;9;L4;;http://apis.sae.digital/redirect/r/EF229L4POR1ED;6;url ok!
+EF22;9;L4;;https://url.sae.digital/EF21_9_POR_L4_U8_01_OD1;7;objeto digital
