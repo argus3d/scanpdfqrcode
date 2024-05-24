@@ -1,6 +1,7 @@
 const fs = require('fs');
 const fsImg = require('fs');
 const axios = require('axios');
+const axiosRetry = require('axios-retry').default;
 const http = require('http');
 const https = require('https');
 const puppeteer = require('puppeteer');
@@ -13,6 +14,7 @@ var nomePDF;
 var nomePDF_elementos = [];
 var lines = [];
 var caminho = "";
+
 
 // Import the functions you need from the SDKs you need
 
@@ -90,11 +92,12 @@ function isValidUrl(string) {
   }
 }
 async function renderPageToImage(url, filename) {
+  
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-  await page.goto(url);
-
+  await page.goto(url, {'waitUntil': 'networkidle0'});
+  await page.waitFor(9000)
   // Adjust viewport
   await page.setViewport({ width: 1280, height: 720 });
 
@@ -102,8 +105,7 @@ async function renderPageToImage(url, filename) {
 
   await browser.close();
   console.log('Page rendered to image successfully!');
-
-
+  
 }
 
 ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
@@ -150,7 +152,10 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
   }
 
   if (isValidUrl(url)) {
-    axios.get(url)
+    // axios retry aqui?
+
+
+    axios.get(url, { timeout: 30000 })
       .then(response => {
         if (response.status === 200) {
           const html = response.data;
@@ -158,8 +163,8 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
             let respostaTexto = "url ok!";
             //saveData(url, ano, componente);
 
-            
-            
+
+
             if (url.includes(".mp4")) {
               respostaTexto = "video";
             }
@@ -178,7 +183,7 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
             if (response.data.includes("vimeo")) {
               respostaTexto = "vídeo vimeo";
             }
-            
+
             if (url.includes(".pdf")) {
               respostaTexto = "pdf";
             }

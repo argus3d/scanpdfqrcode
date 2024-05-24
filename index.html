@@ -260,8 +260,9 @@
             <button id="btIniciaTutorial" class="botao w30">Inicia Tutorial</button>
             <button id="btPulaTutorial" class="botao w30">Pula Tutorial</button>
         </div>
-        <div style="position: absolute; bottom: 20px; right: 20px;">
-            <p style="font-size: 10px;">Desenvolvido por Augusto</p>
+        <div style="position: absolute; bottom: 20px; right: 20px; display: flex;align-items: flex-end;flex-direction: column;justify-content: flex-end;">
+            <p style="font-size: 20px;">V0.15 alpha</p>
+            <p style="font-size: 10px;">augustobarbosa@arcoeducacao.com.br</p>
         </div>
     </div>
 
@@ -329,18 +330,26 @@
             style="width: 10%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
             <p>Multiplos QRCODES por página (diminui o tempo de leitura)</p>
             <input type="checkbox" id="checkboxMulti" checked>
+
         </div>
         <div
-            style="width: 20%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
-            <p>Precisão. Para QRcodes menores ajustar para a direita</p>
+            style="width: 10%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
+            <p>Escala da página, quanto maior, mais demorado.</p>
             <div
-                style="display: flex;flex-direction: row;width: 100%;height: 100px; align-items: center;justify-content: center;">
-                <img src="qr-code.png" style="height: 60%;margin-right: 10px;">
-                <input id="inputEscala" type="range" value="2" min="2" max="5" step="1">
-                <img src="qr-code.png" style="height: 25%;margin-left: 10px;">
+                style="display: flex;flex-direction: row;width: 100%;height: 20px; align-items: center;justify-content: center;">
+                <p><span>Escala: </span><input type="number" id="inputEscala" min="2" max="8" value="2"
+                        style="width: 60px;"></p>
             </div>
-
-
+        </div>
+        <div
+            style="width: 10%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
+            <p>Metodos de escaneamento</p>
+            <select id="scanMethodDropdown">
+                <option value="1">6x2</option>
+                <option value="2">7x2</option>
+                <option value="3" selected>8x2</option>
+                <option value="4">8x2 (rescan)</option>
+            </select>
         </div>
         <div
             style="width: 10%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;gap: 20px;">
@@ -435,6 +444,7 @@
         const btEscolha2 = document.querySelector('#btEscolha2');
         //
         //configuracoes
+        const scanMethodDropdown = document.querySelector('#scanMethodDropdown');
         const inputEscala = document.querySelector('#inputEscala');
         const btFechaConfig = document.querySelector('#btFechaConfig');
         const configuracoesUI = document.querySelector('.configuracoesUI');
@@ -621,12 +631,25 @@
                     var imageHeight = canvas.height;
                     var numHorizontalSections = 2;
                     var numVerticalSections = 6;
-                    
-                    
+
+
 
                     if (checkboxMulti.checked) {
-                        numHorizontalSections = 2;
-                        numVerticalSections = 8;
+
+                        if (scanMethodDropdown.value == 1) {
+                            numHorizontalSections = 2;
+                            numVerticalSections = 6;
+                        } else if (scanMethodDropdown.value == 2) {
+                            numHorizontalSections = 2;
+                            numVerticalSections = 7;
+                        } else if (scanMethodDropdown.value == 3) {
+                            numHorizontalSections = 2;
+                            numVerticalSections = 8;
+                        } else if (scanMethodDropdown.value == 4) {
+                            numHorizontalSections = 2;
+                            numVerticalSections = 8;
+                        }
+                        console.log("Method:", scanMethodDropdown.value, numHorizontalSections, numVerticalSections)
 
                     } else {
                         numHorizontalSections = 2;
@@ -688,15 +711,19 @@
                     let y = row * sectionHeight;
                     sections.push([x, y, sectionWidth, sectionHeight]);
 
-                    x = col * sectionWidth;
-                    y = row * sectionHeight + overlap/2;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
 
-                    //overlap:
-                    if (col > 0) {
-                        //x = col * sectionWidth;
-                        //y = row * sectionHeight - overlap / 2;
-                        //sections.push([x, y, sectionWidth, overlap * 2]);
+                    if (scanMethodDropdown.value == 4) {
+                        console.log("reecan method", scanMethodDropdown.value, "yeah baby")
+                        x = col * sectionWidth;
+                        y = row * sectionHeight + overlap / 3;
+                        sections.push([x, y, sectionWidth, sectionHeight]);
+                        x = col * sectionWidth;
+                        y = row * sectionHeight + overlap / 2;
+                        sections.push([x, y, sectionWidth, sectionHeight]);
+                    } else {
+                        x = col * sectionWidth;
+                        y = row * sectionHeight + overlap / 2;
+                        sections.push([x, y, sectionWidth, sectionHeight]);
                     }
 
                 }
@@ -827,7 +854,7 @@
                     canvas.width = 3047 / 4;
                     ctx2.drawImage(img, 0, 0, canvas.width, canvas.height);
                     canvas.id = "pag" + pageNumber;
-                    
+
 
                     div.appendChild(canvas);
                     div.appendChild(label);

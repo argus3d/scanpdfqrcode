@@ -1,373 +1,204 @@
 URL;ID;Resultado:
-;1;;;https://url.sae.digital/EXT21_3_POR_L1_A_01_OD1;4;objeto digital
+;1;;;https://url.sae.digital/EXT21_3_POR_L1_A_01_OD1;4;erro
 ;1;;;https://url.sae.digital/EXT24CARTAO;7;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01A;10;vídeo vimeo
-;1;;;https://url.sae.digital/EXT21_3_POR_L1_A_01_OD1;10;objeto digital
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01F;14;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01I1;14;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V1;15;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V2;15;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V6;16;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V7;16;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V9;16;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V10;16;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V8;16;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V11;17;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V14;17;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V12;17;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V15;17;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01C;18;vídeo vimeo
+;1;;;https://url.sae.digital/EXT21_3_POR_L1_A_01_OD1;10;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01A;10;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V4;15;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V2;15;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V1;15;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01I1;14;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01F;14;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V7;16;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V5;15;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V3;15;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V10;16;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V6;16;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V9;16;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V8;16;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V12;17;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V13;17;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V11;17;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V14;17;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V15;17;erro
 ;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_01_GAB.pdf;18;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02A;19;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02I1;23;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V1;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V2;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V3;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V7;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V8;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V4;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V5;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V9;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V10;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V11;25;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V12;25;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V14;25;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V15;25;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V13;25;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V16;26;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V17;26;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V19;26;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V18;26;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02C;27;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_02_GAB.pdf;27;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03A;28;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03F;32;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03I1;32;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V2;33;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V3;33;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V4;33;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V5;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V7;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V8;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V6;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V9;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V10;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V11;35;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03C;36;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_03_GAB.pdf;36;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04A;37;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04F;41;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04I1;41;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V1;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V2;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V8;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V6;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V7;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V4;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V3;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V9;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V5;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V13;43;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V14;43;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V15;43;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V12;43;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V16;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V20;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V17;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V18;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V21;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V19;44;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_04_GAB.pdf;45;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04C;45;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05A;46;vídeo vimeo
-;1;;;https://url.sae.digital/EXT21_3_POR_L1_A_05_OD1;46;objeto digital
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05F;50;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05I1;50;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V5;51;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V3;51;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V9;52;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V6;52;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V7;52;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V8;52;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V10;52;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V14;53;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V13;53;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_05_GAB.pdf;54;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06A;55;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06F;59;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06I1;59;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V1;60;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V2;60;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V4;60;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V3;60;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V5;60;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V8;61;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V6;61;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V9;61;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V7;61;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V10;61;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V11;61;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V14;62;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V12;62;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V13;62;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V15;63;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06C;63;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_06_GAB.pdf;63;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01A;64;vídeo vimeo
-;1;;;https://url.sae.digital/EXT21_3_RED_L1_B_01_OD1;65;objeto digital
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01F;68;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01I1;68;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01V1;69;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01V3;69;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01V2;69;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02A;71;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_RED_B_01_GAB.pdf;70;pdf
-;1;;;https://url.sae.digital/EXT21_3_RED_L1_B_02_OD1;74;objeto digital
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02F;75;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02I1;75;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02V1;76;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02V3;76;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02V2;76;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB03A;78;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB03I1;82;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB03V1;83;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB03V2;83;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04A;85;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_RED_B_03_GAB.pdf;84;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04F;89;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04I1;89;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04V1;90;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04V3;90;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04V2;90;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_RED_B_04_GAB.pdf;91;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01F;96;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V5;97;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V4;97;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01I1;96;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V2;97;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V7;97;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V6;97;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V3;97;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V8;98;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V11;98;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V9;98;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V12;99;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V13;99;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V15;99;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V16;99;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_LIT_C_01_GAB.pdf;100;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01C;100;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02A;101;vídeo vimeo
-;1;;;https://url.sae.digital/EXT21_3_LIT_L1_C_02_OD1;101;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02F;105;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02I1;105;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V3;106;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V2;106;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V1;106;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V4;106;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V5;106;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V6;107;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V7;107;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V11;107;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V8;107;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V12;108;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V16;108;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V13;108;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V15;108;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V14;108;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02C;109;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_LIT_C_02_GAB.pdf;109;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03A;110;vídeo vimeo
-;1;;;https://url.sae.digital/EXT21_3_LIT_L1_C_03_OD1;111;objeto digital
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03F;114;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03I1;114;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V1;115;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V2;115;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V5;115;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V3;115;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V4;115;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V6;115;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V7;115;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V8;116;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V9;116;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V10;98;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V11;116;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V14;117;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V12;117;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V16;117;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V13;117;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03V17;117;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_LIT_C_03_GAB.pdf;118;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03C;118;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04A;119;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04F;123;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04I1;123;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V1;124;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V5;124;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V2;124;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V4;124;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V7;125;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V6;124;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V3;124;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V9;125;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V8;125;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V12;126;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V13;126;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V14;127;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04V11;126;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC04C;127;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_LIT_C_04_GAB.pdf;127;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05A;128;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05F;132;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05I1;132;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05V1;133;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05V5;133;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05V4;133;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05V2;133;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05V6;133;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05V3;133;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05V8;134;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05V7;134;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05V9;134;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05V10;135;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05V11;135;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC05C;136;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_LIT_C_05_GAB.pdf;136;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06A;137;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06F;141;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06V1;142;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06V2;142;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06I1;141;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06V3;142;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06V4;142;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06V5;142;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06V8;143;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06V7;143;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06V11;144;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06V9;144;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06V12;144;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06V10;144;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211LITC06C;145;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_LIT_C_06_GAB.pdf;145;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211ING01A;147;vídeo vimeo
-;1;;;https://url.sae.digital/EXT21_3_POR_L1_A_01_OD1;4;objeto digital
-;1;;;https://url.sae.digital/EXT24CARTAO;7;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01A;10;vídeo vimeo
-;1;;;https://url.sae.digital/EXT21_3_POR_L1_A_01_OD1;10;objeto digital
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01F;14;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01I1;14;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V1;15;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V6;16;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V4;15;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V2;15;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V7;16;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V9;16;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V3;15;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V5;15;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V10;16;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V8;16;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V11;17;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V14;17;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V12;17;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V15;17;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01V13;17;vídeo vimeo
 ;1;;;https://apis.sae.digital/redirect/r/EXT211PORA01C;18;vídeo vimeo
-;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_01_GAB.pdf;18;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02A;19;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02A;19;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V1;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02F;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V6;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V2;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V7;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V3;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V8;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02I1;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V4;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V5;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V9;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V10;24;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V16;26;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V11;25;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V12;25;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V17;26;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V14;25;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V19;26;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V15;25;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V13;25;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V18;26;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03A;28;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02C;27;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02A;19;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V1;24;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V4;24;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02F;23;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V10;24;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V12;25;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V2;24;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V8;24;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V14;25;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V3;24;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02I1;23;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V16;26;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V7;24;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V17;26;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V19;26;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V5;24;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V18;26;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V9;24;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V13;25;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V11;25;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02V15;25;erro
 ;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_02_GAB.pdf;27;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03F;32;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03I1;32;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V1;33;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V5;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V7;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V2;33;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V8;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V6;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V3;33;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V4;33;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V9;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V10;34;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V12;35;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V11;35;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V13;35;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03C;36;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04A;37;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA02C;27;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03A;28;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V1;33;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V2;33;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V4;33;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V3;33;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V5;34;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03I1;32;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03F;32;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V7;34;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V9;34;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V10;34;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V6;34;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V8;34;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V12;35;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V11;35;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03V13;35;erro
 ;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_03_GAB.pdf;36;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04F;41;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V1;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04I1;41;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V6;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V7;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V2;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V8;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V3;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V9;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V4;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V13;43;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V5;42;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V10;43;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V14;43;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V16;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V11;43;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V20;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V17;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V12;43;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V15;43;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V18;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V19;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V21;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V19;44;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05A;46;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04C;45;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA03C;36;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04A;37;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V1;42;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04I1;41;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V5;42;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V8;42;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V6;42;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V7;42;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V4;42;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V2;42;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04F;41;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V10;43;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V3;42;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V13;43;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V14;43;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V12;43;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V18;44;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V11;43;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V15;43;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V9;42;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V16;44;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V20;44;erro
 ;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_04_GAB.pdf;45;pdf
-;1;;;https://url.sae.digital/EXT21_3_POR_L1_A_05_OD1;46;objeto digital
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05F;50;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05I1;50;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V1;51;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V4;51;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V2;51;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V5;51;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V6;52;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V3;51;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V9;52;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V7;52;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V10;52;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V8;52;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V14;53;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V15;53;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V12;53;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V13;53;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V17;44;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V19;44;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04V21;44;erro
+;1;;;https://url.sae.digital/EXT21_3_POR_L1_A_05_OD1;46;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA04C;45;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05A;46;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V2;51;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05I1;50;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V1;51;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05F;50;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V4;51;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V9;52;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V6;52;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V5;51;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V8;52;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V3;51;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V7;52;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V12;53;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V14;53;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V10;52;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V13;53;erro
 ;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_05_GAB.pdf;54;pdf
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06A;55;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05V15;53;erro
 ;1;;;https://apis.sae.digital/redirect/r/EXT211PORA05C;54;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06F;59;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V1;60;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06I1;59;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V2;60;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V4;60;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V3;60;vídeo vimeo
-;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V5;60;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06A;55;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V1;60;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06I1;59;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V4;60;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V2;60;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V5;60;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V6;61;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06F;59;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V9;61;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V3;60;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V8;61;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V11;61;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V13;62;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V7;61;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V15;63;erro
+;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_POR_A_06_GAB.pdf;63;pdf
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V14;62;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V10;61;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06V12;62;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211PORA06C;63;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01A;64;erro
+;1;;;https://url.sae.digital/EXT21_3_RED_L1_B_01_OD1;65;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01I1;68;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01F;68;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01V1;69;erro
+;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_RED_B_01_GAB.pdf;70;pdf
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01V3;69;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB01V2;69;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02A;71;erro
+;1;;;https://url.sae.digital/EXT21_3_RED_L1_B_02_OD1;74;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02I1;75;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02V3;76;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02V1;76;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02F;75;erro
+;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_RED_B_02_GAB.pdf;77;pdf
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB02V2;76;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB03A;78;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB03F;82;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB03I1;82;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB03V2;83;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB03V1;83;erro
+;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_RED_B_03_GAB.pdf;84;pdf
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04A;85;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04V1;90;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04I1;89;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04F;89;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04V2;90;erro
+;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_RED_B_04_GAB.pdf;91;pdf
+;1;;;https://apis.sae.digital/redirect/r/EXT211REDB04V3;90;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01A;92;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01I1;96;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01F;96;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V1;97;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V4;97;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V3;97;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V2;97;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V5;97;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V10;98;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V7;97;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V6;97;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V8;98;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V12;99;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V11;98;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V9;98;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V15;99;erro
+;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_LIT_C_01_GAB.pdf;100;pdf
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V14;99;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V16;99;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01V13;99;erro
+;1;;;https://url.sae.digital/EXT21_3_LIT_L1_C_02_OD1;101;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC01C;100;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02A;101;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02F;105;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02I1;105;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V1;106;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V9;107;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V5;106;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V4;106;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V2;106;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V3;106;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V10;107;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V11;107;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V13;108;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V8;107;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V6;107;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V12;108;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V14;108;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V7;107;erro
+;1;;;https://gabaritossae.s3.amazonaws.com/EXT24_1_LIT_C_02_GAB.pdf;109;pdf
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V15;108;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02V16;108;erro
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC02C;109;vídeo vimeo
+;1;;;https://apis.sae.digital/redirect/r/EXT211LITC03A;110;erro
