@@ -1,0 +1,5 @@
+URL;ID;Resultado:
+EF23;3;L1;;;1;link invalido
+EF23;3;L1;;Objeto Digital;6;link invalido
+EF23;3;L1;;;15;link invalido
+EF23;3;L1;;http://apis.sae.digital/redirect/r/EF223L1POR1ED;9;url ok!

@@ -288,14 +288,23 @@
         <div style="width: 50%; display: flex; gap: 30px;" class="alinhar">
             <div style="width: 25%;">
                 <button id="btEscolha3" class="botao w100">1 QRCODE</button>
+                <div style="width: 100%;height: 50%;" class="alinharTudo">
+                    <img src="icons8-page-100-1.png" style="width: 80%;">
+                </div>
                 <p><b>Rapido:</b> Apenas 1 QRcode por página</p>
             </div>
             <div style="width: 25%;">
                 <button id="btEscolha1" class="botao w100">Até 4 QRCODES</button>
+                <div style="width: 100%;height: 50%;" class="alinharTudo">
+                    <img src="icons8-page-100-2.png" style="width: 80%;">
+                </div>
                 <p><b>Médio:</b> Para pdfs do Fundamental com 1 ou 2 QRcodes</p>
             </div>
             <div style="width: 25%;">
                 <button id="btEscolha2" class="botao w100">De 5 a 10 QRCODES</button>
+                <div style="width: 100%;height: 50%;" class="alinharTudo">
+                    <img src="icons8-page-100-3.png" style="width: 80%;">
+                </div>
                 <p><b>Lento:</b> Para pdfs do EM com varios qrcodes por página</p>
             </div>
 
@@ -339,8 +348,9 @@
         </div>
         <div
             style="width: 15%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
-            <p>Multiplos QRCODES por página (diminui o tempo de leitura)</p>
-            <select id="qrcodeDropdown">
+            <p><span style="font-size: 1.2rem;">Precisão</span><br>Multiplos QRCODES por página (afeta o tempo de
+                detecção)</p>
+            <select id="qrcodeDropdown" style="width: 100%;">
                 <option value="1">1 QRCODE</option>
                 <option value="2">Até 4 QRCODES</option>
                 <option value="3">Até 10 QRCODES</option>
@@ -348,18 +358,20 @@
         </div>
         <div
             style="width: 15%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
-            <p>Escala da página, quanto maior, mais demorado.</p>
+            <p><span style="font-size: 1.2rem;">Escala da página</span><br> Para qrcodes muito pequenos talvez seja bom
+                ir aumentando aqui a escala.</p>
             <div
                 style="display: flex;flex-direction: row;width: 100%;height: 20px; align-items: center;justify-content: center;">
-                <p><span>Escala: </span><input type="number" id="inputEscala" min="2" max="8" value="2"
+                <p><span>Escala: </span><input type="number" id="inputEscala" min="2" max="8" value="3"
                         style="width: 60px;"></p>
             </div>
         </div>
         <div
             style="width: 15%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
-            <p>Metodos de escaneamento (quantas vezes a pagina é escaneada, exemplo 6x2: 6 vezes verticalmente e 2
-                horizoltalmente)</p>
-            <select id="scanMethodDropdown">
+            <p><span style="font-size: 1.2rem;">Metodos de escaneamento</span><br>Quantas vezes a pagina é escaneada,
+                exemplo 6x2: 6 vezes verticalmente e 2
+                horizontalmente</p>
+            <select id="scanMethodDropdown" style="width: 100%;">
                 <option value="1">6x2</option>
                 <option value="2">7x2</option>
                 <option value="3" selected>8x2</option>
@@ -374,7 +386,8 @@
         <div
             style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;;gap: 20px;">
             <p><span style="color: rgb(255, 0, 123);">*EXPERIMENTAL</span><br>Compara com lista de codigos em arquivo
-                <b>.txt</b><br>Arquivo deve estar na pasta<b>/TXT</b> </p>
+                <b>.txt</b><br>Arquivo deve estar na pasta<b>/TXT</b>
+            </p>
             <input type="checkbox" id="checkboxLista">
             <div id="seletorLista"
                 style="width: 100%; display: none;flex-direction: column;gap: 20px;align-items: center;justify-content: center;">
@@ -442,8 +455,8 @@
     </div>
 
     <script type="module">
-        const versao = 0.16;
-        document.title = "Escaner de QRcodes Hub Curitiba V" + versao + " alpha";
+        const versao = 0.2;
+        document.title = "Scanner de QRcodes Hub Curitiba V" + versao + " alpha";
         document.querySelector("#txtVersao").innerText = "V" + versao + " alpha";
 
 
@@ -486,7 +499,7 @@
         const fileInputTxt = document.getElementById('fileInputTxt');
         let currentIndex = 0;
         var imagensPaginas = document.getElementById('imagensPaginas');
-        var titulo = document.getElementById('nPag');
+        var nPag = document.getElementById('nPag');
         var nQr = document.getElementById('nQr');
         var pageNumber = 1;
         var i_qrcodes = 0;
@@ -528,7 +541,7 @@
 
         checkboxImagens.addEventListener('change', function () {
             if (checkboxImagens.checked) {
-                imagensPaginas.style.display = "block"
+                imagensPaginas.style.display = "flex"
             } else {
                 imagensPaginas.style.display = "none"
             }
@@ -554,6 +567,14 @@
             console.log(`file size: ${file.size} bytes`);
             console.log(`file type: ${file.type}`);
             electron.ipcRenderer.send('abrearquivo', file.name);
+
+            pageNumber = 1;
+            i_qrcodes = 0;
+            id_count = 0;
+            data = [];
+            nQr.innerText = i_qrcodes + " qrcodes";
+            imagensPaginas.innerHTML = "";
+            tabela.innerHTML = "";
 
         });
         /*
@@ -614,16 +635,19 @@
             i_qrcodes = 0;
             id_count = 0;
             data = [];
+            nQr.innerText = i_qrcodes + " qrcodes";
+            imagensPaginas.innerHTML = "";
+            tabela.innerHTML = "";
+
             if (url.length > 3) {
-                imagensPaginas.innerHTML = "";
-                tabela.innerHTML = "";
+
                 podeEscanear = true;
                 btProcessar.style.display = "none";
                 btProcessarCancela.style.display = "block";
                 var loadingTask = PDFJS.getDocument(caminho + "PDF/" + url);
                 loadingTask.promise.then(function (pdf) {
                     totalPages = pdf.numPages
-                    titulo.innerText = totalPages + " paginas";
+                    nPag.innerText = totalPages + " paginas";
                     renderPage(pdf);
                 }, function (reason) {
                     console.error(reason);
@@ -717,7 +741,7 @@
                             console.log("pula pagina===================================>:", pageNumber);
                             if (pageNumber <= totalPages) {
                                 renderPage(pdf);
-                                titulo.innerText = pageNumber + " de " + totalPages + " páginas processadas";
+                                nPag.innerText = pageNumber + " de " + totalPages + " páginas processadas";
                                 let percentage = (pageNumber / totalPages) * 100;
                                 fillBar.style.width = percentage + '%';
                                 fillBar.innerText = percentage.toFixed(0) + '%';
@@ -740,7 +764,7 @@
                                 console.log("pula pagina===================================>:", pageNumber);
                                 if (pageNumber <= totalPages) {
                                     renderPage(pdf);
-                                    titulo.innerText = pageNumber + " de " + totalPages + " páginas processadas";
+                                    nPag.innerText = pageNumber + " de " + totalPages + " páginas processadas";
                                     let percentage = (pageNumber / totalPages) * 100;
                                     fillBar.style.width = percentage + '%';
                                     fillBar.innerText = percentage.toFixed(0) + '%';

@@ -5,32 +5,28 @@ EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2POR2ED;29;url ok!
 EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2POR3ED;41;url ok!
 EF23;1;L2;;https://url.sae.digital/EF21_1_POR_L2_U3_01_od1;17;erro
 EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2POR4ED;51;url ok!
-EF23;1;L2;;https://url.sae.digital/EF21_1_POR_L2_U3_02_od1;32;erro
 EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2MAT1ED;65;url ok!
+EF23;1;L2;;https://url.sae.digital/EF21_1_POR_L2_U3_02_od1;32;erro
 EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2MAT2ED;79;url ok!
 EF23;1;L2;;https://url.sae.digital/EF21_1_MAT_L2_U3_02_od1;80;link não cadastrado
 EF23;1;L2;;https://url.sae.digital/EF21_1_POR_L2_U4_01_od1;43;erro
 EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2MAT3ED;91;url ok!
 EF23;1;L2;;https://url.sae.digital/EF21_1_POR_L2_U4_02_od1;58;erro
-EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2MAT4ED;105;url ok!
 EF23;1;L2;;https://url.sae.digital/EF21_1_MAT_L2_U3_01_od1;70;erro
 EF23;1;L2;;https://url.sae.digital/EF21_1_MAT_L2_U3_01_od2;72;erro
+EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2MAT4ED;105;url ok!
 EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2CIE1ED;121;url ok!
 EF23;1;L2;;https://url.sae.digital/EF21_1_MAT_L2_U4_01_od1;96;erro
 EF23;1;L2;;https://url.sae.digital/EF21_1_MAT_L2_U4_01_od2;97;erro
 EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2CIE2ED;133;url ok!
 EF23;1;L2;;https://url.sae.digital/EF21_1_MAT_L2_U4_02_od1;108;erro
-EF23;1;L2;;https://url.sae.digital/EF21_1_CIE_L2_U2_01_od1;124;erro
 EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2GEO1ED;153;url ok!
 EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2GEO2ED;167;url ok!
+EF23;1;L2;;https://url.sae.digital/EF21_1_CIE_L2_U2_01_od1;124;erro
 EF23;1;L2;;https://url.sae.digital/EF21_1_CIE_L2_U2_02_od1;135;erro
 EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2HIS1ED;185;url ok!
 EF23;1;L2;;https://url.sae.digital/EF21_1_GEO_L2_U2_01_od1;158;erro
+EF23;1;L2;;https://url.sae.digital/EF21_1_HIS_L2_U2_01_od1;191;erro
 EF23;1;L2;;https://url.sae.digital/EF21_1_GEO_L2_U2_01_od2;164;erro
 EF23;1;L2;;https://url.sae.digital/EF21_1_GEO_L2_U2_02_od1;176;erro
 EF23;1;L2;;http://apis.sae.digital/redirect/r/EF221L2HIS2ED;201;url ok!
-EF23;1;L2;;https://url.sae.digital/EF21_1_HIS_L2_U2_01_od1;191;erro
-EF23;1;L2;;https://url.sae.digital/EF21_1_HIS_L2_U2_01_od2;196;erro
-EF23;1;L2;;https://url.sae.digital/EF21_1_HIS_L2_U2_02_od1;210;erro
-EF23;1;L2;;https://url.sae.digital/EF21_1_ART_L2_U2_01_od1;219;erro
-EF23;1;L2;;https://url.sae.digital/EF21_1_ART_L2_U2_01_od2;221;erro
