@@ -197,7 +197,10 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
             if (url.includes(".pdf")) {
               respostaTexto = "pdf";
             }
-
+            if (response.data.includes("subscribers")) {
+              respostaTexto = "vídeo no youtube";
+            }
+            
             if (response.data.includes("sae-digital-home")) {
               respostaTexto = "link não cadastrado";
             }

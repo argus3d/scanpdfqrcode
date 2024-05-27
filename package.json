@@ -6,8 +6,16 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "set NODE_ENV=development&& electron .",
+    "devwin": "set NODE_ENV=development&& electron .",
+    "devmac": "NODE_ENV=development electron .",
     "package": "electron-packager . pdfqrcodescanner --platform=win32 --arch=x64 --out=dist --overwrite -icon=qr.ico"
+  },
+  "build": {
+    "appId": "com.arco.qrcodescanner",
+    "win": {
+      "icon": "qr.ico",
+      "target": "nsis"
+    }
   },
   "author": "",
   "license": "ISC",
