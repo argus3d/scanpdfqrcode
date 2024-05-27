@@ -27,7 +27,7 @@
             display: flex;
             width: 100%;
             height: 250px;
-            background-color: #cfcfcf;
+            background-color: #4080c1;
             overflow: auto;
             white-space: nowrap;
             margin-top: 30px;
@@ -47,14 +47,12 @@
         }
 
         .table {
-            margin-top: 30px;
             width: 100%;
             height: auto;
         }
 
         .styled-table {
             border-collapse: collapse;
-            margin: 25px 0;
             font-size: 0.9em;
             font-family: sans-serif;
             min-width: 400px;
@@ -62,7 +60,7 @@
         }
 
         .styled-table thead tr {
-            background-color: #0692c0;
+            background-color: #4080c1;
             color: #ffffff;
             text-align: left;
         }
@@ -81,12 +79,12 @@
         }
 
         .styled-table tbody tr:last-of-type {
-            border-bottom: 2px solid #0692c0;
+            border-bottom: 2px solid #4080c1;
         }
 
         .styled-table tbody tr.active-row {
             font-weight: bold;
-            color: #0692c0;
+            color: #4080c1;
         }
 
         button {
@@ -97,7 +95,7 @@
             text-transform: inherit;
             font-size: inherit;
             font-family: inherit;
-            border: 2px solid #0692c0;
+            border: 2px solid #4080c1;
         }
 
         button.styling-b {
@@ -105,7 +103,7 @@
             color: #382b22;
             padding: 1.25em 2em;
             background: #a7e7fc;
-            border: 2px solid #0692c0;
+            border: 2px solid #4080c1;
             border-radius: 0.75em;
             transform-style: preserve-3d;
             transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1);
@@ -122,7 +120,7 @@
             bottom: 0;
             background: #75dafb;
             border-radius: inherit;
-            box-shadow: 0 0 0 2px #0692c0, 0 0.625em 0 0 #d8f5fe;
+            box-shadow: 0 0 0 2px #4080c1, 0 0.625em 0 0 #d8f5fe;
             transform: translate3d(0, 0.75em, -1em);
             transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
         }
@@ -203,7 +201,7 @@
         .tela {
             width: 100%;
             height: 100%;
-            background-color: #396087;
+            background-color: #4080c1;
             display: flex;
             justify-content: center;
             align-items: center;
@@ -229,8 +227,9 @@
         }
 
         .botao {
-            background-color: #75dafb;
+            background-color: #4080c1;
             border-radius: 15px;
+            color: white;
             width: 100px;
             height: 40px;
         }
@@ -318,7 +317,7 @@
 
         <h2 style="margin: 10px;color: #ffffff;">Documento Concluido</h2>
         <button id="btFechaFim"
-            style="background-color: #75dafb;border-radius: 5px;width: 100px;height: 40px;">Fechar</button>
+            style="background-color: #4080c1;border-radius: 5px;width: 100px;height: 40px;">Fechar</button>
     </div>
 
     <div class="menuconfiguracoesUI"
@@ -401,8 +400,7 @@
             <input type="checkbox" id="checkboxSalvaImagens">
         </div>
     </div>
-    <div
-        style="width: 100%;display: flex;flex-wrap: wrap;margin-top: 10px; align-items: center;justify-content: space-between;">
+    <div style="width: 100%;display: flex;margin-top: 10px; align-items: center;justify-content: space-between;">
         <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
             <div
                 style="width: 90%; display: flex;flex-direction: row;gap: 20px;align-items: center;justify-content: center;">
@@ -410,32 +408,33 @@
                 <input type="file" id="fileInputPdf" accept=".pdf">
             </div>
         </div>
-        <div style="width: 50%;display: flex;align-items: end;justify-content: center;flex-direction: column;">
-            <button class="styling-b" id="btProcessar" style="margin-right: 20px;">Processar</button>
-            <button class="styling-b" id="btProcessarCancela"
-                style="display: none;margin-right: 20px;">Cancelar</button>
+        <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: row;">
+
+            <div style="width: 50%; background-color: #ccc; border-radius: 10px;">
+                <div id="fillBar"
+                    style="width: 0%; background-color: #4080c1; color: white; border-radius: 5px; text-align: center; padding: 5px;">
+                    0%
+                </div>
+            </div>
+
+            <div style="width: 50%;display: flex;align-items: end;justify-content: center;flex-direction: column;">
+                <button class="styling-b" id="btProcessar" style="margin-right: 20px;">Processar</button>
+                <button class="styling-b" id="btProcessarCancela"
+                    style="display: none;margin-right: 20px;">Cancelar</button>
+            </div>
         </div>
+
     </div>
 
     <div id="imagensPaginas">
     </div>
-    <div style="width: 100%;display: flex;flex-wrap: wrap;">
+    <div style="width: 100%;display: flex;flex-wrap: wrap;background-color: #ea503a">
         <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-            <p class="heading">Progresso</p>
-            <p class="title" id="nPag">0</p>
-            <div style="width: 50%; background-color: #ccc; border-radius: 10px; margin-top: 10px;">
-                <div id="fillBar"
-                    style="width: 0%; background-color: rgb(0, 111, 155); color: white; border-radius: 5px; text-align: center; padding: 5px;">
-                    0%
-                </div>
-            </div>
+            <p class="title" id="nPag" style="margin-left: 20px;color: white;font-size: 30px;">0</p>
         </div>
         <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: column;">
-            <p class="heading">Qrcodes Encontrados</p>
-            <p class="title" id="nQr">0</p>
-
+            <p class="title" id="nQr" style="color: white;font-size: 30px;">0</p>
         </div>
-
     </div>
     <div class="father">
         <table class="table styled-table">
@@ -854,18 +853,20 @@
             //setResult(results, pageNumber, canvas);
         }
         function setResult(result, _pagina, _canvas) {
-            const ctx = _canvas.getContext('2d');
-            ctx.beginPath();
-            ctx.strokeStyle = 'red';
-            ctx.lineWidth = 20;
-            if (result.cornerPoints && result.cornerPoints.length === 4) {
-                ctx.moveTo(result.cornerPoints[0].x - 20, result.cornerPoints[0].y - 20);
-                ctx.lineTo(result.cornerPoints[1].x + 20, result.cornerPoints[1].y - 20);
-                ctx.lineTo(result.cornerPoints[2].x + 20, result.cornerPoints[2].y + 20);
-                ctx.lineTo(result.cornerPoints[3].x - 20, result.cornerPoints[3].y + 20);
-                ctx.closePath();
+            if (isValidURL(result.data)) {
+                const ctx = _canvas.getContext('2d');
+                ctx.beginPath();
+                ctx.strokeStyle = 'red';
+                ctx.lineWidth = 20;
+                if (result.cornerPoints && result.cornerPoints.length === 4) {
+                    ctx.moveTo(result.cornerPoints[0].x - 20, result.cornerPoints[0].y - 20);
+                    ctx.lineTo(result.cornerPoints[1].x + 20, result.cornerPoints[1].y - 20);
+                    ctx.lineTo(result.cornerPoints[2].x + 20, result.cornerPoints[2].y + 20);
+                    ctx.lineTo(result.cornerPoints[3].x - 20, result.cornerPoints[3].y + 20);
+                    ctx.closePath();
+                }
+                ctx.stroke();
             }
-            ctx.stroke();
 
             if (result.data == "No QR code found" || result.data == "Scanner error: timeout") {
                 _canvas = null;
@@ -927,6 +928,7 @@
                     var label = document.createElement('label');
                     label.innerText = "Página: " + pageNumber;
                     label.style.fontSize = "12px";
+                    label.style.color = "white";
                     var canvas = document.createElement('canvas');
                     canvas.style.height = "100%";
                     var ctx2 = canvas.getContext('2d');
@@ -958,7 +960,10 @@
         }
 
 
-
+        function isValidURL(string) {
+            const regex = /^(https?:\/\/)?([\w\-]+(\.[\w\-]+)+)([\/\w\-\._~:?#[\]@!$&'()*+,;=]*)?$/;
+            return regex.test(string);
+        }
 
         function decodeImageFromBase64(data, callback) {
             qrcode.callback = callback;
