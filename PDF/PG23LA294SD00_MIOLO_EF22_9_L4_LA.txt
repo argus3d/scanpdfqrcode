@@ -1,3 +1,0 @@
-URL;ID;Resultado:
-EF22;9;L4;;Objeto Digital;4;link invalido
-EF22;9;L4;;https://nyc3.digitaloceanspaces.com/cdn-livrodigital/proposta_redacao/9_ano/EF20_9_POR_L4_PROPOSTA_REDACAO_.P01.pdf;15;pdf

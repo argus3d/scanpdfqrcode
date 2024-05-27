@@ -6,8 +6,8 @@
   "main": "main.js",
   "scripts": {
     "start": "electron .",
-    "dev": "NODE_ENV=development electron .",
-    "package": "electron-packager . pdfqrcodescanner --platform=win32 --arch=x64 --out=dist --overwrite"
+    "dev": "set NODE_ENV=development&& electron .",
+    "package": "electron-packager . pdfqrcodescanner --platform=win32 --arch=x64 --out=dist --overwrite -icon=qr.ico"
   },
   "author": "",
   "license": "ISC",

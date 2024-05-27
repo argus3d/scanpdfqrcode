@@ -1,4 +1,3 @@
 URL;ID;Resultado:
-EF23;3;L1;;https://url.sae.digital/EF21_3_POR_L1_U1_01_OD2;14;objeto digital
-EF23;3;L1;;https://url.sae.digital/EF21_3_POR_L1_U1_01_OD1;12;objeto digital
-EF23;3;L1;;http://apis.sae.digital/redirect/r/EF223L1POR2ED;21;url ok!
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;6;pdf
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;8;pdf
