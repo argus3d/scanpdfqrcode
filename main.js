@@ -80,6 +80,11 @@ app.on('window-all-closed', function () {
   if (process.platform !== 'darwin') app.quit();
 });
 
+const isDev = process.env.NODE_ENV === 'development';
+
+
+
+
 app.on('activate', function () {
   if (mainWindow === null) createWindow();
 });
@@ -107,6 +112,11 @@ async function renderPageToImage(url, filename) {
   console.log('Page rendered to image successfully!');
   
 }
+ipcMain.on('mandaEnv', async (event) => {
+  console.log("process.env.NODE_ENV ",isDev );
+  event.sender.send("voltaEnv",isDev);
+
+});
 
 ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
 

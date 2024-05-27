@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <title>Escaner de QRcodes Hub Curitiba V0.1 alpha</title>
+    <title></title>
     <script src="pdf.js"></script>
     <script src="anime.min.js"></script>
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -222,6 +222,12 @@
             align-items: center;
         }
 
+        .alinhar {
+            display: flex;
+            justify-content: center;
+            /*align-items: center;*/
+        }
+
         .botao {
             background-color: #75dafb;
             border-radius: 15px;
@@ -260,8 +266,9 @@
             <button id="btIniciaTutorial" class="botao w30">Inicia Tutorial</button>
             <button id="btPulaTutorial" class="botao w30">Pula Tutorial</button>
         </div>
-        <div style="position: absolute; bottom: 20px; right: 20px; display: flex;align-items: flex-end;flex-direction: column;justify-content: flex-end;">
-            <p style="font-size: 20px;">V0.15 alpha</p>
+        <div
+            style="position: absolute; bottom: 20px; right: 20px; display: flex;align-items: flex-end;flex-direction: column;justify-content: flex-end;">
+            <p style="font-size: 20px;" id="txtVersao"></p>
             <p style="font-size: 10px;">augustobarbosa@arcoeducacao.com.br</p>
         </div>
     </div>
@@ -278,12 +285,16 @@
         <div style="width: 100%;" class="alinharTudo">
             <h1>Escolha a forma de detecção:</h1>
         </div>
-        <div style="width: 50%; display: flex; gap: 30px;" class="alinharTudo">
-            <div>
-                <button id="btEscolha1" class="botao w100">Até 4 QRCODES</button>
-                <p><b>Rapido:</b> Para pdfs do Fundamental com 1 ou 2 QRcodes</p>
+        <div style="width: 50%; display: flex; gap: 30px;" class="alinhar">
+            <div style="width: 25%;">
+                <button id="btEscolha3" class="botao w100">1 QRCODE</button>
+                <p><b>Rapido:</b> Apenas 1 QRcode por página</p>
             </div>
-            <div>
+            <div style="width: 25%;">
+                <button id="btEscolha1" class="botao w100">Até 4 QRCODES</button>
+                <p><b>Médio:</b> Para pdfs do Fundamental com 1 ou 2 QRcodes</p>
+            </div>
+            <div style="width: 25%;">
                 <button id="btEscolha2" class="botao w100">De 5 a 10 QRCODES</button>
                 <p><b>Lento:</b> Para pdfs do EM com varios qrcodes por página</p>
             </div>
@@ -327,13 +338,16 @@
             </div>
         </div>
         <div
-            style="width: 10%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
+            style="width: 15%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
             <p>Multiplos QRCODES por página (diminui o tempo de leitura)</p>
-            <input type="checkbox" id="checkboxMulti" checked>
-
+            <select id="qrcodeDropdown">
+                <option value="1">1 QRCODE</option>
+                <option value="2">Até 4 QRCODES</option>
+                <option value="3">Até 10 QRCODES</option>
+            </select>
         </div>
         <div
-            style="width: 10%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
+            style="width: 15%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
             <p>Escala da página, quanto maior, mais demorado.</p>
             <div
                 style="display: flex;flex-direction: row;width: 100%;height: 20px; align-items: center;justify-content: center;">
@@ -342,8 +356,9 @@
             </div>
         </div>
         <div
-            style="width: 10%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
-            <p>Metodos de escaneamento</p>
+            style="width: 15%;display: flex;align-items: start;justify-content: center;flex-direction: column;margin: 10px;">
+            <p>Metodos de escaneamento (quantas vezes a pagina é escaneada, exemplo 6x2: 6 vezes verticalmente e 2
+                horizoltalmente)</p>
             <select id="scanMethodDropdown">
                 <option value="1">6x2</option>
                 <option value="2">7x2</option>
@@ -358,7 +373,8 @@
         </div>
         <div
             style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;;gap: 20px;">
-            <p>Compara com lista de codigos em arquivo <b>.txt</b><br>Arquivo deve estar na pasta<b>/TXT</b> </p>
+            <p><span style="color: rgb(255, 0, 123);">*EXPERIMENTAL</span><br>Compara com lista de codigos em arquivo
+                <b>.txt</b><br>Arquivo deve estar na pasta<b>/TXT</b> </p>
             <input type="checkbox" id="checkboxLista">
             <div id="seletorLista"
                 style="width: 100%; display: none;flex-direction: column;gap: 20px;align-items: center;justify-content: center;">
@@ -366,8 +382,9 @@
             </div>
         </div>
         <div
-            style="width: 20%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;;gap: 20px;">
-            <p>*EXPERIMENTAL<br>Salva screenshots dos links na pasta <b>/SCREENSHOTS</b></p>
+            style="width: 10%;display: flex;align-items: center;justify-content: center;flex-direction: column;margin: 10px;;gap: 20px;">
+            <p><span style="color: rgb(255, 0, 123);">*EXPERIMENTAL</span></span><br>Salva screenshots dos links na
+                pasta <b>/SCREENSHOTS</b></p>
             <input type="checkbox" id="checkboxSalvaImagens">
         </div>
     </div>
@@ -425,6 +442,11 @@
     </div>
 
     <script type="module">
+        const versao = 0.16;
+        document.title = "Escaner de QRcodes Hub Curitiba V" + versao + " alpha";
+        document.querySelector("#txtVersao").innerText = "V" + versao + " alpha";
+
+
 
         import QrScanner from "./qr-scanner.min.js";
         //modal fim
@@ -442,9 +464,11 @@
         const btFechaFim = document.querySelector('#btFechaFim');
         const btEscolha1 = document.querySelector('#btEscolha1');
         const btEscolha2 = document.querySelector('#btEscolha2');
+        const btEscolha3 = document.querySelector('#btEscolha3');
         //
         //configuracoes
         const scanMethodDropdown = document.querySelector('#scanMethodDropdown');
+        const qrcodeDropdown = document.querySelector('#qrcodeDropdown');
         const inputEscala = document.querySelector('#inputEscala');
         const btFechaConfig = document.querySelector('#btFechaConfig');
         const configuracoesUI = document.querySelector('.configuracoesUI');
@@ -471,10 +495,22 @@
         var data = [];
         var qrcodesDuplicados = [];
         var podeEscanear = true;
+        var escolhaQrcode = "10qrcodes";
         //------------------>quando for fazer a build "npm run package":
         //var caminho = "../../";
         //------------------>pra dev:
         var caminho = "./";
+
+        //aqui verificamos se esta sendo rodado em DEV
+        electron.ipcRenderer.send('mandaEnv');
+        electron.ipcRenderer.on('voltaEnv', (e, data) => {
+            console.log("recebeu env", data);
+            if (data) {
+                caminho = "./";
+            } else {
+                caminho = "../../";
+            }
+        })
 
         var PDFJS = window['pdfjs-dist/build/pdf'];
 
@@ -524,13 +560,28 @@
         BOTOES
         --------------------------------------------------------------
         */
+        qrcodeDropdown.addEventListener('change', event => {
+            if (qrcodeDropdown.value == 1) {
+                escolhaQrcode = "1qrcode";
+            } else if (qrcodeDropdown.value == 2) {
+                escolhaQrcode = "4qrcodes";
+            } else if (qrcodeDropdown.value == 3) {
+                escolhaQrcode = "10qrcodes";
+            }
+            console.log("escolhaQrcode", escolhaQrcode);
+        })
         btEscolha1.addEventListener('click', () => {
             telaEscolhaModo.classList.add("esconde");
-            checkboxMulti.checked = false;
+            escolhaQrcode = "4qrcodes";
         })
         btEscolha2.addEventListener('click', () => {
             telaEscolhaModo.classList.add("esconde");
-            checkboxMulti.checked = true;
+            escolhaQrcode = "10qrcodes";
+        })
+        btEscolha3.addEventListener('click', () => {
+            telaEscolhaModo.classList.add("esconde");
+            escolhaQrcode = "1qrcode";
+
         })
         btIniciaTutorial.addEventListener('click', () => {
             telaAbertura.classList.add("esconde");
@@ -632,10 +683,7 @@
                     var numHorizontalSections = 2;
                     var numVerticalSections = 6;
 
-
-
-                    if (checkboxMulti.checked) {
-
+                    if (escolhaQrcode == "10qrcodes") {
                         if (scanMethodDropdown.value == 1) {
                             numHorizontalSections = 2;
                             numVerticalSections = 6;
@@ -649,13 +697,37 @@
                             numHorizontalSections = 2;
                             numVerticalSections = 8;
                         }
+                        console.log("escolhaQrcode: ", escolhaQrcode);
                         console.log("Method:", scanMethodDropdown.value, numHorizontalSections, numVerticalSections)
-
-                    } else {
+                    } else if (escolhaQrcode == "4qrcodes") {
                         numHorizontalSections = 2;
                         numVerticalSections = 2;
-                        /*
-                        console.log("qrcodes multi:", checkboxMulti.checked);
+                        console.log("escolhaQrcode: ", escolhaQrcode);
+
+                    } else if (escolhaQrcode == "1qrcode") {
+                        console.log("escolhaQrcode: ", escolhaQrcode);
+
+                    }
+                    if (escolhaQrcode == "10qrcodes" || escolhaQrcode == "4qrcodes") {
+                        var overlap = imageHeight / numVerticalSections;
+                        var sections = divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap);
+                        console.log(sections); // This will print out the sections including overlaps
+                        processSections(sections, imageData, pageNumber, canvas).then(function () {
+                            pageNumber++;
+                            console.log("pula pagina===================================>:", pageNumber);
+                            if (pageNumber <= totalPages) {
+                                renderPage(pdf);
+                                titulo.innerText = pageNumber + " de " + totalPages + " páginas processadas";
+                                let percentage = (pageNumber / totalPages) * 100;
+                                fillBar.style.width = percentage + '%';
+                                fillBar.innerText = percentage.toFixed(0) + '%';
+                            } else {
+                                console.log("FIM");
+                                fim();
+                            }
+                        });
+                    } else {
+
                         QrScanner.scanImage(imageData, { returnDetailedScanResult: true })
                             .then(result => {
                                 setResult(result, pageNumber, canvas);
@@ -677,25 +749,9 @@
                                     fim();
                                 }
                             });
-*/
+
                     }
-                    var overlap = imageHeight / numVerticalSections;
-                    var sections = divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap);
-                    console.log(sections); // This will print out the sections including overlaps
-                    processSections(sections, imageData, pageNumber, canvas).then(function () {
-                        pageNumber++;
-                        console.log("pula pagina===================================>:", pageNumber);
-                        if (pageNumber <= totalPages) {
-                            renderPage(pdf);
-                            titulo.innerText = pageNumber + " de " + totalPages + " páginas processadas";
-                            let percentage = (pageNumber / totalPages) * 100;
-                            fillBar.style.width = percentage + '%';
-                            fillBar.innerText = percentage.toFixed(0) + '%';
-                        } else {
-                            console.log("FIM");
-                            fim();
-                        }
-                    });
+
 
                 });
             });
