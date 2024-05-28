@@ -1,1 +1,798 @@
 URL;ID;Resultado:
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;6;pdf
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;8;pdf
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ1;9;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ2;9;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ1;10;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ1;9;link não cadastrado
+;;;;https://url.sae.digital/QE24GABPOR;8;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ2;9;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ1;10;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ2;10;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ3;11;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ2;11;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ3;11;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ4;12;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ1;11;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ6;12;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ5;12;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ7;12;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ4;13;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ3;13;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ3;14;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ5;13;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ5;14;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ6;14;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ4;14;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ7;15;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ3;15;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ2;15;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ22;15;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ5;16;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ4;16;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ6;16;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ7;17;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ8;17;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ9;17;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ4;18;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ5;18;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ6;18;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ7;18;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ8;19;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ10;19;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ11;19;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ9;19;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ12;20;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ14;20;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ13;20;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ15;21;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ16;21;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ11;21;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ12;21;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ14;22;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ13;22;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ15;22;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ8;23;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ6;23;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ7;23;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ9;23;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ11;24;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ10;24;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ12;24;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ13;25;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ10;25;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ11;25;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ17;26;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ12;26;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ18;26;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ21;27;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ19;27;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ20;27;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ22;28;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ19;28;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ14;28;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ8;28;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ15;29;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ13;29;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ23;30;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ16;29;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ25;30;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ24;30;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ10;31;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ15;32;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ17;31;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ9;31;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ14;32;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ24;31;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ16;33;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ27;33;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ26;33;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ25;34;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ12;34;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ17;35;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ11;34;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ13;34;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ18;35;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ28;36;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ30;36;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ29;36;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ33;37;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ31;36;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ32;37;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ34;37;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ28;38;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ26;38;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ27;38;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ20;39;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ18;39;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ19;39;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ14;38;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ35;40;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ37;40;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ15;39;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ36;40;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ38;40;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ39;41;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ41;41;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ40;41;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ42;41;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ20;43;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ16;42;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ18;42;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ21;43;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ19;43;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ17;42;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ21;44;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ23;44;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ22;44;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ43;45;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ44;45;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ36;45;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ35;45;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023REDQ1;47;link não cadastrado
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;53;pdf
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ1;54;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ2;54;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ3;54;vídeo vimeo
+;;;;https://url.sae.digital/QE24GABLIT;53;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022LITQ1;54;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021LITQ1;55;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022LITQ2;55;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022LITQ3;55;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ4;56;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019LITQ2;55;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ2;56;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ3;56;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ1;56;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022LITQ6;57;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022LITQ4;57;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021LITQ2;57;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022LITQ5;57;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021LITQ3;58;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ5;58;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019LITQ5;58;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ4;58;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ5;59;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022LITQ7;59;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021LITQ5;60;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ7;59;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022LITQ8;60;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ6;60;erro
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ6;59;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021LITQ4;60;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ7;61;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019LITQ10;61;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019LITQ11;61;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019LITQ9;61;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ8;62;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ10;62;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022LITQ9;63;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ9;62;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022LITQ10;63;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ11;62;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021LITQ6;64;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023LITQ12;63;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021LITQ7;64;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ9;64;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ8;64;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ10;65;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ12;65;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ11;65;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ13;65;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020LITQ14;66;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019LITQ13;66;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019LITQ14;67;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019LITQ15;67;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019LITQ12;66;url ok!
+;;;;https://url.sae.digital/QE23GABING;69;url ok!
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2023_RAIO-X.pdf;69;pdf
+;;;;https://apis.sae.digital/redirect/r/ENEM2023INGQ1;70;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023INGQ3;70;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023INGQ2;70;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022INGQ3;71;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022INGQ1;71;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023INGQ4;71;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022INGQ4;72;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021INGQ1;72;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022INGQ2;71;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021INGQ2;72;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022INGQ5;72;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020INGQ1;73;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021INGQ3;73;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021INGQ4;73;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020INGQ2;73;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020INGQ3;74;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020INGQ5;74;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020INGQ4;74;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020INGQ6;74;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020INGQ7;75;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019INGQ2;75;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019INGQ1;75;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019INGQ3;76;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019INGQ7;76;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2020INGQ9;77;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021INGQ5;77;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023INGQ5;76;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2019INGQ4;76;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2020INGQ8;77;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020INGQ10;77;vídeo vimeo
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;79;pdf
+;;;;https://apis.sae.digital/redirect/r/ENEM2022ESPQ1;80;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023ESPQ1;80;link não cadastrado
+;;;;https://url.sae.digital/QE24GABESP;79;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ESPQ2;81;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022ESPQ2;81;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ESPQ1;81;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023ESPQ2;80;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ESPQ3;81;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ESPQ1;82;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ESPQ4;82;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ESPQ5;82;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ESPQ2;82;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ESPQ3;83;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ESPQ4;83;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ESPQ5;83;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ESPQ6;84;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019ESPQ1;84;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019ESPQ3;84;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019ESPQ2;84;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019ESPQ4;85;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023ESPQ3;85;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ESPQ7;86;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022ESPQ5;86;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ESPQ8;86;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022ESPQ3;87;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022ESPQ4;87;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023ESPQ4;86;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ESPQ9;88;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023ESPQ5;87;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ESPQ10;88;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019ESPQ9;88;url ok!
+;;;;https://url.sae.digital/QE23GABART;90;url ok!
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2023_RAIO-X.pdf;90;pdf
+;;;;https://apis.sae.digital/redirect/r/ENEM2022ARTQ2;91;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022ARTQ1;91;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022ARTQ3;91;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023ARTQ1;91;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ARTQ1;92;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ARTQ2;92;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ARTQ1;92;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019ARTQ2;93;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023ARTQ2;93;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022ARTQ4;93;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019ARTQ3;93;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ARTQ3;94;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ARTQ2;94;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ARTQ4;94;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ARTQ5;95;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ARTQ4;95;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ARTQ3;95;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019ARTQ5;96;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019ARTQ4;96;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ARTQ6;97;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ARTQ5;97;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022ARTQ5;97;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023ARTQ3;97;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ARTQ6;98;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ARTQ7;98;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ARTQ8;98;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ARTQ9;99;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019ARTQ7;99;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023ARTQ4;99;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ARTQ7;100;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021ARTQ8;100;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020ARTQ10;100;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023ARTQ5;99;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2019ARTQ10;101;url ok!
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2023_RAIO-X.pdf;103;pdf
+;;;;https://url.sae.digital/QE23GABEDF;103;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023EDFQ1;104;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023EDFQ4;104;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023EDFQ2;104;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023EDFQ3;104;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022EDFQ1;105;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022EDFQ3;105;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021EDFQ1;105;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023EDFQ5;104;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022EDFQ2;105;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ1;106;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ3;106;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ4;106;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ2;106;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ5;107;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ7;107;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ8;107;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ6;107;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ12;108;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ9;108;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ11;108;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020EDFQ10;108;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019EDFQ1;108;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019EDFQ3;109;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019EDFQ2;109;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019EDFQ4;109;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019EDFQ5;110;url ok!
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;112;pdf
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ1;113;vídeo vimeo
+;;;;https://url.sae.digital/QE24GABMAT;112;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ1;113;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ2;113;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ2;113;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ1;114;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ2;114;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ3;115;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ2;115;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ1;115;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ4;116;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ3;115;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ4;116;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ3;116;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ7;116;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ4;116;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ5;116;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ3;115;erro
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ12;117;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ8;117;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ9;117;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ5;117;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ10;117;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ11;117;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ6;117;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ8;117;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ9;118;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ12;118;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ11;118;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ2;118;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ10;118;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ7;118;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ8;119;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ4;119;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ6;119;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ5;119;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ5;120;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ42;120;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ7;120;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ6;120;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ43;120;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ6;121;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ44;120;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ9;121;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ10;121;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ8;121;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ11;121;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ7;122;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ12;122;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ13;122;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ15;122;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ16;122;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ19;123;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ14;122;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ24;123;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ23;123;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ20;123;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ21;123;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ22;123;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ25;123;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ17;123;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ18;124;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ13;124;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ14;124;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ16;125;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ18;125;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ15;125;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ17;125;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ8;125;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ11;126;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ9;126;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ10;126;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ9;126;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ10;126;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ14;127;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ12;126;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ13;127;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ11;127;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ28;128;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ12;127;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ26;128;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ29;128;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ15;127;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ30;128;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ31;128;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ27;128;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ32;129;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ28;129;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ33;129;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ21;129;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ22;129;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ23;130;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ16;130;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ15;130;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ13;131;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ17;130;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ13;131;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ16;132;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ14;131;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ17;132;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ14;132;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ15;132;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ18;133;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ19;133;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ20;133;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ34;134;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ35;135;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ37;135;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ38;135;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ36;135;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ39;136;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ41;136;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ40;136;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ33;136;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ34;137;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ37;137;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ35;137;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ16;139;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ20;139;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ38;138;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ21;139;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ17;139;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ18;138;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ22;140;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ19;139;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ43;140;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ23;140;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ44;140;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ42;140;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ45;140;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ21;141;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ22;141;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ19;141;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ21;141;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ40;141;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ24;142;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ46;142;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ47;142;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ20;141;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ25;142;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ50;143;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ48;143;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ51;143;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ52;143;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ49;143;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ53;144;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ44;144;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ42;144;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ25;145;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ24;145;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ45;144;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ26;145;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ43;144;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ27;146;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ54;146;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ56;146;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ23;145;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ57;146;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ55;146;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ53;147;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ54;147;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ28;148;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ22;147;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ24;147;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ25;147;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ59;148;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ58;148;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ23;147;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ26;148;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ60;149;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ62;149;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ61;149;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ56;149;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ57;149;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ27;150;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ26;150;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ28;150;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ29;151;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ28;151;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ29;151;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ27;150;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ32;152;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ30;151;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ31;152;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ34;152;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ33;152;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ63;153;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ65;153;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ64;153;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ66;153;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ60;154;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ62;154;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ61;154;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ63;154;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ64;154;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ29;155;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ31;155;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ32;156;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ30;156;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ34;156;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ30;155;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ31;157;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ35;157;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ33;156;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ36;158;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ67;158;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ68;158;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ37;158;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ69;159;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ70;159;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ71;159;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ73;160;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ72;160;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ74;160;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ75;161;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ72;161;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ71;161;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ70;161;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ73;162;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ36;162;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ74;162;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ33;163;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ37;162;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ32;163;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ35;163;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ34;163;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ35;164;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ37;164;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ36;164;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ38;164;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ38;165;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ45;164;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ39;165;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ40;166;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ41;166;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ42;166;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ76;166;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ78;167;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ77;167;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ79;167;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ80;167;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ81;168;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ82;168;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ83;168;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ84;169;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ85;169;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ79;169;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ80;170;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ41;170;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ39;171;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ81;170;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ38;171;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ40;171;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ40;172;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ43;173;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ39;171;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ46;172;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ86;173;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ87;173;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ88;173;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ44;174;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ44;174;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ43;174;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021MATQ45;175;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ88;175;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ89;176;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020MATQ90;176;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023MATQ42;175;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022MATQ41;176;vídeo vimeo
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;178;pdf
+;;;;https://apis.sae.digital/redirect/r/ENEM2019MATQ90;176;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ1;179;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ1;179;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ2;179;vídeo vimeo
+;;;;https://url.sae.digital/QE24GABFIS;178;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ1;180;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ1;180;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ2;179;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ3;179;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ2;181;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ3;181;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ4;181;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ4;181;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ1;181;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ3;182;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ5;182;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ3;183;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ2;183;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ4;183;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ5;183;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ5;184;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ4;184;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ5;184;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ3;184;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ7;185;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ4;185;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ6;185;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ7;185;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ9;186;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ6;186;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ7;186;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ8;186;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ6;187;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ6;187;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ5;187;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ7;188;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ12;188;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ13;188;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ14;188;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ11;189;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ8;189;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ9;189;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ10;189;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ15;190;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ16;190;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ8;190;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ9;190;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ10;190;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ8;191;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ10;191;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ13;191;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ9;191;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ11;191;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ17;192;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ18;192;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ12;191;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ19;192;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ7;192;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ20;193;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ10;193;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ14;193;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ9;194;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ13;194;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ8;194;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ10;195;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ14;194;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ11;195;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ11;195;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ12;195;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ13;196;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ12;196;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ14;197;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ22;197;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ21;197;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ23;198;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ25;198;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ26;198;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ24;198;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ29;199;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ27;199;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ28;199;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020FISQ30;200;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ13;200;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ16;200;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ15;200;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ15;201;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023FISQ15;200;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021FISQ16;202;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ14;202;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ18;201;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022FISQ15;202;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019FISQ19;203;url ok!
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;205;pdf
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ1;206;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ1;206;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ2;207;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ1;206;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ5;207;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ6;207;vídeo vimeo
+;;;;https://url.sae.digital/QE24GABQUI;205;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ2;206;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ3;207;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ4;207;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ7;207;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ1;208;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ1;208;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ2;208;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ3;208;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ8;209;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ2;209;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ2;209;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ4;209;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ3;209;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ3;211;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ4;211;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ3;210;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ9;211;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ10;211;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ11;212;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ5;212;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ5;211;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ6;213;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ12;213;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ4;213;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ6;213;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ5;214;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ8;213;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ7;213;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ7;214;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ6;214;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ8;214;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ15;215;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ7;215;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ16;215;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ9;215;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ8;215;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ17;215;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ14;216;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ18;216;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ13;216;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ8;216;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ19;217;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ10;218;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ20;218;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ9;217;erro
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ11;218;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ9;217;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ9;217;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ11;219;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ12;218;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ10;219;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ12;219;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ12;220;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ22;220;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ21;220;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ23;220;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ24;222;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ25;222;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ17;222;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ14;221;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ15;221;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ10;221;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ26;223;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ11;222;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ27;223;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ14;223;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ14;221;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ13;223;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ19;223;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021QUIQ13;224;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ28;225;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ12;224;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ27;224;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ20;224;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ29;226;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023QUIQ13;225;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022QUIQ15;226;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ31;225;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2020QUIQ30;226;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ33;227;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019QUIQ34;227;url ok!
+;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;229;pdf
+;;;;https://apis.sae.digital/redirect/r/ENEM2022BIOQ3;230;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022BIOQ4;230;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022BIOQ1;230;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022BIOQ2;230;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021BIOQ2;231;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021BIOQ1;231;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022BIOQ5;231;vídeo vimeo
+;;;;https://url.sae.digital/QE24GABBIO;229;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2023BIOQ1;230;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2020BIOQ1;231;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019BIOQ3;232;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019BIOQ4;232;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021BIOQ3;233;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023BIOQ2;232;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2021BIOQ4;233;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019BIOQ1;232;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2019BIOQ2;232;url ok!
+;;;;https://apis.sae.digital/redirect/r/ENEM2021BIOQ5;233;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023BIOQ3;232;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022BIOQ6;233;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2023BIOQ16;233;link não cadastrado
+;;;;https://apis.sae.digital/redirect/r/ENEM2022BIOQ7;233;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020BIOQ2;234;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020BIOQ3;234;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020BIOQ4;234;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020BIOQ5;234;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2021BIOQ6;235;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020BIOQ6;234;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2020BIOQ7;235;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2022BIOQ8;235;vídeo vimeo
+;;;;https://apis.sae.digital/redirect/r/ENEM2019BIOQ9;235;url ok!
