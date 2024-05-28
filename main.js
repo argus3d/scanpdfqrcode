@@ -97,24 +97,31 @@ function isValidUrl(string) {
   }
 }
 async function renderPageToImage(url, filename) {
-  
+
   const browser = await puppeteer.launch();
   const page = await browser.newPage();
 
-  await page.goto(url, {'waitUntil': 'networkidle0'});
-  await page.waitFor(9000)
+  await page.goto(url, { 'waitUntil': 'networkidle0' });
   // Adjust viewport
   await page.setViewport({ width: 1280, height: 720 });
-
+  /*
+  if (url.includes("OD1") || url.includes("OD2") || url.includes("OD3")) {
+    await iframe.waitForSelector('.css-ln3ne7', { hidden: true });
+    await page.screenshot({ path: filename, fullPage: false });
+    await browser.close();
+  } else {
+    await page.screenshot({ path: filename, fullPage: false });
+    await browser.close();
+  }
+  */
   await page.screenshot({ path: filename, fullPage: false });
-
   await browser.close();
   console.log('Page rendered to image successfully!');
-  
+
 }
 ipcMain.on('mandaEnv', async (event) => {
-  console.log("process.env.NODE_ENV ",isDev );
-  event.sender.send("voltaEnv",isDev);
+  console.log("process.env.NODE_ENV ", isDev);
+  event.sender.send("voltaEnv", isDev);
 
 });
 
@@ -200,7 +207,7 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
             if (response.data.includes("subscribers")) {
               respostaTexto = "vídeo no youtube";
             }
-            
+
             if (response.data.includes("sae-digital-home")) {
               respostaTexto = "link não cadastrado";
             }
