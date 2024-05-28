@@ -685,7 +685,7 @@
 
                 var canvas = document.createElement('canvas');
 
-                var context = canvas.getContext('2d');
+                var context = canvas.getContext('2d', { willReadFrequently: true });
                 canvas.height = viewport.height;
                 canvas.width = viewport.width;
 
