@@ -1,0 +1,4 @@
+URL;ID;Resultado:
+;;;;https://apis.sae.digital/redirect/r/EXT213MATA13S1;1;erro
+;;;;https://apis.sae.digital/redirect/r/EXT213MATA13S8;1;erro
+;;;;https://apis.sae.digital/redirect/r/EXT213MATA13S9;1;erro

@@ -1,19 +1,1 @@
 URL;ID;Resultado:
-;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;6;pdf
-;;;;https://s3.amazonaws.com/gabaritossae/QE_2024_RAIO-X.pdf;8;pdf
-;;;;https://url.sae.digital/QE24GABPOR;8;link não cadastrado
-;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ1;9;vídeo vimeo
-;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ1;9;link não cadastrado
-;;;;https://apis.sae.digital/redirect/r/ENEM2022PORQ2;9;vídeo vimeo
-;;;;https://apis.sae.digital/redirect/r/ENEM2023PORQ2;9;link não cadastrado
-;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ1;10;vídeo vimeo
-;;;;https://apis.sae.digital/redirect/r/ENEM2021PORQ1;10;vídeo vimeo
-;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ2;10;vídeo vimeo
-;;;;https://apis.sae.digital/redirect/r/ENEM2020PORQ3;11;vídeo vimeo
-;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ2;11;erro
-;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ1;11;erro
-;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ3;11;erro
-;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ4;12;erro
-;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ6;12;erro
-;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ7;12;erro
-;;;;https://apis.sae.digital/redirect/r/ENEM2019PORQ5;12;erro

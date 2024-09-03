@@ -4,6 +4,8 @@ const axios = require('axios');
 const axiosRetry = require('axios-retry').default;
 const http = require('http');
 const https = require('https');
+
+
 const puppeteer = require('puppeteer');
 const readline = require('readline');
 const { app, BrowserWindow, ipcMain, dialog } = require('electron');
@@ -200,7 +202,9 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
             if (response.data.includes("vimeo")) {
               respostaTexto = "vídeo vimeo";
             }
-
+            if (response.data.includes("<title>Player</title>")) {
+              respostaTexto = "player de video";
+            }
             if (url.includes(".pdf")) {
               respostaTexto = "pdf";
             }

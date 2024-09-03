@@ -454,7 +454,7 @@
     </div>
 
     <script type="module">
-        const versao = 0.2;
+        const versao = 0.3;
         document.title = "Scanner de QRcodes Hub Curitiba V" + versao + " alpha";
         document.querySelector("#txtVersao").innerText = "V" + versao + " alpha";
 
@@ -718,7 +718,7 @@
                             numVerticalSections = 8;
                         } else if (scanMethodDropdown.value == 4) {
                             numHorizontalSections = 2;
-                            numVerticalSections = 8;
+                            numVerticalSections = 16;
                         }
                         console.log("escolhaQrcode: ", escolhaQrcode);
                         console.log("Method:", scanMethodDropdown.value, numHorizontalSections, numVerticalSections)
@@ -733,22 +733,44 @@
                     }
                     if (escolhaQrcode == "10qrcodes" || escolhaQrcode == "4qrcodes") {
                         var overlap = imageHeight / numVerticalSections;
-                        var sections = divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap);
-                        console.log(sections); // This will print out the sections including overlaps
-                        processSections(sections, imageData, pageNumber, canvas).then(function () {
-                            pageNumber++;
-                            console.log("pula pagina===================================>:", pageNumber);
-                            if (pageNumber <= totalPages) {
-                                renderPage(pdf);
-                                nPag.innerText = pageNumber + " de " + totalPages + " páginas processadas";
-                                let percentage = (pageNumber / totalPages) * 100;
-                                fillBar.style.width = percentage + '%';
-                                fillBar.innerText = percentage.toFixed(0) + '%';
-                            } else {
-                                console.log("FIM");
-                                fim();
-                            }
-                        });
+                        var sections;
+                        if (escolhaQrcode == "10qrcodes") {
+                            //com mais de 18 qrcodes BEEEEm lento
+                            console.log("10qrcodes+ LENTO");
+                            sections = divideImageIntoSectionsPlus(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap);
+                        } else {
+                            console.log("4qrcodes");
+                            sections = divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap);
+                        }
+                        QrScanner.scanImage(imageData, { returnDetailedScanResult: true })
+                        //primeiro tenta achar um qrcode simples
+                            .then(result => {
+                                if (qrcodesDuplicados.indexOf(result.data) > -1) {
+                                    console.log("QRCODE DUPLICADO");
+                                } else {
+                                    setResult(result, pageNumber, canvas);
+                                    qrcodesDuplicados.push(result.data);
+                                }
+                            })
+                            .catch(e => {
+                                console.log("SEM QRCODE SIMPLES");
+                            })
+                            .finally(e => {
+                                processSections(sections, imageData, pageNumber, canvas).then(function () {
+                                    pageNumber++;
+                                    console.log("pula pagina===================================>:", pageNumber);
+                                    if (pageNumber <= totalPages) {
+                                        renderPage(pdf);
+                                        nPag.innerText = pageNumber + " de " + totalPages + " páginas processadas";
+                                        let percentage = (pageNumber / totalPages) * 100;
+                                        fillBar.style.width = percentage + '%';
+                                        fillBar.innerText = percentage.toFixed(0) + '%';
+                                    } else {
+                                        console.log("FIM");
+                                        fim();
+                                    }
+                                });
+                            });
                     } else {
 
                         QrScanner.scanImage(imageData, { returnDetailedScanResult: true })
@@ -811,13 +833,63 @@
 
             return sections;
         }
+        function divideImageIntoSectionsPlus(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap) {
+            const sectionWidth = imageWidth / numHorizontalSections;
+            const sectionHeight = imageHeight / 18;
+
+            const sections = [];
+            var w = 0;
+
+
+            for (let row = 0; row < 19; row++) {
+                for (let col = 0; col < 2; col++) {
+                    let x = col * sectionWidth;
+                    let y = row * sectionHeight;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                    x = col * sectionWidth;
+                    y = row * sectionHeight + w * 5;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                    x = col * sectionWidth;
+                    y = row * sectionHeight + w * 10;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                    x = col * sectionWidth;
+                    y = row * sectionHeight + w * 15;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                    x = col * sectionWidth;
+                    y = row * sectionHeight + w * 20;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                    x = col * sectionWidth;
+                    y = row * sectionHeight + w * 25;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                    x = col * sectionWidth;
+                    y = row * sectionHeight + w * 30;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                    x = col * sectionWidth;
+                    y = row * sectionHeight + w * 35;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                    x = col * sectionWidth;
+                    y = row * sectionHeight + w * 40;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                    x = col * sectionWidth;
+                    y = row * sectionHeight + w * 45;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                    x = col * sectionWidth;
+                    y = row * sectionHeight + w * 50;
+                    sections.push([x, y, sectionWidth, sectionHeight]);
+                    w++;
+                }
+            }
+
+
+            return sections;
+        }
         function delay(ms) {
             return new Promise(resolve => setTimeout(resolve, ms));
         }
 
         async function processSections(sections, imageData, pageNumber, canvas) {
             const results = [];
-
+            console.log("scan "+sections.length+"sections "); 
             for (let i = 0; i < sections.length; i++) {
                 //console.log("Processing page:", pageNumber, "section:", sections[i][0], sections[i][1], sections[i][2], sections[i][3]);
 
@@ -846,7 +918,7 @@
                 }
 
                 // delayzinho entre as seccoes
-                await delay(50);
+                await delay(5);
             }
 
             //console.log("All sections processed. Results:", results);
