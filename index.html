@@ -118,9 +118,9 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: #75dafb;
+            background: #8a8a8a;
             border-radius: inherit;
-            box-shadow: 0 0 0 2px #4080c1, 0 0.625em 0 0 #d8f5fe;
+            box-shadow: 0 0 0 2px #4b4b4b, 0 0.625em 0 0 #d8f5fe;
             transform: translate3d(0, 0.75em, -1em);
             transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), box-shadow 150ms cubic-bezier(0, 0, 0.58, 1);
         }
@@ -164,13 +164,22 @@
             background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='%230964B0'%3E%3Cpath d='M18 15v3H6v-3H4v3c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2v-3h-2zM7 9l1.41 1.41L11 7.83V16h2V7.83l2.59 2.58L17 9l-5-5-5 5z'/%3E%3C/svg%3E");
         }
 
-        input[type="file"]::after {
+        input.inputArquivo[type="file"]::after {
             position: absolute;
             pointer-events: none;
             top: 11px;
             left: 40px;
             color: #0964b0;
-            content: "Abrir arquivo";
+            content: "Abrir Arquivo";
+        }
+
+        input.inputPasta[type="file"]::after {
+            position: absolute;
+            pointer-events: none;
+            top: 11px;
+            left: 40px;
+            color: #0964b0;
+            content: "Abrir Pasta";
         }
 
         /* ------- From Step 1 ------- */
@@ -259,7 +268,7 @@
 <body>
     <div id="telaAbertura" class="tela gradienteCinza">
         <div style="width: 100%;" class="alinharTudo">
-            <img src="static/logo.png" style="height: 60%;">
+            <img src="assets/logo.png" style="height: 60%;">
         </div>
         <div style="width: 50%; display: flex; gap: 30px;" class="alinharTudo">
             <button id="btIniciaTutorial" class="botao w30">Inicia Tutorial</button>
@@ -273,12 +282,12 @@
     </div>
 
     <div id="telaTutorial" class="tela esconde">
-        <img class="tuto" src="tutorial.png" style="height: 80%">
-        <img class="tuto" src="tuto1.jpg" style="height: 100%;;display: none;">
-        <img class="tuto" src="tuto2.jpg" style="height: 100%;display: none;">
-        <img class="tuto" src="tuto3.jpg" style="height: 100%;display: none;">
-        <img class="tuto" src="tuto4.jpg" style="height: 100%;display: none;">
-        <img class="tuto" src="tuto5.jpg" style="height: 100%;display: none;">
+        <img class="tuto" src="assets/tutorial.png" style="height: 80%">
+        <img class="tuto" src="assets/tuto1.jpg" style="height: 100%;;display: none;">
+        <img class="tuto" src="assets/tuto2.jpg" style="height: 100%;display: none;">
+        <img class="tuto" src="assets/tuto3.jpg" style="height: 100%;display: none;">
+        <img class="tuto" src="assets/tuto4.jpg" style="height: 100%;display: none;">
+        <img class="tuto" src="assets/tuto5.jpg" style="height: 100%;display: none;">
     </div>
     <div id="telaEscolhaModo" class="tela esconde gradienteCinza">
         <div style="width: 100%;" class="alinharTudo">
@@ -288,21 +297,21 @@
             <div style="width: 25%;">
                 <button id="btEscolha3" class="botao w100">1 QRCODE</button>
                 <div style="width: 100%;height: 50%;" class="alinharTudo">
-                    <img src="icons8-page-100-1.png" style="width: 80%;">
+                    <img src="assets/icons8-page-100-1.png" style="width: 80%;">
                 </div>
                 <p><b>Rapido:</b> Apenas 1 QRcode por página</p>
             </div>
             <div style="width: 25%;">
                 <button id="btEscolha1" class="botao w100">Até 4 QRCODES</button>
                 <div style="width: 100%;height: 50%;" class="alinharTudo">
-                    <img src="icons8-page-100-2.png" style="width: 80%;">
+                    <img src="assets/icons8-page-100-2.png" style="width: 80%;">
                 </div>
                 <p><b>Médio:</b> Para pdfs do Fundamental com 1 ou 2 QRcodes</p>
             </div>
             <div style="width: 25%;">
                 <button id="btEscolha2" class="botao w100">De 5 a 10 QRCODES</button>
                 <div style="width: 100%;height: 50%;" class="alinharTudo">
-                    <img src="icons8-page-100-3.png" style="width: 80%;">
+                    <img src="assets/icons8-page-100-3.png" style="width: 80%;">
                 </div>
                 <p><b>Lento:</b> Para pdfs do EM com varios qrcodes por página</p>
             </div>
@@ -319,17 +328,26 @@
         <button id="btFechaFim"
             style="background-color: #4080c1;border-radius: 5px;width: 100px;height: 40px;">Fechar</button>
     </div>
+    <div id="telaCarregando"
+        style="width: 100%;height: 100%;background-color: rgba(0, 0, 0, 0.5);display: none;justify-content: center;align-items: center;position: fixed;z-index: 10;flex-direction: column;">
 
+        <img src="assets/animacaolupa.gif" style="width: 15%;">
+    </div>
+    <div
+        style="display: none;position: fixed;bottom: 0;width: 100%;height: 20%;z-index: 100;background-color: #0964b0;align-items: center;justify-content: center;">
+        <button id="btSalvaTxt" style="background-color: #ffffff;border-radius: 15px;width: 200px;height: 100px;">Salva
+            TXT</button>
+    </div>
     <div class="menuconfiguracoesUI"
         style="padding: 10px;width: 100%;height:80px;flex-wrap: wrap;background-color: #001236;display: flex;justify-content: space-between;align-items: center;">
         <h2 style="margin: 10px; color: #ffffff;display: none;">PDF Scan</h2>
-        <img src="static/marca_site.png" style="height: 100%;margin-left: 20px;">
+        <img src="assets/marca_site.png" style="height: 100%;margin-left: 20px;">
         <div style="display: flex;flex-direction: row;">
             <div id="btAbreConfig" style="width: 40px;height: 40px;margin-right: 20px;">
-                <img src="icons8-tools-94.png" style="height: 100%;">
+                <img src="assets/icons8-tools-94.png" style="height: 100%;">
             </div>
             <div id="btHelp" style="width: 40px;height: 40px;margin-right: 20px;">
-                <img src="icons8-help-94.png" style="height: 100%;">
+                <img src="assets/icons8-help-94.png" style="height: 100%;">
             </div>
         </div>
 
@@ -342,7 +360,7 @@
             <h2 style="margin: 10px;">Configurações</h2>
 
             <div id="btFechaConfig" style="width: 40px;height: 40px;margin-right: 20px;">
-                <img src="icons8-done-94.png" style="height: 100%;">
+                <img src="assets/icons8-done-94.png" style="height: 100%;">
             </div>
         </div>
         <div
@@ -390,7 +408,7 @@
             <input type="checkbox" id="checkboxLista">
             <div id="seletorLista"
                 style="width: 100%; display: none;flex-direction: column;gap: 20px;align-items: center;justify-content: center;">
-                <input type="file" id="fileInputTxt" accept=".txt" style="content: 'Abrir arquivo TXT';">
+                <input type="file" class="inputArquivo" id="fileInputTxt" accept=".txt" style="content: 'Abrir arquivo TXT';">
             </div>
         </div>
         <div
@@ -405,7 +423,14 @@
             <div
                 style="width: 90%; display: flex;flex-direction: row;gap: 20px;align-items: center;justify-content: center;">
                 <label>Arquivo <b>PDF:</b></label>
-                <input type="file" id="fileInputPdf" accept=".pdf">
+                <input class="inputArquivo" type="file" id="fileInputPdf" accept=".pdf">
+
+            </div>
+            <div
+                style="width: 90%; display: flex;flex-direction: row;gap: 20px;align-items: center;justify-content: center;">
+                <label>Lote de <b>PDFs</b></label>
+                <input class="inputPasta" type="file" id="folderInput" webkitdirectory multiple />
+
             </div>
         </div>
         <div style="width: 50%;display: flex;align-items: center;justify-content: center;flex-direction: row;">
@@ -419,8 +444,7 @@
 
             <div style="width: 50%;display: flex;align-items: end;justify-content: center;flex-direction: column;">
                 <button class="styling-b" id="btProcessar" style="margin-right: 20px;">Processar</button>
-                <button class="styling-b" id="btProcessarCancela"
-                    style="display: none;margin-right: 20px;">Cancelar</button>
+                <button class="styling-b" id="btProcessarCancela" style="display: none;margin-right: 20px;background: #ff9b29;border: 2px solid rgb(156, 77, 12), 180, 64);">Cancelar</button>
             </div>
         </div>
 
@@ -453,601 +477,7 @@
         </table>
     </div>
 
-    <script type="module">
-        const versao = 0.3;
-        document.title = "Scanner de QRcodes Hub Curitiba V" + versao + " alpha";
-        document.querySelector("#txtVersao").innerText = "V" + versao + " alpha";
-
-
-
-        import QrScanner from "./qr-scanner.min.js";
-        //modal fim
-        const tutorialElements = document.querySelectorAll('.tuto');
-        const telaAbertura = document.querySelector('#telaAbertura');
-        const telaTutorial = document.querySelector('#telaTutorial');
-        const telaEscolhaModo = document.querySelector('#telaEscolhaModo');
-
-        const telaHelp = document.querySelector('#telaHelp');
-        const telaFim = document.querySelector('#telaFim');
-        const fillBar = document.querySelector('#fillBar');
-        const btIniciaTutorial = document.querySelector('#btIniciaTutorial');
-        const btPulaTutorial = document.querySelector('#btPulaTutorial');
-        const btHelp = document.querySelector('#btHelp');
-        const btFechaFim = document.querySelector('#btFechaFim');
-        const btEscolha1 = document.querySelector('#btEscolha1');
-        const btEscolha2 = document.querySelector('#btEscolha2');
-        const btEscolha3 = document.querySelector('#btEscolha3');
-        //
-        //configuracoes
-        const scanMethodDropdown = document.querySelector('#scanMethodDropdown');
-        const qrcodeDropdown = document.querySelector('#qrcodeDropdown');
-        const inputEscala = document.querySelector('#inputEscala');
-        const btFechaConfig = document.querySelector('#btFechaConfig');
-        const configuracoesUI = document.querySelector('.configuracoesUI');
-        const btAbreConfig = document.querySelector('#btAbreConfig');
-        const menuconfiguracoesUI = document.querySelector('.menuconfiguracoesUI');
-        const checkboxImagens = document.getElementById('checkboxImagens');
-        const checkboxLista = document.getElementById('checkboxLista');
-        const checkboxSalvaImagens = document.getElementById('checkboxSalvaImagens');
-        const checkboxMulti = document.getElementById('checkboxMulti');
-        //
-        const btProcessar = document.querySelector('#btProcessar');
-        const btProcessarCancela = document.querySelector('#btProcessarCancela');
-        const tabela = document.querySelector('.tabela');
-        const fileInputPdf = document.getElementById('fileInputPdf');
-        const fileInputTxt = document.getElementById('fileInputTxt');
-        let currentIndex = 0;
-        var imagensPaginas = document.getElementById('imagensPaginas');
-        var nPag = document.getElementById('nPag');
-        var nQr = document.getElementById('nQr');
-        var pageNumber = 1;
-        var i_qrcodes = 0;
-        var id_count = 0;
-        var totalPages;
-        var data = [];
-        var qrcodesDuplicados = [];
-        var podeEscanear = true;
-        var escolhaQrcode = "10qrcodes";
-        //------------------>quando for fazer a build "npm run package":
-        //var caminho = "../../";
-        //------------------>pra dev:
-        var caminho = "./";
-
-        //aqui verificamos se esta sendo rodado em DEV
-        electron.ipcRenderer.send('mandaEnv');
-        electron.ipcRenderer.on('voltaEnv', (e, data) => {
-            console.log("recebeu env", data);
-            if (data) {
-                caminho = "./";
-            } else {
-                caminho = "../../";
-            }
-        })
-
-        var PDFJS = window['pdfjs-dist/build/pdf'];
-
-        PDFJS.GlobalWorkerOptions.workerSrc = 'pdf.worker.js';
-        var url = '';
-
-        electron.ipcRenderer.on('QRCodeProcessado', (e, data) => {
-            //console.log("recebeu http", data);
-            const divstatus = document.getElementById('stat' + data[1]);
-            const divfind = document.getElementById('find' + data[1]);
-            divstatus.innerText = data[0];
-            divfind.innerText = data[2];
-        })
-
-
-        checkboxImagens.addEventListener('change', function () {
-            if (checkboxImagens.checked) {
-                imagensPaginas.style.display = "flex"
-            } else {
-                imagensPaginas.style.display = "none"
-            }
-        });
-        checkboxLista.addEventListener('change', function () {
-            if (checkboxLista.checked) {
-                document.querySelector('#seletorLista').style.display = "flex"
-            } else {
-                document.querySelector('#seletorLista').style.display = "none"
-            }
-        });
-        fileInputTxt.addEventListener('change', event => {
-            const files = event.target.files;
-            const file = files[0];
-            electron.ipcRenderer.send('abrearquivoTxt', file.name);
-        });
-        fileInputPdf.addEventListener('change', event => {
-            telaEscolhaModo.classList.remove("esconde");
-            const files = event.target.files;
-            const file = files[0];
-            url = file.name;
-            console.log(`filename: ${file.name}`);
-            console.log(`file size: ${file.size} bytes`);
-            console.log(`file type: ${file.type}`);
-            electron.ipcRenderer.send('abrearquivo', file.name);
-
-            pageNumber = 1;
-            i_qrcodes = 0;
-            id_count = 0;
-            data = [];
-            nQr.innerText = i_qrcodes + " qrcodes";
-            imagensPaginas.innerHTML = "";
-            tabela.innerHTML = "";
-
-        });
-        /*
-        BOTOES
-        --------------------------------------------------------------
-        */
-        qrcodeDropdown.addEventListener('change', event => {
-            if (qrcodeDropdown.value == 1) {
-                escolhaQrcode = "1qrcode";
-            } else if (qrcodeDropdown.value == 2) {
-                escolhaQrcode = "4qrcodes";
-            } else if (qrcodeDropdown.value == 3) {
-                escolhaQrcode = "10qrcodes";
-            }
-            console.log("escolhaQrcode", escolhaQrcode);
-        })
-        btEscolha1.addEventListener('click', () => {
-            telaEscolhaModo.classList.add("esconde");
-            escolhaQrcode = "4qrcodes";
-        })
-        btEscolha2.addEventListener('click', () => {
-            telaEscolhaModo.classList.add("esconde");
-            escolhaQrcode = "10qrcodes";
-        })
-        btEscolha3.addEventListener('click', () => {
-            telaEscolhaModo.classList.add("esconde");
-            escolhaQrcode = "1qrcode";
-
-        })
-        btIniciaTutorial.addEventListener('click', () => {
-            telaAbertura.classList.add("esconde");
-            telaTutorial.classList.remove("esconde");
-        });
-        btPulaTutorial.addEventListener('click', () => {
-            telaAbertura.classList.add("esconde");
-            telaTutorial.classList.add("esconde");
-        });
-        telaTutorial.addEventListener('click', () => {
-            if (currentIndex < tutorialElements.length - 1) {
-                tutorialElements[currentIndex].style.display = "none";
-                currentIndex++;
-                tutorialElements[currentIndex].style.display = "flex";
-            } else {
-                tutorialElements[currentIndex].style.display = "none";
-                telaTutorial.style.display = 'none'; // Assuming the parent div has a class 'parentDiv'
-            }
-        });
-        btHelp.addEventListener('click', () => {
-            currentIndex = 0;
-            tutorialElements[0].style.display = "flex";
-            telaTutorial.style.display = "flex";
-        });
-        btFechaFim.addEventListener('click', () => {
-            telaFim.style.display = "none";
-        });
-        btProcessar.addEventListener('click', () => {
-            pageNumber = 1;
-            i_qrcodes = 0;
-            id_count = 0;
-            data = [];
-            nQr.innerText = i_qrcodes + " qrcodes";
-            imagensPaginas.innerHTML = "";
-            tabela.innerHTML = "";
-
-            if (url.length > 3) {
-
-                podeEscanear = true;
-                btProcessar.style.display = "none";
-                btProcessarCancela.style.display = "block";
-                var loadingTask = PDFJS.getDocument(caminho + "PDF/" + url);
-                loadingTask.promise.then(function (pdf) {
-                    totalPages = pdf.numPages
-                    nPag.innerText = totalPages + " paginas";
-                    renderPage(pdf);
-                }, function (reason) {
-                    console.error(reason);
-                });
-            }
-        });
-        btProcessarCancela.addEventListener('click', () => {
-            podeEscanear = false;
-            btProcessar.style.display = "block";
-            btProcessarCancela.style.display = "none";
-            QrScanner.stop();
-        })
-        btAbreConfig.addEventListener('click', () => {
-            abreConfiguracoes();
-        });
-        btFechaConfig.addEventListener('click', () => {
-            fechaConfiguracoes();
-
-        });
-        function abreConfiguracoes() {
-            menuconfiguracoesUI.style.display = "none";
-            configuracoesUI.style.display = "flex";
-        }
-        function fechaConfiguracoes() {
-            menuconfiguracoesUI.style.display = "flex";
-            configuracoesUI.style.display = "none";
-        }
-        function renderPage(pdf) {
-            if (!podeEscanear) {
-                return;
-            }
-            pdf.getPage(pageNumber).then(function (page) {
-                //console.log("escala:", inputEscala.value)
-                qrcodesDuplicados = [];
-                var viewport = page.getViewport({ scale: inputEscala.value });
-
-                var canvas = document.createElement('canvas');
-
-                var context = canvas.getContext('2d', { willReadFrequently: true });
-                canvas.height = viewport.height;
-                canvas.width = viewport.width;
-
-                console.log("tamanho:", viewport.width, viewport.height)
-
-                var renderContext = {
-                    canvasContext: context,
-                    viewport: viewport
-                };
-
-                var renderTask = page.render(renderContext);
-                renderTask.promise.then(function () {
-                    const imageData = canvas.toDataURL('image/png');
-                    data.push(imageData);
-
-                    var imageWidth = canvas.width;
-                    var imageHeight = canvas.height;
-                    var numHorizontalSections = 2;
-                    var numVerticalSections = 6;
-
-                    if (escolhaQrcode == "10qrcodes") {
-                        if (scanMethodDropdown.value == 1) {
-                            numHorizontalSections = 2;
-                            numVerticalSections = 6;
-                        } else if (scanMethodDropdown.value == 2) {
-                            numHorizontalSections = 2;
-                            numVerticalSections = 7;
-                        } else if (scanMethodDropdown.value == 3) {
-                            numHorizontalSections = 2;
-                            numVerticalSections = 8;
-                        } else if (scanMethodDropdown.value == 4) {
-                            numHorizontalSections = 2;
-                            numVerticalSections = 16;
-                        }
-                        console.log("escolhaQrcode: ", escolhaQrcode);
-                        console.log("Method:", scanMethodDropdown.value, numHorizontalSections, numVerticalSections)
-                    } else if (escolhaQrcode == "4qrcodes") {
-                        numHorizontalSections = 2;
-                        numVerticalSections = 2;
-                        console.log("escolhaQrcode: ", escolhaQrcode);
-
-                    } else if (escolhaQrcode == "1qrcode") {
-                        console.log("escolhaQrcode: ", escolhaQrcode);
-
-                    }
-                    if (escolhaQrcode == "10qrcodes" || escolhaQrcode == "4qrcodes") {
-                        var overlap = imageHeight / numVerticalSections;
-                        var sections;
-                        if (escolhaQrcode == "10qrcodes") {
-                            //com mais de 18 qrcodes BEEEEm lento
-                            console.log("10qrcodes+ LENTO");
-                            sections = divideImageIntoSectionsPlus(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap);
-                        } else {
-                            console.log("4qrcodes");
-                            sections = divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap);
-                        }
-                        QrScanner.scanImage(imageData, { returnDetailedScanResult: true })
-                        //primeiro tenta achar um qrcode simples
-                            .then(result => {
-                                if (qrcodesDuplicados.indexOf(result.data) > -1) {
-                                    console.log("QRCODE DUPLICADO");
-                                } else {
-                                    setResult(result, pageNumber, canvas);
-                                    qrcodesDuplicados.push(result.data);
-                                }
-                            })
-                            .catch(e => {
-                                console.log("SEM QRCODE SIMPLES");
-                            })
-                            .finally(e => {
-                                processSections(sections, imageData, pageNumber, canvas).then(function () {
-                                    pageNumber++;
-                                    console.log("pula pagina===================================>:", pageNumber);
-                                    if (pageNumber <= totalPages) {
-                                        renderPage(pdf);
-                                        nPag.innerText = pageNumber + " de " + totalPages + " páginas processadas";
-                                        let percentage = (pageNumber / totalPages) * 100;
-                                        fillBar.style.width = percentage + '%';
-                                        fillBar.innerText = percentage.toFixed(0) + '%';
-                                    } else {
-                                        console.log("FIM");
-                                        fim();
-                                    }
-                                });
-                            });
-                    } else {
-
-                        QrScanner.scanImage(imageData, { returnDetailedScanResult: true })
-                            .then(result => {
-                                setResult(result, pageNumber, canvas);
-                            })
-                            .catch(e => {
-                                console.log("SEM QRCODE SIMPLES");
-                            })
-                            .finally(e => {
-                                pageNumber++;
-                                console.log("pula pagina===================================>:", pageNumber);
-                                if (pageNumber <= totalPages) {
-                                    renderPage(pdf);
-                                    nPag.innerText = pageNumber + " de " + totalPages + " páginas processadas";
-                                    let percentage = (pageNumber / totalPages) * 100;
-                                    fillBar.style.width = percentage + '%';
-                                    fillBar.innerText = percentage.toFixed(0) + '%';
-                                } else {
-                                    console.log("FIM");
-                                    fim();
-                                }
-                            });
-
-                    }
-
-
-                });
-            });
-        }
-        function divideImageIntoSections(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap) {
-            const sectionWidth = imageWidth / numHorizontalSections;
-            const sectionHeight = imageHeight / numVerticalSections;
-            const sections = [];
-
-            for (let row = 0; row < numVerticalSections; row++) {
-                for (let col = 0; col < numHorizontalSections; col++) {
-                    let x = col * sectionWidth;
-                    let y = row * sectionHeight;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-
-
-                    if (scanMethodDropdown.value == 4) {
-                        console.log("reecan method", scanMethodDropdown.value, "yeah baby")
-                        x = col * sectionWidth;
-                        y = row * sectionHeight + overlap / 3;
-                        sections.push([x, y, sectionWidth, sectionHeight]);
-                        x = col * sectionWidth;
-                        y = row * sectionHeight + overlap / 2;
-                        sections.push([x, y, sectionWidth, sectionHeight]);
-                    } else {
-                        x = col * sectionWidth;
-                        y = row * sectionHeight + overlap / 2;
-                        sections.push([x, y, sectionWidth, sectionHeight]);
-                    }
-
-                }
-            }
-
-
-            return sections;
-        }
-        function divideImageIntoSectionsPlus(imageWidth, imageHeight, numHorizontalSections, numVerticalSections, overlap) {
-            const sectionWidth = imageWidth / numHorizontalSections;
-            const sectionHeight = imageHeight / 18;
-
-            const sections = [];
-            var w = 0;
-
-
-            for (let row = 0; row < 19; row++) {
-                for (let col = 0; col < 2; col++) {
-                    let x = col * sectionWidth;
-                    let y = row * sectionHeight;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                    x = col * sectionWidth;
-                    y = row * sectionHeight + w * 5;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                    x = col * sectionWidth;
-                    y = row * sectionHeight + w * 10;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                    x = col * sectionWidth;
-                    y = row * sectionHeight + w * 15;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                    x = col * sectionWidth;
-                    y = row * sectionHeight + w * 20;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                    x = col * sectionWidth;
-                    y = row * sectionHeight + w * 25;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                    x = col * sectionWidth;
-                    y = row * sectionHeight + w * 30;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                    x = col * sectionWidth;
-                    y = row * sectionHeight + w * 35;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                    x = col * sectionWidth;
-                    y = row * sectionHeight + w * 40;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                    x = col * sectionWidth;
-                    y = row * sectionHeight + w * 45;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                    x = col * sectionWidth;
-                    y = row * sectionHeight + w * 50;
-                    sections.push([x, y, sectionWidth, sectionHeight]);
-                    w++;
-                }
-            }
-
-
-            return sections;
-        }
-        function delay(ms) {
-            return new Promise(resolve => setTimeout(resolve, ms));
-        }
-
-        async function processSections(sections, imageData, pageNumber, canvas) {
-            const results = [];
-            console.log("scan "+sections.length+"sections "); 
-            for (let i = 0; i < sections.length; i++) {
-                //console.log("Processing page:", pageNumber, "section:", sections[i][0], sections[i][1], sections[i][2], sections[i][3]);
-
-                const _scanRegion = {
-                    x: sections[i][0],
-                    y: sections[i][1],
-                    width: sections[i][2],
-                    height: sections[i][3]
-                };
-
-                try {
-                    const result = await QrScanner.scanImage(imageData, { returnDetailedScanResult: true, scanRegion: _scanRegion });
-                    if (result.data) {
-                        //results.push(result);
-                        if (qrcodesDuplicados.indexOf(result.data) > -1) {
-                            console.log("QRCODE DUPLICADO");
-                        } else {
-                            //console.log(result.cornerPoints );
-                            setResult(result, pageNumber, canvas);
-                            qrcodesDuplicados.push(result.data);
-                        }
-
-                    }
-                } catch (e) {
-                    //console.log("No QR code found in this section:", e);
-                }
-
-                // delayzinho entre as seccoes
-                await delay(5);
-            }
-
-            //console.log("All sections processed. Results:", results);
-            //setResult(results, pageNumber, canvas);
-        }
-        function setResult(result, _pagina, _canvas) {
-            if (isValidURL(result.data)) {
-                const ctx = _canvas.getContext('2d');
-                ctx.beginPath();
-                ctx.strokeStyle = 'red';
-                ctx.lineWidth = 20;
-                if (result.cornerPoints && result.cornerPoints.length === 4) {
-                    ctx.moveTo(result.cornerPoints[0].x - 20, result.cornerPoints[0].y - 20);
-                    ctx.lineTo(result.cornerPoints[1].x + 20, result.cornerPoints[1].y - 20);
-                    ctx.lineTo(result.cornerPoints[2].x + 20, result.cornerPoints[2].y + 20);
-                    ctx.lineTo(result.cornerPoints[3].x - 20, result.cornerPoints[3].y + 20);
-                    ctx.closePath();
-                }
-                ctx.stroke();
-            }
-
-            if (result.data == "No QR code found" || result.data == "Scanner error: timeout") {
-                _canvas = null;
-                //console.log("sem resultado: ", _pagina + "/" + totalPages);
-            } else {
-                //console.log(result.data, _pagina);
-                i_qrcodes++;
-                //console.log(result.data, "pagina:", _pagina, checkboxSalvaImagens.checked);
-                electron.ipcRenderer.send('processaLink', [result.data, id_count, _pagina, checkboxSalvaImagens.checked]);
-
-                var tr = document.createElement('tr');
-                var td1 = document.createElement('td');
-                td1.innerHTML = _pagina;
-
-
-                var td2 = document.createElement('td');
-                var link = document.createElement('a');
-                link.href = result.data;
-                link.target = "_blank";
-                link.innerHTML = result.data;
-
-                td2.appendChild(link);
-
-                var td3 = document.createElement('td');
-                td3.innerHTML = "processando...";
-                td3.id = "stat" + id_count;
-
-
-                var td4 = document.createElement('td');
-                td4.innerHTML = "-";
-                td4.id = "find" + id_count;
-                id_count++;
-
-                var td5 = document.createElement('td');
-                var checkbox = document.createElement('input');
-                checkbox.type = 'checkbox';
-                td5.appendChild(checkbox);
-
-
-                tr.appendChild(td1);
-                tr.appendChild(td5);
-                tr.appendChild(td2);
-                tr.appendChild(td3);
-                tr.appendChild(td4);
-
-                tabela.appendChild(tr);
-
-                nQr.innerText = i_qrcodes + " qrcodes";
-
-                var imagedata = _canvas.toDataURL("image/png");
-                var img = new Image();
-                img.src = imagedata;
-                img.onload = function () {
-                    var div = document.createElement('div');
-                    div.style.height = "88%";
-                    div.style.display = "flex";
-                    div.style.flexDirection = "column";
-                    div.style.alignItems = "center";
-                    var label = document.createElement('label');
-                    label.innerText = "Página: " + pageNumber;
-                    label.style.fontSize = "12px";
-                    label.style.color = "white";
-                    var canvas = document.createElement('canvas');
-                    canvas.style.height = "100%";
-                    var ctx2 = canvas.getContext('2d');
-                    canvas.height = 4039 / 4;
-                    canvas.width = 3047 / 4;
-                    ctx2.drawImage(img, 0, 0, canvas.width, canvas.height);
-                    canvas.id = "pag" + pageNumber;
-
-
-                    div.appendChild(canvas);
-                    div.appendChild(label);
-                    imagensPaginas.appendChild(div);
-
-                    _canvas = null;
-                    canvas.onclick = function () {
-                        var windowFeatures = "menubar=yes,location=yes,resizable=yes,scrollbars=yes,status=yes";
-                        var windowObjectReference = window.open('', 'CanvasImageWindow', windowFeatures);
-                        var newCanvas = windowObjectReference.document.createElement('canvas');
-                        newCanvas.width = canvas.width;
-                        newCanvas.height = canvas.height;
-                        var newContext = newCanvas.getContext('2d');
-                        newContext.drawImage(canvas, 0, 0);
-                        windowObjectReference.document.body.appendChild(newCanvas);
-                        windowObjectReference.document.title = "Página: " + canvas.id;
-                    };
-                }
-
-            }
-        }
-
-
-        function isValidURL(string) {
-            const regex = /^(https?:\/\/)?([\w\-]+(\.[\w\-]+)+)([\/\w\-\._~:?#[\]@!$&'()*+,;=]*)?$/;
-            return regex.test(string);
-        }
-
-        function decodeImageFromBase64(data, callback) {
-            qrcode.callback = callback;
-            qrcode.decode(data)
-        }
-        function fim() {
-            telaFim.style.display = "flex";
-            electron.ipcRenderer.send('fim', "nada");
-            podeEscanear = true;
-            btProcessar.style.display = "block";
-            btProcessarCancela.style.display = "none";
-        }
+    <script type="module" src="renderer.js">
     </script>
 
 

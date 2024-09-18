@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Viewer</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: black;
+        }
+        img {
+            max-width: 100%;
+            max-height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <img id="image" alt="Image" src="">
+    <script>
+        // Get the image source from the URL parameters
+        const urlParams = new URLSearchParams(window.location.search);
+        const imgSrc = urlParams.get('src');
+        document.getElementById('image').src = imgSrc;
+    </script>
+</body>
+</html>

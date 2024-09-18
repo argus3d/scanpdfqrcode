@@ -8,15 +8,23 @@ const https = require('https');
 
 const puppeteer = require('puppeteer');
 const readline = require('readline');
-const { app, BrowserWindow, ipcMain, dialog } = require('electron');
+const { app, BrowserWindow, ipcMain, screen } = require('electron');
 const path = require('path');
+
+
 
 var output;
 var nomePDF;
 var nomePDF_elementos = [];
 var lines = [];
 var caminho = "";
+var outputPathHtml;
+var i_img = 0;
 
+axiosRetry(axios, {
+  retries: 3,
+  retryDelay: axiosRetry.exponentialDelay,
+});
 
 // Import the functions you need from the SDKs you need
 
@@ -56,12 +64,16 @@ function saveData(name, year, description) {
 }
 */
 
+
+
 let mainWindow;
 function createWindow() {
+
+  const { width, height } = screen.getPrimaryDisplay().workAreaSize;
   mainWindow = new BrowserWindow({
-    width: 1500,
-    height: 900,
-    icon: 'qr.ico',
+    width: width,
+    height: height,
+    icon: path.join(__dirname, 'assets', 'qr.ico'),
     webPreferences: {
       contextIsolation: true,
       preload: path.join(__dirname, 'preload.js'),
@@ -127,48 +139,55 @@ ipcMain.on('mandaEnv', async (event) => {
 
 });
 
+ipcMain.on('save-image', async (event, [dataURL, _pagina, _url]) => {
+
+  const base64Data = dataURL.split(',')[1];
+  const buffer = Buffer.from(base64Data, 'base64');
+
+  const filePath = "OUTPUT/" + nomePDF + '/IMG/' + nomePDF + '_' + i_img + '.jpg';
+
+  fs.mkdir("OUTPUT/" + nomePDF + '/IMG/', { recursive: true }, (err) => {
+    fs.writeFile(filePath, buffer, (err) => {
+      if (err) {
+        console.error('Error saving image:', err);
+        return;
+      }
+      //console.log('Image saved successfully at:', filePath,_url);
+      const imgTag = `<li>
+      <a href="${'IMG/' + nomePDF + '_' + i_img + '.jpg'}" target="_blank">
+          <img src="${'IMG/' + nomePDF + '_' + i_img + '.jpg'}"
+             alt="Página: ${_pagina}"> 
+      </a>
+      <h2>Pagina: ${_pagina}</h2>
+      <a href="${_url}" target="_blank">${_url}</a>
+      </li>`;
+
+      i_img++;
+      fs.appendFile(outputPathHtml, imgTag, (err) => {
+        if (err) console.error('Error updating HTML file:', err);
+      });
+    });
+  });
+});
+
 ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
+  var voltaLine;
+  let urlLowerCase = url.trim().toLowerCase();
+  try {
+    const foundLine = lines.find(line => line.toLowerCase().includes(urlLowerCase));
 
-  var temlinha = lines.indexOf(url.trim())
-  console.log("temlinha", url, temlinha, _salva);
-  //console.log(url, 'SCREENSHOTS/' +nomePDF+ _pagina + ".jpg");
-  let voltaLine = "não encontrado na planilha";
-  if (temlinha > -1) {
-    voltaLine = lines[temlinha];
+    if (foundLine) {
+      voltaLine = "URL encontrada! " + foundLine;
+    } else {
+      voltaLine = "URL não encontrada.";
+    }
+  } catch (err) {
+    console.error('Error reading file:', err);
+    voltaLine = "Erro ao ler o arquivo.";
   }
-  let base_anos = ["1", "2", "3", "4", "5", "6", "7", "8", "9"];
-  let base_componentes = ["EF21", "EF22", "EF23", "EF24", "EF25"];
-  let base_livros = ["L1", "L2", "L3", "L4"];
-  let base_anuais = ["ING", "ESP"];
+  console.log("temlinha?", voltaLine);
 
-  let componente = "";
-  let ano = "";
-  let livro = "";
-  let anual = "";
-  for (let i = 0; i < base_componentes.length; i++) {
-    if (nomePDF_elementos.indexOf(base_componentes[i]) > -1) {
-      componente = base_componentes[i];
-      break;
-    }
-  }
-  for (let i = 0; i < base_anos.length; i++) {
-    if (nomePDF_elementos.indexOf(base_anos[i]) > -1) {
-      ano = base_anos[i];
-      break;
-    }
-  }
-  for (let i = 0; i < base_livros.length; i++) {
-    if (nomePDF_elementos.indexOf(base_livros[i]) > -1) {
-      livro = base_livros[i];
-      break;
-    }
-  }
-  for (let i = 0; i < base_anuais.length; i++) {
-    if (nomePDF_elementos.indexOf(base_anuais[i]) > -1) {
-      anual = base_anuais[i];
-      break;
-    }
-  }
+
 
   if (isValidUrl(url)) {
     // axios retry aqui?
@@ -211,58 +230,87 @@ ipcMain.on('processaLink', async (event, [url, _id, _pagina, _salva]) => {
             if (response.data.includes("subscribers")) {
               respostaTexto = "vídeo no youtube";
             }
-
             if (response.data.includes("sae-digital-home")) {
               respostaTexto = "link não cadastrado";
             }
+            if (response.data.includes("S3")) {
+              respostaTexto = "objeto não cadastrado";
+            }
             if (_salva) {
-              renderPageToImage(url, caminho + 'SCREENSHOTS/' + nomePDF + '_pagina_' + _pagina + ".jpg")
-                .catch(error => console.error('Error rendering page to image:', error));
+              fs.mkdir(caminho + 'SCREENSHOTS/', { recursive: true }, (err) => {
+                renderPageToImage(url, caminho + 'SCREENSHOTS/' + nomePDF + '_pagina_' + _pagina + ".jpg")
+                  .catch(error => console.error('Error rendering page to image:', error));
+              });
             }
 
             event.sender.send('QRCodeProcessado', [respostaTexto, _id, voltaLine]);
-            output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + respostaTexto + "\n");
+            output.write(url + ";" + _pagina + ";" + respostaTexto + ";" + voltaLine + "\n");
           } else {
             event.sender.send('QRCodeProcessado', ["link vazio...", _id, voltaLine]);
-            output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + "link vazio...\n");
+            output.write(url + ";" + _pagina + ";" + "link vazio..." + ";" + voltaLine + "\n");
           }
         } else {
           console.log('Failed to load the web page. Status code: ' + response.status);
           event.sender.send('QRCodeProcessado', ["url com erro...", _id, voltaLine]);
-          output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + "url com erro..\n");
+          output.write(url + ";" + _pagina + ";" + "url com erro.." + ";" + voltaLine + "\n");
         }
       })
       .catch(error => {
-        event.sender.send('QRCodeProcessado', ["erro ao buscar URL", _id, voltaLine]);
-        output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + "erro\n");
+        event.sender.send('QRCodeProcessado', ["erro no software", _id, voltaLine]);
+        output.write(url + ";" + _pagina + ";" + "erro no software" + ";" + voltaLine + "\n");
       })
   } else {
     event.sender.send('QRCodeProcessado', ["Link invalido", _id, voltaLine]);
-    output.write(componente + ";" + ano + ";" + livro + ";" + anual + ";" + url + ";" + _pagina + ";" + "link invalido\n");
+    output.write(url + ";" + _pagina + ";" + "link invalido" + ";" + voltaLine + "\n");
   }
 
 })
 ipcMain.on('abrearquivoTxt', async (event, nome) => {
-
-  readFileToArray(caminho + "TXT/" + nome)
-    .then(lines => {
-      //console.log('Array of lines:', lines);
-    })
-    .catch(err => {
-      //console.error('Error reading file:', err);
-    });
+  try {
+    i_img = 0;
+    const lines = await readFileToArray(caminho + "TXT/" + nome);
+    const lowerCaseLines = lines.map(line => line.toLowerCase());
+    console.log('Array of lines in lowercase:', lowerCaseLines);
+    // You can also choose to do something else with lowerCaseLines here
+  } catch (err) {
+    console.error('Error reading file:', err);
+  }
 });
 ipcMain.on('abrearquivo', async (event, nome) => {
   nomePDF = nome.substring(0, nome.lastIndexOf("."));
   nomePDF_elementos = nomePDF.split("_");
-  output = fs.createWriteStream(caminho + "PDF/" + nomePDF + ".txt");
-  output.once('open', function (fd) {
-    output.write("URL;ID;Resultado:\n");
+  fs.mkdir("OUTPUT/" + nomePDF + '/IMG/', { recursive: true }, (err) => {
+    output = fs.createWriteStream(caminho + "OUTPUT/" + nomePDF + "/" + nomePDF + ".csv");
+    output.once('open', function (fd) {
+      output.write("URL;PAGINA PROGRAMA;TESTE AUTOMATIZADO URL;BUSCA NA PLANILHA; \n");
+    });
+
+
+    let outputHtml = `
+    <html>
+    <head>
+      <title>Relatório de Páginas</title>
+      <style>
+        body { font-family: Arial; margin: 20px;}
+        img { max-width: 40%; height: auto;  border-style: solid;transition: max-width .25s;}
+        img:hover{max-width: 80%;}
+        li{display:flex;flex-direction:column;padding: 15px;width:30%}
+        ul{display:flex;flex-wrap:wrap}
+      </style>
+    </head>
+    <body>
+      <h1>Relatório de ${nomePDF}:</h1>
+      <ul>
+  `;
+    outputPathHtml = path.join("OUTPUT", nomePDF, nomePDF + ".html");
+    fs.writeFile(outputPathHtml, outputHtml, (err) => {
+      if (err) console.error('Error creating HTML file:', err);
+    });
   });
 });
 ipcMain.on('fim', async (event, oque) => {
   console.log("fim")
-  output.end();
+  //output.end();
 });
 
 function encontraElemento(_tem) {
