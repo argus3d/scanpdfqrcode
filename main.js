@@ -153,7 +153,7 @@ ipcMain.on('save-image', async (event, [dataURL, _pagina, _url]) => {
         return;
       }
       //console.log('Image saved successfully at:', filePath,_url);
-      const imgTag = `<li>
+      const imgTag = `<li id="dv_${_pagina}">
       <a href="${'IMG/' + nomePDF + '_' + i_img + '.jpg'}" target="_blank">
           <img src="${'IMG/' + nomePDF + '_' + i_img + '.jpg'}"
              alt="Página: ${_pagina}"> 
@@ -294,13 +294,30 @@ ipcMain.on('abrearquivo', async (event, nome) => {
         body { font-family: Arial; margin: 20px;}
         img { max-width: 40%; height: auto;  border-style: solid;transition: max-width .25s;}
         img:hover{max-width: 80%;}
-        li{display:flex;flex-direction:column;padding: 15px;width:30%}
+        li{display:flex;flex-direction:column;padding: 15px;width:30%;word-wrap: break-word;}
         ul{display:flex;flex-wrap:wrap}
       </style>
+      <script defer>
+      document.addEventListener("DOMContentLoaded", function() {
+          var main = document.getElementById('main');
+          function sortList() {
+              var listItems = Array.from(main.children); // Create an array from the NodeList
+              listItems.sort(function(a, b) {
+                  return parseInt(a.id.split('_')[1]) - parseInt(b.id.split('_')[1]); // Sort based on numeric part of id
+              });
+              // Clear the existing list and re-append sorted items
+              main.innerHTML = '';
+              listItems.forEach(function(item) {
+                  main.appendChild(item);
+              });
+          }
+          sortList(); // Call the sorting function on page load
+      });
+  </script>
     </head>
     <body>
       <h1>Relatório de ${nomePDF}:</h1>
-      <ul>
+      <ul id="main">
   `;
     outputPathHtml = path.join("OUTPUT", nomePDF, nomePDF + ".html");
     fs.writeFile(outputPathHtml, outputHtml, (err) => {
